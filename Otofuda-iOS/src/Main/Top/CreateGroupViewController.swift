@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CreateGroupViewController.swift
 //  Otofuda-iOS
 //
 //  Created by nonaka on 2019/05/10.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class CreateGroupViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
 }
-

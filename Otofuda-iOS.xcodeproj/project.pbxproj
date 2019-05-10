@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		589460D522852E9500319032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460D422852E9500319032 /* AppDelegate.swift */; };
-		589460D722852E9500319032 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460D622852E9500319032 /* ViewController.swift */; };
-		589460DA22852E9500319032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589460D822852E9500319032 /* Main.storyboard */; };
+		589460D722852E9500319032 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460D622852E9500319032 /* TopViewController.swift */; };
 		589460DC22852E9500319032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589460DB22852E9500319032 /* Assets.xcassets */; };
-		589460DF22852E9500319032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589460DD22852E9500319032 /* LaunchScreen.storyboard */; };
+		589460EB2285367300319032 /* OtofudaTop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589460EA2285367300319032 /* OtofudaTop.storyboard */; };
+		589460F122855AAE00319032 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F022855AAE00319032 /* CreateGroupViewController.swift */; };
+		589460F522855D9F00319032 /* SearchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F422855D9F00319032 /* SearchGroupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		589460D122852E9500319032 /* Otofuda-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Otofuda-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		589460D422852E9500319032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		589460D622852E9500319032 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		589460D922852E9500319032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		589460D622852E9500319032 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		589460DB22852E9500319032 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		589460DE22852E9500319032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		589460E022852E9500319032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		589460EA2285367300319032 /* OtofudaTop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtofudaTop.storyboard; sourceTree = "<group>"; };
+		589460F022855AAE00319032 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		589460F422855D9F00319032 /* SearchGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,79 @@
 		589460D322852E9500319032 /* Otofuda-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				589460D422852E9500319032 /* AppDelegate.swift */,
-				589460D622852E9500319032 /* ViewController.swift */,
-				589460D822852E9500319032 /* Main.storyboard */,
-				589460DB22852E9500319032 /* Assets.xcassets */,
-				589460DD22852E9500319032 /* LaunchScreen.storyboard */,
-				589460E022852E9500319032 /* Info.plist */,
+				589460E622852F6400319032 /* resources */,
+				589460E722852FEE00319032 /* src */,
 			);
 			path = "Otofuda-iOS";
+			sourceTree = "<group>";
+		};
+		589460E622852F6400319032 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				589460DB22852E9500319032 /* Assets.xcassets */,
+				589460E022852E9500319032 /* Info.plist */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		589460E722852FEE00319032 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				589460E82285328300319032 /* Common */,
+				589460E92285362E00319032 /* Main */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		589460E82285328300319032 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				589460D422852E9500319032 /* AppDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		589460E92285362E00319032 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				589460EC2285449100319032 /* Top */,
+				589460ED228544A100319032 /* Menu */,
+				589460EE228544C100319032 /* Play */,
+				589460EF228544D800319032 /* Result */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		589460EC2285449100319032 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				589460D622852E9500319032 /* TopViewController.swift */,
+				589460EA2285367300319032 /* OtofudaTop.storyboard */,
+				589460F422855D9F00319032 /* SearchGroupViewController.swift */,
+				589460F022855AAE00319032 /* CreateGroupViewController.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		589460ED228544A100319032 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		589460EE228544C100319032 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		589460EF228544D800319032 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +189,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				589460DF22852E9500319032 /* LaunchScreen.storyboard in Resources */,
 				589460DC22852E9500319032 /* Assets.xcassets in Resources */,
-				589460DA22852E9500319032 /* Main.storyboard in Resources */,
+				589460EB2285367300319032 /* OtofudaTop.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,31 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				589460D722852E9500319032 /* ViewController.swift in Sources */,
+				589460F522855D9F00319032 /* SearchGroupViewController.swift in Sources */,
+				589460D722852E9500319032 /* TopViewController.swift in Sources */,
 				589460D522852E9500319032 /* AppDelegate.swift in Sources */,
+				589460F122855AAE00319032 /* CreateGroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		589460D822852E9500319032 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				589460D922852E9500319032 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		589460DD22852E9500319032 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				589460DE22852E9500319032 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		589460E122852E9500319032 /* Debug */ = {
@@ -284,7 +333,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8YPT438X6;
-				INFOPLIST_FILE = "Otofuda-iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Otofuda-iOS/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8YPT438X6;
-				INFOPLIST_FILE = "Otofuda-iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Otofuda-iOS/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
