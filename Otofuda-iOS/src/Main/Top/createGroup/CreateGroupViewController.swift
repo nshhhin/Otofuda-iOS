@@ -21,12 +21,9 @@ class CreateGroupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DBRef = Database.database().reference()
-        
         self.roomID = getRandomStringWithLength(length: 6)
         print(roomID)
         
-        //self.createRoom(name: self.roomId)
-        // ↑多分タイムスタンプとか名前を生成したり，部屋があるかどうか？チェックしてる？？？
         self.generateQRCode(name: self.roomID)
     }
     

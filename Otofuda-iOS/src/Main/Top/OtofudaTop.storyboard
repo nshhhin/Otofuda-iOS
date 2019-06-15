@@ -93,20 +93,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cameraID" translatesAutoresizingMaskIntoConstraints="NO" id="qNs-xX-Xpd">
-                                <rect key="frame" x="46" y="282" width="322" height="381"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="cameraID" translatesAutoresizingMaskIntoConstraints="NO" id="qNs-xX-Xpd">
+                                <rect key="frame" x="46" y="163" width="322" height="381"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="↓カメラの画面表示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCH-Ow-Ehf">
-                                <rect key="frame" x="100" y="210" width="215" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="↓カメラの画面表示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCH-Ow-Ehf">
+                                <rect key="frame" x="100" y="74" width="215" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qNs-xX-Xpd" firstAttribute="top" secondItem="QCH-Ow-Ehf" secondAttribute="bottom" constant="60" id="cvd-MJ-n9Q"/>
+                            <constraint firstItem="QCH-Ow-Ehf" firstAttribute="top" secondItem="6H1-SW-fmF" secondAttribute="top" constant="30" id="v9X-11-A67"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6H1-SW-fmF"/>
                     </view>
                     <connections>
