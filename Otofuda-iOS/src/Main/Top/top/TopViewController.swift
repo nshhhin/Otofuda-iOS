@@ -16,7 +16,7 @@ final class OtofudaTopViewController: UIViewController {
 
     // グループを作成するボタン
     @IBAction func tapCreateBtn(_ sender: Any) {
-        // QRコードを生成して表示する画面に遷移
+        // QRコードを生成・表示する画面に遷移
         let next =  storyboard!.instantiateViewController(withIdentifier: "CreateGroupView")
         next.modalTransitionStyle = .crossDissolve
         self.present(next,animated: true, completion: nil)
