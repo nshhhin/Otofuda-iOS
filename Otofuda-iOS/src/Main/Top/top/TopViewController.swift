@@ -8,12 +8,11 @@
 
 import UIKit
 
-class OtofudaTopViewController: UIViewController {
+protocol topViewController {
+    // 関数を列挙する
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+final class OtofudaTopViewController: UIViewController {
 
     // グループを作成するボタン
     @IBAction func tapCreateBtn(_ sender: Any) {
@@ -29,6 +28,12 @@ class OtofudaTopViewController: UIViewController {
         let next =  storyboard!.instantiateViewController(withIdentifier: "SearchGroupView")
         next.modalTransitionStyle = .crossDissolve
         self.present(next,animated: true, completion: nil)
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
 }
 

@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4NL-SW-c24" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-132" y="263"/>
+            <point key="canvasLocation" x="-175" y="586"/>
         </scene>
         <!--Create Group View Controller-->
         <scene sceneID="goy-Wj-6rK">
@@ -65,7 +65,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="↓QRコード表示させるやつ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoP-R9-L58">
-                                <rect key="frame" x="87" y="119" width="296" height="29"/>
+                                <rect key="frame" x="59" y="120" width="296" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -83,7 +83,7 @@
         <!--Search Group View Controller-->
         <scene sceneID="Si9-Su-4yt">
             <objects>
-                <viewController id="vix-G8-yFh" customClass="SearchGroupViewController" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchGroupView" id="vix-G8-yFh" customClass="SearchGroupViewController" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7R9-ol-kwd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

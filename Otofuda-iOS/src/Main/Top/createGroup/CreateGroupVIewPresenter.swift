@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import Firebase
+
+protocol CreateGroupPresenter:class {
+    
+}
+
+
+final class CreateGroupViewPresenter {
+    
+}

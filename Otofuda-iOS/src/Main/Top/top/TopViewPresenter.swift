@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import Firebase
+
+protocol topPresenter: class {
+    
+}
+
+
+final class topViewPresenter: topPresenter {
+    
+}

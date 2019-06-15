@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5880D37A22B4832F00F40959 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5880D37922B4832F00F40959 /* GoogleService-Info.plist */; };
+		588470092286904300649B37 /* CreateGroupVIewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588470082286904300649B37 /* CreateGroupVIewPresenter.swift */; };
 		589460D522852E9500319032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460D422852E9500319032 /* AppDelegate.swift */; };
 		589460D722852E9500319032 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460D622852E9500319032 /* TopViewController.swift */; };
 		589460DC22852E9500319032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589460DB22852E9500319032 /* Assets.xcassets */; };
 		589460EB2285367300319032 /* OtofudaTop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589460EA2285367300319032 /* OtofudaTop.storyboard */; };
 		589460F122855AAE00319032 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F022855AAE00319032 /* CreateGroupViewController.swift */; };
 		589460F522855D9F00319032 /* SearchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F422855D9F00319032 /* SearchGroupViewController.swift */; };
+		589460F722867A4800319032 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F622867A4800319032 /* FirebaseManager.swift */; };
+		ABB34FFD4B8DD80A5EAA9C01 /* Pods_Otofuda_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F973746A2B06067E4EA3ABB /* Pods_Otofuda_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03555C36D7B3F6240EE0182C /* Pods-Otofuda-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOS.release.xcconfig"; path = "Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		1950F3B136AEAAC0B3CE5024 /* Pods-Otofuda-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4F973746A2B06067E4EA3ABB /* Pods_Otofuda_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Otofuda_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5880D37922B4832F00F40959 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		588470082286904300649B37 /* CreateGroupVIewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVIewPresenter.swift; sourceTree = "<group>"; };
 		589460D122852E9500319032 /* Otofuda-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Otofuda-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		589460D422852E9500319032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		589460D622852E9500319032 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,7 @@
 		589460EA2285367300319032 /* OtofudaTop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtofudaTop.storyboard; sourceTree = "<group>"; };
 		589460F022855AAE00319032 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		589460F422855D9F00319032 /* SearchGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroupViewController.swift; sourceTree = "<group>"; };
+		589460F622867A4800319032 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB34FFD4B8DD80A5EAA9C01 /* Pods_Otofuda_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54E6151815F6B8962458DCA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F973746A2B06067E4EA3ABB /* Pods_Otofuda_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5884700322868D0B00649B37 /* top */ = {
+			isa = PBXGroup;
+			children = (
+				589460D622852E9500319032 /* TopViewController.swift */,
+			);
+			path = top;
+			sourceTree = "<group>";
+		};
+		5884700422868D6200649B37 /* createGroup */ = {
+			isa = PBXGroup;
+			children = (
+				589460F022855AAE00319032 /* CreateGroupViewController.swift */,
+				588470082286904300649B37 /* CreateGroupVIewPresenter.swift */,
+			);
+			path = createGroup;
+			sourceTree = "<group>";
+		};
+		5884700522868D7400649B37 /* searchGroup */ = {
+			isa = PBXGroup;
+			children = (
+				589460F422855D9F00319032 /* SearchGroupViewController.swift */,
+			);
+			path = searchGroup;
+			sourceTree = "<group>";
+		};
 		589460C822852E9500319032 = {
 			isa = PBXGroup;
 			children = (
 				589460D322852E9500319032 /* Otofuda-iOS */,
 				589460D222852E9500319032 /* Products */,
+				DF4B4C7A60863B6BDBCE3175 /* Pods */,
+				54E6151815F6B8962458DCA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +111,7 @@
 		589460E622852F6400319032 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				5880D37922B4832F00F40959 /* GoogleService-Info.plist */,
 				589460DB22852E9500319032 /* Assets.xcassets */,
 				589460E022852E9500319032 /* Info.plist */,
 			);
@@ -84,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				589460D422852E9500319032 /* AppDelegate.swift */,
+				589460F622867A4800319032 /* FirebaseManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -102,10 +150,10 @@
 		589460EC2285449100319032 /* Top */ = {
 			isa = PBXGroup;
 			children = (
-				589460D622852E9500319032 /* TopViewController.swift */,
 				589460EA2285367300319032 /* OtofudaTop.storyboard */,
-				589460F422855D9F00319032 /* SearchGroupViewController.swift */,
-				589460F022855AAE00319032 /* CreateGroupViewController.swift */,
+				5884700322868D0B00649B37 /* top */,
+				5884700422868D6200649B37 /* createGroup */,
+				5884700522868D7400649B37 /* searchGroup */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -131,6 +179,15 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
+		DF4B4C7A60863B6BDBCE3175 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1950F3B136AEAAC0B3CE5024 /* Pods-Otofuda-iOS.debug.xcconfig */,
+				03555C36D7B3F6240EE0182C /* Pods-Otofuda-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 589460E322852E9500319032 /* Build configuration list for PBXNativeTarget "Otofuda-iOS" */;
 			buildPhases = (
+				72E1837E0B9A4EA64C3F807C /* [CP] Check Pods Manifest.lock */,
 				589460CD22852E9500319032 /* Sources */,
 				589460CE22852E9500319032 /* Frameworks */,
 				589460CF22852E9500319032 /* Resources */,
+				CCF88AE628F8962FFE90B6FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,10 +250,62 @@
 			files = (
 				589460DC22852E9500319032 /* Assets.xcassets in Resources */,
 				589460EB2285367300319032 /* OtofudaTop.storyboard in Resources */,
+				5880D37A22B4832F00F40959 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72E1837E0B9A4EA64C3F807C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Otofuda-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCF88AE628F8962FFE90B6FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		589460CD22852E9500319032 /* Sources */ = {
@@ -203,6 +314,8 @@
 			files = (
 				589460F522855D9F00319032 /* SearchGroupViewController.swift in Sources */,
 				589460D722852E9500319032 /* TopViewController.swift in Sources */,
+				589460F722867A4800319032 /* FirebaseManager.swift in Sources */,
+				588470092286904300649B37 /* CreateGroupVIewPresenter.swift in Sources */,
 				589460D522852E9500319032 /* AppDelegate.swift in Sources */,
 				589460F122855AAE00319032 /* CreateGroupViewController.swift in Sources */,
 			);
@@ -329,6 +442,7 @@
 		};
 		589460E422852E9500319032 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1950F3B136AEAAC0B3CE5024 /* Pods-Otofuda-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -347,6 +461,7 @@
 		};
 		589460E522852E9500319032 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03555C36D7B3F6240EE0182C /* Pods-Otofuda-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
