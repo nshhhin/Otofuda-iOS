@@ -28,6 +28,8 @@ class SearchGroupViewController: UIViewController, AVCaptureMetadataOutputObject
         readQRCode()
     }
     
+    
+    
     func readQRCode(){
         // QRコードをマークするビュー
         qrView = UIView()
