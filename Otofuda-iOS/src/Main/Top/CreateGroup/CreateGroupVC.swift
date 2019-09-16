@@ -11,19 +11,20 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
     @IBOutlet weak var QRView: UIImageView!
     
     var firebaseManager = FirebaseManager()
-    var roomID: String = ""
+    
     var number: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        roomID = String.getRandomStringWithLength(length: 6)
-        let room = Room(name: roomID)
-        firebaseManager.post(path: RoomURL.base.rawValue, value: room.dict() )
-        self.generateQRCode(name: self.roomID)
+        let roomId = createGroup()
+        generateQRCode(name: roomId)
     }
     
-    func createGroup(name: String){
-        
+    func createGroup() -> String{
+        let roomID = String.getRandomStringWithLength(length: 6)
+        let room = Room(name: roomID)
+        firebaseManager.post(path: RoomURL.base.rawValue, value: room.dict() )
+        return roomID
     }
     
     func generateQRCode(name: String) {
