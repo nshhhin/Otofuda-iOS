@@ -6,6 +6,7 @@ target 'Otofuda-iOS' do
   use_frameworks!
 
   # Pods for Otofuda-iOS
-  pod 'Firebase/Core'
+  pod 'Firebase'
   pod 'Firebase/Database'
+  
 end
