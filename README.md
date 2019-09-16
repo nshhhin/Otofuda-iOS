@@ -1,8 +1,14 @@
 # Otofuda-iOS
 
 ## Start
-```cmd
+
+CocoaPodをインストールしてください。
+```
 pod install
+```
+
+Carthageをインストールしてください。
+```
 carthage update --platform iOS
 ```
 
