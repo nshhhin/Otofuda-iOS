@@ -5,7 +5,6 @@ protocol CreateGroupPresenter:class {
     
 }
 
-
 final class CreateGroupViewPresenter {
     
 }

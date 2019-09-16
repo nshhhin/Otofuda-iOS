@@ -9,13 +9,14 @@
 import Foundation
 import Firebase
 
-enum Room: String {
+enum RoomURL: String {
     case base = "room/"
     case playMode = "/Otofuda/PlayMode"
     case mode = "/Otofuda/Mode"
 }
 
-enum Mode: String {
+
+enum ModeURL: String {
     case intro = "intro"
     case random = "random"
     case normal = "normal"

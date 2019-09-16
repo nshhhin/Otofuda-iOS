@@ -22,6 +22,8 @@
 		F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB8232F711300546D5B /* UIImage+Ex.swift */; };
 		F3C21BBB232F738F00546D5B /* SearchGropuVC+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BBA232F738F00546D5B /* SearchGropuVC+Ex.swift */; };
 		F3C21BBD232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BBC232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift */; };
+		F3C21BC0232F809100546D5B /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BBF232F809100546D5B /* Room.swift */; };
+		F3C21BC2232F80EF00546D5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BC1232F80EF00546D5B /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		F3C21BB8232F711300546D5B /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
 		F3C21BBA232F738F00546D5B /* SearchGropuVC+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchGropuVC+Ex.swift"; sourceTree = "<group>"; };
 		F3C21BBC232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchGroupVC+AVCaptureDelegate.swift"; sourceTree = "<group>"; };
+		F3C21BBF232F809100546D5B /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		F3C21BC1232F80EF00546D5B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 		589460E82285328300319032 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F3C21BBE232F808300546D5B /* Models */,
 				F3C21BB5232F702800546D5B /* Extensions */,
 				589460D422852E9500319032 /* AppDelegate.swift */,
 				589460F622867A4800319032 /* FirebaseManager.swift */,
@@ -206,6 +211,15 @@
 				F3C21BB8232F711300546D5B /* UIImage+Ex.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3C21BBE232F808300546D5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3C21BBF232F809100546D5B /* Room.swift */,
+				F3C21BC1232F80EF00546D5B /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,8 +345,10 @@
 				F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */,
 				F3C21BBB232F738F00546D5B /* SearchGropuVC+Ex.swift in Sources */,
 				588470092286904300649B37 /* CreateGroupVIewPresenter.swift in Sources */,
+				F3C21BC2232F80EF00546D5B /* User.swift in Sources */,
 				589460D522852E9500319032 /* AppDelegate.swift in Sources */,
 				589460F122855AAE00319032 /* CreateGroupVC.swift in Sources */,
+				F3C21BC0232F809100546D5B /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
