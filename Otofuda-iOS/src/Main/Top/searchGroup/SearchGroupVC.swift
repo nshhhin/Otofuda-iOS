@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class SearchGroupVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class SearchGroupViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     var qrView: UIView!
     @IBOutlet weak var cameraView: UIView!

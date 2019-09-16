@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Otofuda Top View Controller-->
+        <!--TopVC-->
         <scene sceneID="6w6-eu-auS">
             <objects>
-                <viewController id="TWC-6W-nji" customClass="OtofudaTopViewController" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TWC-6W-nji" customClass="TopVC" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RUp-UI-MQ1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="-175" y="586"/>
         </scene>
-        <!--Create Group View Controller-->
+        <!--Create GroupVC-->
         <scene sceneID="goy-Wj-6rK">
             <objects>
-                <viewController storyboardIdentifier="CreateGroupView" id="C8y-tv-MuB" customClass="CreateGroupViewController" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateGroupView" id="C8y-tv-MuB" customClass="CreateGroupVC" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9x0-Un-B1c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="648" y="263"/>
         </scene>
-        <!--Search Group View Controller-->
+        <!--Search GroupVC-->
         <scene sceneID="Si9-Su-4yt">
             <objects>
-                <viewController storyboardIdentifier="SearchGroupView" id="vix-G8-yFh" customClass="SearchGroupViewController" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchGroupView" id="vix-G8-yFh" customClass="SearchGroupVC" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7R9-ol-kwd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

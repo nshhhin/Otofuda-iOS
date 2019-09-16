@@ -12,7 +12,7 @@ protocol topViewController {
     // 関数を列挙する
 }
 
-final class OtofudaTopViewController: UIViewController {
+final class TopVC: UIViewController {
 
     // グループを作成するボタン
     @IBAction func tapCreateBtn(_ sender: Any) {

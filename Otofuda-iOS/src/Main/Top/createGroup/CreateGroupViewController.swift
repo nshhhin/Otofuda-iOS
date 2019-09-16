@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class CreateGroupViewController: UIViewController {
+class CreateGroupVC: UIViewController {
     
     
     @IBOutlet weak var QRView: UIImageView!
