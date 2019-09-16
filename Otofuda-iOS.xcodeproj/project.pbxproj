@@ -26,6 +26,11 @@
 		F3C21BC2232F80EF00546D5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BC1232F80EF00546D5B /* User.swift */; };
 		F3C21BC4232F9C4F00546D5B /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BC3232F9C4F00546D5B /* Music.swift */; };
 		F3E25FD0232F9E5200134769 /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FCF232F9E5200134769 /* PlayVC.swift */; };
+		F3E25FD2232F9F5700134769 /* PlayVC+UICollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FD1232F9F5700134769 /* PlayVC+UICollectionDelegate.swift */; };
+		F3E25FD4232F9F6600134769 /* PlayVC+UICollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FD3232F9F6600134769 /* PlayVC+UICollectionDataSource.swift */; };
+		F3E25FD6232F9FD400134769 /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3E25FD5232F9FD400134769 /* Play.storyboard */; };
+		F3E25FDB232F9FF800134769 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3E25FDA232F9FF800134769 /* Menu.storyboard */; };
+		F3E25FDD232FA00D00134769 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FDC232FA00D00134769 /* MenuVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		F3C21BC1232F80EF00546D5B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F3C21BC3232F9C4F00546D5B /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		F3E25FCF232F9E5200134769 /* PlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
+		F3E25FD1232F9F5700134769 /* PlayVC+UICollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayVC+UICollectionDelegate.swift"; sourceTree = "<group>"; };
+		F3E25FD3232F9F6600134769 /* PlayVC+UICollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayVC+UICollectionDataSource.swift"; sourceTree = "<group>"; };
+		F3E25FD5232F9FD400134769 /* Play.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Play.storyboard; path = "Otofuda-iOS/src/Main/Play/Play.storyboard"; sourceTree = SOURCE_ROOT; };
+		F3E25FDA232F9FF800134769 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		F3E25FDC232FA00D00134769 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				589460EC2285449100319032 /* Top */,
-				589460ED228544A100319032 /* Menu */,
+				F3E25FD9232F9FED00134769 /* Menu */,
 				F3E25FCE232F9E3B00134769 /* Play */,
 				589460EF228544D800319032 /* Result */,
 			);
@@ -174,13 +184,6 @@
 				5884700522868D7400649B37 /* SearchGroup */,
 			);
 			path = Top;
-			sourceTree = "<group>";
-		};
-		589460ED228544A100319032 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		589460EF228544D800319032 /* Result */ = {
@@ -223,9 +226,21 @@
 		F3E25FCE232F9E3B00134769 /* Play */ = {
 			isa = PBXGroup;
 			children = (
+				F3E25FD5232F9FD400134769 /* Play.storyboard */,
 				F3E25FCF232F9E5200134769 /* PlayVC.swift */,
+				F3E25FD1232F9F5700134769 /* PlayVC+UICollectionDelegate.swift */,
+				F3E25FD3232F9F6600134769 /* PlayVC+UICollectionDataSource.swift */,
 			);
 			path = Play;
+			sourceTree = "<group>";
+		};
+		F3E25FD9232F9FED00134769 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F3E25FDA232F9FF800134769 /* Menu.storyboard */,
+				F3E25FDC232FA00D00134769 /* MenuVC.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +303,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E25FDB232F9FF800134769 /* Menu.storyboard in Resources */,
+				F3E25FD6232F9FD400134769 /* Play.storyboard in Resources */,
 				589460DC22852E9500319032 /* Assets.xcassets in Resources */,
 				589460EB2285367300319032 /* Top.storyboard in Resources */,
 				F3C21BB4232F6D8D00546D5B /* GoogleService-Info.plist in Resources */,
@@ -343,10 +360,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E25FD2232F9F5700134769 /* PlayVC+UICollectionDelegate.swift in Sources */,
 				589460F522855D9F00319032 /* SearchGroupVC.swift in Sources */,
 				F3C21BC4232F9C4F00546D5B /* Music.swift in Sources */,
 				589460D722852E9500319032 /* TopVC.swift in Sources */,
+				F3E25FDD232FA00D00134769 /* MenuVC.swift in Sources */,
 				F3C21BB7232F703C00546D5B /* String+Ex.swift in Sources */,
+				F3E25FD4232F9F6600134769 /* PlayVC+UICollectionDataSource.swift in Sources */,
 				F3E25FD0232F9E5200134769 /* PlayVC.swift in Sources */,
 				F3C21BBD232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift in Sources */,
 				589460F722867A4800319032 /* FirebaseManager.swift in Sources */,

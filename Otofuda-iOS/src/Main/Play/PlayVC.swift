@@ -5,7 +5,7 @@ protocol PlayProtocol {
     func tapExitBtn(_ sender: Any)
 }
 
-final class TopVC: UIViewController, PlayProtocol {
+final class PlayVC: UIViewController, PlayProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()

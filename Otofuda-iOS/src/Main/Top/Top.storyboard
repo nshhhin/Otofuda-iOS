@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TWC-6W-nji">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="75s-Y0-JzR">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="d1F-KO-7n9">
+            <objects>
+                <navigationController id="75s-Y0-JzR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ASz-xp-q65">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TWC-6W-nji" kind="relationship" relationship="rootViewController" id="RHT-OV-qd0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jzs-7V-FEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-952" y="586"/>
+        </scene>
         <!--TopVC-->
         <scene sceneID="6w6-eu-auS">
             <objects>
@@ -24,8 +43,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="グループ作る"/>
                                 <connections>
-                                    <action selector="tapCreateBtn:" destination="TWC-6W-nji" eventType="touchUpInside" id="33m-xF-Kpz"/>
-                                    <action selector="tapCreateBtn:" destination="BGF-VQ-act" eventType="touchUpInside" id="qHH-fX-3Kw"/>
+                                    <segue destination="C8y-tv-MuB" kind="push" id="ORC-jD-28X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7l-zJ-h28">
@@ -34,7 +52,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="グループ参加"/>
                                 <connections>
-                                    <action selector="tapSearchBtn:" destination="TWC-6W-nji" eventType="touchUpInside" id="M8G-JT-9Fn"/>
+                                    <segue destination="vix-G8-yFh" kind="push" id="vKX-2e-raY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Otofuda🎴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fe-0b-KHV">
@@ -48,13 +66,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0d6-49-v7h"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pf4-T6-xqm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4NL-SW-c24" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="BGF-VQ-act" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-175" y="586"/>
+            <point key="canvasLocation" x="-175.36231884057972" y="585.9375"/>
         </scene>
-        <!--Create GroupVC-->
+        <!--グループを作成-->
         <scene sceneID="goy-Wj-6rK">
             <objects>
                 <viewController storyboardIdentifier="CreateGroupView" id="C8y-tv-MuB" customClass="CreateGroupVC" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,19 +91,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4N-lT-quR">
+                                <rect key="frame" x="116" y="638" width="182" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="グループを作成"/>
+                                <connections>
+                                    <segue destination="0zx-20-CYg" kind="push" id="avX-7c-xfb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dVy-hS-JW8"/>
                     </view>
+                    <navigationItem key="navigationItem" title="グループを作成" id="gCo-gk-Vx2"/>
                     <connections>
                         <outlet property="QRView" destination="lBY-ag-FyV" id="OM1-dt-dRy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fT9-xb-zgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="648" y="263"/>
+            <point key="canvasLocation" x="647.82608695652175" y="255.80357142857142"/>
         </scene>
-        <!--Search GroupVC-->
+        <!--Menu-->
+        <scene sceneID="ecG-72-PLI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" id="0zx-20-CYg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zVe-Q5-r50"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJC-tQ-88e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189" y="246"/>
+        </scene>
+        <!--グループに参加-->
         <scene sceneID="Si9-Su-4yt">
             <objects>
                 <viewController storyboardIdentifier="SearchGroupView" id="vix-G8-yFh" customClass="SearchGroupVC" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +135,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="↓カメラの画面表示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCH-Ow-Ehf">
-                                <rect key="frame" x="100" y="74" width="215" height="29"/>
+                                <rect key="frame" x="100" y="118" width="215" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -111,6 +148,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6H1-SW-fmF"/>
                     </view>
+                    <navigationItem key="navigationItem" title="グループに参加" id="DuC-UP-kGM"/>
                     <connections>
                         <outlet property="cameraView" destination="qNs-xX-Xpd" id="zOw-eF-iWi"/>
                     </connections>

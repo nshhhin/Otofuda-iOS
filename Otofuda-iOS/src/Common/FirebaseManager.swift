@@ -15,7 +15,6 @@ enum RoomURL: String {
     case mode = "/Otofuda/Mode"
 }
 
-
 enum ModeURL: String {
     case intro = "intro"
     case random = "random"
