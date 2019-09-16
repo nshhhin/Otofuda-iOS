@@ -1,7 +1,7 @@
 # Otofuda-iOS
 
 ## Start
-```Terminal
+```terminal
 pod install
 carthage update --platform iOS
 ```
