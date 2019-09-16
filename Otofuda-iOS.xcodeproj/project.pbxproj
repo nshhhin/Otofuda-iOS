@@ -62,29 +62,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5884700322868D0B00649B37 /* top */ = {
-			isa = PBXGroup;
-			children = (
-				589460D622852E9500319032 /* TopVC.swift */,
-			);
-			path = top;
-			sourceTree = "<group>";
-		};
-		5884700422868D6200649B37 /* createGroup */ = {
+		5884700422868D6200649B37 /* CreateGroup */ = {
 			isa = PBXGroup;
 			children = (
 				589460F022855AAE00319032 /* CreateGroupViewController.swift */,
 				588470082286904300649B37 /* CreateGroupVIewPresenter.swift */,
 			);
-			path = createGroup;
+			path = CreateGroup;
 			sourceTree = "<group>";
 		};
-		5884700522868D7400649B37 /* searchGroup */ = {
+		5884700522868D7400649B37 /* SearchGroup */ = {
 			isa = PBXGroup;
 			children = (
 				589460F422855D9F00319032 /* SearchGroupVC.swift */,
 			);
-			path = searchGroup;
+			path = SearchGroup;
 			sourceTree = "<group>";
 		};
 		589460C822852E9500319032 = {
@@ -157,9 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				589460EA2285367300319032 /* Top.storyboard */,
-				5884700322868D0B00649B37 /* top */,
-				5884700422868D6200649B37 /* createGroup */,
-				5884700522868D7400649B37 /* searchGroup */,
+				589460D622852E9500319032 /* TopVC.swift */,
+				5884700422868D6200649B37 /* CreateGroup */,
+				5884700522868D7400649B37 /* SearchGroup */,
 			);
 			path = Top;
 			sourceTree = "<group>";
