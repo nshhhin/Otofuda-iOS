@@ -1,7 +1,6 @@
 
 import Foundation
 
-struct User {
+struct Music {
     var name: String!
-    var musics: [Music]
 }

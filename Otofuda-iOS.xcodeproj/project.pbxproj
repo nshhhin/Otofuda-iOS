@@ -24,6 +24,8 @@
 		F3C21BBD232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BBC232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift */; };
 		F3C21BC0232F809100546D5B /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BBF232F809100546D5B /* Room.swift */; };
 		F3C21BC2232F80EF00546D5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BC1232F80EF00546D5B /* User.swift */; };
+		F3C21BC4232F9C4F00546D5B /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BC3232F9C4F00546D5B /* Music.swift */; };
+		F3E25FD0232F9E5200134769 /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FCF232F9E5200134769 /* PlayVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		F3C21BBC232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchGroupVC+AVCaptureDelegate.swift"; sourceTree = "<group>"; };
 		F3C21BBF232F809100546D5B /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		F3C21BC1232F80EF00546D5B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F3C21BC3232F9C4F00546D5B /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		F3E25FCF232F9E5200134769 /* PlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,10 +146,10 @@
 		589460E82285328300319032 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F3C21BBE232F808300546D5B /* Models */,
-				F3C21BB5232F702800546D5B /* Extensions */,
 				589460D422852E9500319032 /* AppDelegate.swift */,
 				589460F622867A4800319032 /* FirebaseManager.swift */,
+				F3C21BBE232F808300546D5B /* Models */,
+				F3C21BB5232F702800546D5B /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -155,7 +159,7 @@
 			children = (
 				589460EC2285449100319032 /* Top */,
 				589460ED228544A100319032 /* Menu */,
-				589460EE228544C100319032 /* Play */,
+				F3E25FCE232F9E3B00134769 /* Play */,
 				589460EF228544D800319032 /* Result */,
 			);
 			path = Main;
@@ -177,13 +181,6 @@
 			children = (
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		589460EE228544C100319032 /* Play */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Play;
 			sourceTree = "<group>";
 		};
 		589460EF228544D800319032 /* Result */ = {
@@ -218,8 +215,17 @@
 			children = (
 				F3C21BBF232F809100546D5B /* Room.swift */,
 				F3C21BC1232F80EF00546D5B /* User.swift */,
+				F3C21BC3232F9C4F00546D5B /* Music.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F3E25FCE232F9E3B00134769 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				F3E25FCF232F9E5200134769 /* PlayVC.swift */,
+			);
+			path = Play;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,8 +344,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				589460F522855D9F00319032 /* SearchGroupVC.swift in Sources */,
+				F3C21BC4232F9C4F00546D5B /* Music.swift in Sources */,
 				589460D722852E9500319032 /* TopVC.swift in Sources */,
 				F3C21BB7232F703C00546D5B /* String+Ex.swift in Sources */,
+				F3E25FD0232F9E5200134769 /* PlayVC.swift in Sources */,
 				F3C21BBD232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift in Sources */,
 				589460F722867A4800319032 /* FirebaseManager.swift in Sources */,
 				F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */,

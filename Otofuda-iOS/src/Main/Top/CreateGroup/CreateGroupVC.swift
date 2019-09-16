@@ -12,8 +12,6 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
     
     var firebaseManager = FirebaseManager()
     
-    var number: Int = 1
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let roomId = createGroup()
