@@ -21,6 +21,7 @@ class SearchGroupViewController: UIViewController, AVCaptureMetadataOutputObject
     }
     
     func readQRCode(){
+        
         // QRコードをマークするビュー
         qrView = UIView()
         qrView.layer.borderWidth = 4
@@ -56,9 +57,8 @@ class SearchGroupViewController: UIViewController, AVCaptureMetadataOutputObject
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection){
+        
         // 複数のメタデータを検出できる
-        
-        
         for metadata in metadataObjects as! [AVMetadataMachineReadableCodeObject] {
             // QRコードのデータかどうかの確認
             if metadata.type == AVMetadataObject.ObjectType.qr {
