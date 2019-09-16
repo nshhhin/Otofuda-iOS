@@ -1,11 +1,13 @@
 
 import UIKit
 
-protocol topViewController {
+protocol TopProtocol {
     // 関数を列挙する
+    func tapCreateBtn(_ sender: Any)
+    func tapSearchBtn(_ sender: Any)
 }
 
-final class TopVC: UIViewController {
+final class TopVC: UIViewController, TopProtocol {
 
     // グループを作成するボタン
     @IBAction func tapCreateBtn(_ sender: Any) {
@@ -23,10 +25,9 @@ final class TopVC: UIViewController {
         self.present(next,animated: true, completion: nil)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
 }
 

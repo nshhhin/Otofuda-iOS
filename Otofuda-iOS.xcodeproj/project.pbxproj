@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,11 +13,15 @@
 		589460D722852E9500319032 /* TopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460D622852E9500319032 /* TopVC.swift */; };
 		589460DC22852E9500319032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589460DB22852E9500319032 /* Assets.xcassets */; };
 		589460EB2285367300319032 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589460EA2285367300319032 /* Top.storyboard */; };
-		589460F122855AAE00319032 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F022855AAE00319032 /* CreateGroupViewController.swift */; };
+		589460F122855AAE00319032 /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F022855AAE00319032 /* CreateGroupVC.swift */; };
 		589460F522855D9F00319032 /* SearchGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F422855D9F00319032 /* SearchGroupVC.swift */; };
 		589460F722867A4800319032 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F622867A4800319032 /* FirebaseManager.swift */; };
 		ABB34FFD4B8DD80A5EAA9C01 /* Pods_Otofuda_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F973746A2B06067E4EA3ABB /* Pods_Otofuda_iOS.framework */; };
-		F3C21BB2232F635400546D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3C21BB1232F635400546D5B /* GoogleService-Info.plist */; };
+		F3C21BB4232F6D8D00546D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */; };
+		F3C21BB7232F703C00546D5B /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB6232F703C00546D5B /* String+Ex.swift */; };
+		F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB8232F711300546D5B /* UIImage+Ex.swift */; };
+		F3C21BBB232F738F00546D5B /* SearchGropuVC+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BBA232F738F00546D5B /* SearchGropuVC+Ex.swift */; };
+		F3C21BBD232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BBC232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +38,14 @@
 		589460DB22852E9500319032 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		589460E022852E9500319032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		589460EA2285367300319032 /* Top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
-		589460F022855AAE00319032 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		589460F022855AAE00319032 /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
 		589460F422855D9F00319032 /* SearchGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroupVC.swift; sourceTree = "<group>"; };
 		589460F622867A4800319032 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
-		F3C21BB1232F635400546D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F3C21BB6232F703C00546D5B /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
+		F3C21BB8232F711300546D5B /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
+		F3C21BBA232F738F00546D5B /* SearchGropuVC+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchGropuVC+Ex.swift"; sourceTree = "<group>"; };
+		F3C21BBC232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchGroupVC+AVCaptureDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +73,7 @@
 		5884700422868D6200649B37 /* CreateGroup */ = {
 			isa = PBXGroup;
 			children = (
-				589460F022855AAE00319032 /* CreateGroupViewController.swift */,
+				589460F022855AAE00319032 /* CreateGroupVC.swift */,
 				588470082286904300649B37 /* CreateGroupVIewPresenter.swift */,
 			);
 			path = CreateGroup;
@@ -75,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				589460F422855D9F00319032 /* SearchGroupVC.swift */,
+				F3C21BBC232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift */,
+				F3C21BBA232F738F00546D5B /* SearchGropuVC+Ex.swift */,
 			);
 			path = SearchGroup;
 			sourceTree = "<group>";
@@ -110,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				589460DB22852E9500319032 /* Assets.xcassets */,
+				F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */,
 				589460E022852E9500319032 /* Info.plist */,
-				F3C21BB1232F635400546D5B /* GoogleService-Info.plist */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -128,6 +138,7 @@
 		589460E82285328300319032 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F3C21BB5232F702800546D5B /* Extensions */,
 				589460D422852E9500319032 /* AppDelegate.swift */,
 				589460F622867A4800319032 /* FirebaseManager.swift */,
 			);
@@ -186,6 +197,15 @@
 				404A2813DE2749B4D0EED308 /* Pods-Otofuda-iOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3C21BB5232F702800546D5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3C21BB6232F703C00546D5B /* String+Ex.swift */,
+				F3C21BB8232F711300546D5B /* UIImage+Ex.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +270,7 @@
 			files = (
 				589460DC22852E9500319032 /* Assets.xcassets in Resources */,
 				589460EB2285367300319032 /* Top.storyboard in Resources */,
-				F3C21BB2232F635400546D5B /* GoogleService-Info.plist in Resources */,
+				F3C21BB4232F6D8D00546D5B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,10 +325,14 @@
 			files = (
 				589460F522855D9F00319032 /* SearchGroupVC.swift in Sources */,
 				589460D722852E9500319032 /* TopVC.swift in Sources */,
+				F3C21BB7232F703C00546D5B /* String+Ex.swift in Sources */,
+				F3C21BBD232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift in Sources */,
 				589460F722867A4800319032 /* FirebaseManager.swift in Sources */,
+				F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */,
+				F3C21BBB232F738F00546D5B /* SearchGropuVC+Ex.swift in Sources */,
 				588470092286904300649B37 /* CreateGroupVIewPresenter.swift in Sources */,
 				589460D522852E9500319032 /* AppDelegate.swift in Sources */,
-				589460F122855AAE00319032 /* CreateGroupViewController.swift in Sources */,
+				589460F122855AAE00319032 /* CreateGroupVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

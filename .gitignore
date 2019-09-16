@@ -116,4 +116,4 @@ iOSInjectionProject/
 # End of https://www.gitignore.io/api/xcode,swift,carthage,cocoapods
 
 # Firebase API Key
-# GoogleService-Info.plist
+GoogleService-Info.plist
