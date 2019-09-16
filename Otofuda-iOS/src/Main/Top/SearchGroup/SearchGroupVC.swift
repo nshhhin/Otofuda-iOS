@@ -1,10 +1,3 @@
-//
-//  SearchGroupViewController.swift
-//  Otofuda-iOS
-//
-//  Created by nonaka on 2019/05/10.
-//  Copyright © 2019 nkmr-lab. All rights reserved.
-//
 
 import UIKit
 import AVFoundation
@@ -19,7 +12,6 @@ class SearchGroupViewController: UIViewController, AVCaptureMetadataOutputObject
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,8 +19,6 @@ class SearchGroupViewController: UIViewController, AVCaptureMetadataOutputObject
         print("サーチビューが起動されました")
         readQRCode()
     }
-    
-    
     
     func readQRCode(){
         // QRコードをマークするビュー
