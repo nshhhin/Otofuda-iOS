@@ -70,16 +70,17 @@ final class MenuVC: UIViewController, Menurotocol {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "next" {
+            var arrayDict: [Dictionary<String,Any>] = []
+            for music in selectedMusics {
+                arrayDict.append( music.dict() )
+            }
+            firebaseManager.post(path: room.url() , value: ["selected": arrayDict])
         
-        var arrayDict: [Dictionary<String,Any>] = []
-        for music in selectedMusics {
-            arrayDict.append( music.dict() )
+            let nextVC = segue.destination as! PlayVC
+            nextVC.musics = selectedMusics
+            nextVC.room = room
         }
-        firebaseManager.post(path: room.url() , value: ["selected": arrayDict])
-        
-        let nextVC = segue.destination as! PlayVC
-        nextVC.musics = selectedMusics
-        nextVC.room = room
     }
     
 }

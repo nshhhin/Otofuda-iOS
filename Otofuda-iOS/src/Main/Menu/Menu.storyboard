@@ -165,7 +165,7 @@
                                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tappedPickBtn:" destination="IMK-H5-JX7" eventType="touchUpInside" id="01d-Ev-D7d"/>
+                                                    <segue destination="ubX-j2-Zen" kind="push" id="OuE-6x-cEk"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -197,7 +197,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="q7q-zK-dlp" kind="push" id="AVx-0H-cmV"/>
+                                    <segue destination="q7q-zK-dlp" kind="push" identifier="next" id="AVx-0H-cmV"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OiU-Pg-Xlt">
@@ -230,6 +230,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ph2-Fl-hfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-184.05797101449278" y="46.875"/>
+        </scene>
+        <!--iTunesPicker-->
+        <scene sceneID="hEM-E2-2Ee">
+            <objects>
+                <viewControllerPlaceholder storyboardName="iTunesPicker" id="ubX-j2-Zen" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yLh-oa-087"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEa-i5-fmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="-16"/>
         </scene>
         <!--Play-->
         <scene sceneID="3rM-FH-Zaa">

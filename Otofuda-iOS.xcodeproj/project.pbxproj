@@ -30,6 +30,11 @@
 		F3225F092330AFF300D9BD79 /* iTunesPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3225F082330AFF200D9BD79 /* iTunesPicker.storyboard */; };
 		F3225F0C2330B01D00D9BD79 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225F0A2330B01D00D9BD79 /* SearchResultCell.swift */; };
 		F3225F0D2330B01D00D9BD79 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3225F0B2330B01D00D9BD79 /* SearchResultCell.xib */; };
+		F3225F132330B25400D9BD79 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3225F0E2330B25400D9BD79 /* Alamofire.framework */; };
+		F3225F142330B25400D9BD79 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3225F0F2330B25400D9BD79 /* SwiftyJSON.framework */; };
+		F3225F152330B25400D9BD79 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3225F102330B25400D9BD79 /* PromiseKit.framework */; };
+		F3225F162330B25400D9BD79 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3225F112330B25400D9BD79 /* ObjectMapper.framework */; };
+		F3225F172330B25400D9BD79 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3225F122330B25400D9BD79 /* AlamofireImage.framework */; };
 		F3C21BB4232F6D8D00546D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */; };
 		F3C21BB7232F703C00546D5B /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB6232F703C00546D5B /* String+Ex.swift */; };
 		F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB8232F711300546D5B /* UIImage+Ex.swift */; };
@@ -56,6 +61,18 @@
 		F3E25FF22330986000134769 /* MPMediaItem+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FF12330986000134769 /* MPMediaItem+Ex.swift */; };
 		F3E25FF42330997F00134769 /* MPMediaItemCollection+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FF32330997F00134769 /* MPMediaItemCollection+Ex.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F3225F182330B26200D9BD79 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03555C36D7B3F6240EE0182C /* Pods-Otofuda-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOS.release.xcconfig"; path = "Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +104,11 @@
 		F3225F082330AFF200D9BD79 /* iTunesPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iTunesPicker.storyboard; sourceTree = "<group>"; };
 		F3225F0A2330B01D00D9BD79 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		F3225F0B2330B01D00D9BD79 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		F3225F0E2330B25400D9BD79 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		F3225F0F2330B25400D9BD79 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		F3225F102330B25400D9BD79 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F3225F112330B25400D9BD79 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		F3225F122330B25400D9BD79 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F3C21BB6232F703C00546D5B /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
 		F3C21BB8232F711300546D5B /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
@@ -119,6 +141,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3225F132330B25400D9BD79 /* Alamofire.framework in Frameworks */,
+				F3225F142330B25400D9BD79 /* SwiftyJSON.framework in Frameworks */,
+				F3225F152330B25400D9BD79 /* PromiseKit.framework in Frameworks */,
+				F3225F162330B25400D9BD79 /* ObjectMapper.framework in Frameworks */,
+				F3225F172330B25400D9BD79 /* AlamofireImage.framework in Frameworks */,
 				5880D37C22B4928700F40959 /* FirebaseCore.framework in Frameworks */,
 				ABB34FFD4B8DD80A5EAA9C01 /* Pods_Otofuda_iOS.framework in Frameworks */,
 			);
@@ -130,6 +157,11 @@
 		54E6151815F6B8962458DCA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3225F0E2330B25400D9BD79 /* Alamofire.framework */,
+				F3225F122330B25400D9BD79 /* AlamofireImage.framework */,
+				F3225F112330B25400D9BD79 /* ObjectMapper.framework */,
+				F3225F102330B25400D9BD79 /* PromiseKit.framework */,
+				F3225F0F2330B25400D9BD79 /* SwiftyJSON.framework */,
 				5880D37B22B4928700F40959 /* FirebaseCore.framework */,
 				4F973746A2B06067E4EA3ABB /* Pods_Otofuda_iOS.framework */,
 			);
@@ -335,6 +367,8 @@
 				589460CE22852E9500319032 /* Frameworks */,
 				589460CF22852E9500319032 /* Resources */,
 				787488BFDB152AFD921AF178 /* [CP] Embed Pods Frameworks */,
+				F3225F182330B26200D9BD79 /* CopyFiles */,
+				F3225F192330B26400D9BD79 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -436,6 +470,29 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F3225F192330B26400D9BD79 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -623,6 +680,7 @@
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
 					"$(PROJECT_DIR)/Pods",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Otofuda-iOS/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -643,6 +701,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S26A4W8VSZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Otofuda-iOS/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
