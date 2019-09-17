@@ -22,4 +22,8 @@ struct Room {
         dict = [ "name": name, "member": userArray ]
         return dict
     }
+    
+    func url() -> String {
+        return "rooms/" + name + "/"
+    }
 }

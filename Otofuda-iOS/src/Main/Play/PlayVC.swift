@@ -13,11 +13,14 @@ protocol PlayProtocol {
 
 final class PlayVC: UIViewController, PlayProtocol {
     
+    var room: Room!
+    
     var musics: [Music] = []
     var arrangedMusics: [Music] = []
     var currentIndex: Int = 0
     let fudaMaxCount = 16
     var player: MPMusicPlayerController!
+    var firebaseManager = FirebaseManager()
     
     @IBOutlet weak var fudaCollectionV: UICollectionView! {
         didSet {
@@ -31,7 +34,7 @@ final class PlayVC: UIViewController, PlayProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializePlayer()
-//        loadMusic() // TODO: ✨毎回読み込むのはうざいので, Uniottoのロードアルゴリズムを仕様
+        loadMusic() // TODO: ✨毎回読み込むのはうざいので, Uniottoのロードアルゴリズムを仕様
         selectRandomMusics()
         arrangeMusics()
         playMusic()

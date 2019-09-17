@@ -17,6 +17,11 @@ enum RulePlaying {
 }
 
 final class MenuVC: UIViewController, Menurotocol {
+    
+    var firebaseManager = FirebaseManager()
+    
+    var room: Room!
+    
     // ルール
     var rulePoint: RulePoint = .normal
     var rulePlaying: RulePlaying = .intro
@@ -56,11 +61,14 @@ final class MenuVC: UIViewController, Menurotocol {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
+        
+        for music in selectedMusics {
+            firebaseManager.post(path: room.url() , value: "あああ")
+        }
+        
         let nextVC = segue.destination as! PlayVC
         nextVC.musics = selectedMusics
-        
-        
+        nextVC.room = room
     }
     
 }
