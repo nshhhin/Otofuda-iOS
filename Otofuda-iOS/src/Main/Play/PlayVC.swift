@@ -4,6 +4,7 @@ import MediaPlayer
 
 protocol PlayProtocol {
     func tapExitBtn(_ sender: Any)
+    func initializePlayer()
     func loadMusic()
     func selectRandomMusics()
     func arrangeMusics()
@@ -14,15 +15,9 @@ final class PlayVC: UIViewController, PlayProtocol {
     
     var musics: [Music] = []
     var arrangedMusics: [Music] = []
+    var currentIndex: Int = 0
     let fudaMaxCount = 16
-    
-    
-    var player: MPMusicPlayerController! {
-        didSet {
-            player = MPMusicPlayerController.systemMusicPlayer
-            player.repeatMode = .none
-        }
-    }
+    var player: MPMusicPlayerController!
     
     @IBOutlet weak var fudaCollectionV: UICollectionView! {
         didSet {
@@ -35,9 +30,11 @@ final class PlayVC: UIViewController, PlayProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializePlayer()
         loadMusic()
         selectRandomMusics()
         arrangeMusics()
+        playMusic()
     }
     
     // グループを作成するボタン

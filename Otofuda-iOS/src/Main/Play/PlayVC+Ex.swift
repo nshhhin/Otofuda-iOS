@@ -3,6 +3,12 @@ import UIKit
 import MediaPlayer
 
 extension PlayVC {
+    
+    func initializePlayer() {
+        self.player = .applicationMusicPlayer
+        self.player.repeatMode = .none
+    }
+    
     func loadMusic() {
         
         let albumsQuery = MPMediaQuery.albums()
@@ -44,5 +50,8 @@ extension PlayVC {
     }
     
     func playMusic() {
+        player.setMusic(item: arrangedMusics[currentIndex].item)
+        player.play()
+        currentIndex += 1
     }
 }

@@ -38,6 +38,7 @@
 		F3E25FE8233085DF00134769 /* FudaCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FE7233085DF00134769 /* FudaCollectionCell.swift */; };
 		F3E25FEA2330874300134769 /* PlayVC+UICollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FE92330874300134769 /* PlayVC+UICollectionLayout.swift */; };
 		F3E25FEC2330891600134769 /* PlayVC+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FEB2330891600134769 /* PlayVC+Ex.swift */; };
+		F3E25FEE233090EC00134769 /* MPMediaPlayer+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FED233090EC00134769 /* MPMediaPlayer+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		F3E25FE7233085DF00134769 /* FudaCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FudaCollectionCell.swift; sourceTree = "<group>"; };
 		F3E25FE92330874300134769 /* PlayVC+UICollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayVC+UICollectionLayout.swift"; sourceTree = "<group>"; };
 		F3E25FEB2330891600134769 /* PlayVC+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayVC+Ex.swift"; sourceTree = "<group>"; };
+		F3E25FED233090EC00134769 /* MPMediaPlayer+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MPMediaPlayer+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				F3E25FDF2330853900134769 /* UICollection+Ex.swift */,
 				F3E25FE12330854D00134769 /* NSObject+Ex.swift */,
 				F3E25FE32330856300134769 /* UITable+Ex.swift */,
+				F3E25FED233090EC00134769 /* MPMediaPlayer+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				F3E25FD2232F9F5700134769 /* PlayVC+UICollectionDelegate.swift in Sources */,
 				589460F522855D9F00319032 /* SearchGroupVC.swift in Sources */,
 				F3C21BC4232F9C4F00546D5B /* Music.swift in Sources */,
+				F3E25FEE233090EC00134769 /* MPMediaPlayer+Ex.swift in Sources */,
 				589460D722852E9500319032 /* TopVC.swift in Sources */,
 				F3E25FE02330853900134769 /* UICollection+Ex.swift in Sources */,
 				F3E25FDD232FA00D00134769 /* MenuVC.swift in Sources */,
