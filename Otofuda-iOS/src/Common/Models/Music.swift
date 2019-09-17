@@ -13,6 +13,7 @@ struct Music {
     
     func dict() -> Dictionary<String, Any> {
         var dict = Dictionary<String, Any>()
+        dict = ["name": name, "artist": item.artist!, "genere": item.genre]
         return dict
     }
 }

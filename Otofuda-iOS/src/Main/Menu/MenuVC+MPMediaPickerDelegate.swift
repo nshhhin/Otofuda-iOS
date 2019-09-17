@@ -14,10 +14,10 @@ extension MenuVC: MPMediaPickerControllerDelegate {
     func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection)  {
         
         selectedMusics = mediaItemCollection.musics()
+        selectMusicTableV.reloadData()
         
         dismiss(animated: true, completion: nil)
     }
-    
     
     func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
         dismiss(animated: true, completion: nil)

@@ -32,6 +32,15 @@ final class MenuVC: UIViewController, Menurotocol {
     
     var selectedMusics: [Music] = []
     
+    @IBOutlet weak var selectMusicTableV: UITableView! {
+        didSet {
+            selectMusicTableV.delegate = self
+            selectMusicTableV.dataSource = self
+            selectMusicTableV.register(cellType: SelectMusicTableCell.self)
+            selectMusicTableV.backgroundColor = .lightGray
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -62,9 +71,11 @@ final class MenuVC: UIViewController, Menurotocol {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        var arrayDict: [Dictionary<String,Any>] = []
         for music in selectedMusics {
-            firebaseManager.post(path: room.url() , value: "あああ")
+            arrayDict.append( music.dict() )
         }
+        firebaseManager.post(path: room.url() , value: ["selected": arrayDict])
         
         let nextVC = segue.destination as! PlayVC
         nextVC.musics = selectedMusics
