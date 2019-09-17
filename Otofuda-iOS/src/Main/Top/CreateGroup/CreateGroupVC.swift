@@ -18,7 +18,7 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
         generateQRCode(name: roomId)
     }
     
-    func createGroup() -> String{
+    func createGroup() -> String {
         let roomID = String.getRandomStringWithLength(length: 6)
         let room = Room(name: roomID)
         firebaseManager.post(path: RoomURL.base.rawValue, value: room.dict() )

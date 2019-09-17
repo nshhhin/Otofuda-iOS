@@ -4,6 +4,17 @@ import UIKit
 protocol Menurotocol {
 }
 
+enum RulePoint {
+    case normal
+    case othello
+}
+
+enum RulePlaying {
+    case intro
+    case sabi
+    case random
+}
+
 final class MenuVC: UIViewController, Menurotocol {
     
     // ルール
@@ -42,15 +53,4 @@ final class MenuVC: UIViewController, Menurotocol {
         }
     }
     
-}
-
-enum RulePoint {
-    case normal
-    case othello
-}
-
-enum RulePlaying {
-    case intro
-    case sabi
-    case random
 }

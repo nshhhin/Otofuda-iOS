@@ -18,45 +18,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-fR-CHt">
-                                <rect key="frame" x="37" y="709" width="341" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="イントロ"/>
-                                    <segment title="サビ"/>
-                                    <segment title="ランダム"/>
-                                </segments>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jPr-fu-pbw">
+                                <rect key="frame" x="10" y="64" width="394" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihr-ZL-7ud">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="採点ルール" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1D-CY-e8r">
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRh-rK-a4s">
+                                                <rect key="frame" x="92" y="0.0" width="20" height="80"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="mry-O2-PAU"/>
+                                                </constraints>
+                                            </view>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-cK-uWk">
+                                                <rect key="frame" x="112" y="0.0" width="282" height="81"/>
+                                                <segments>
+                                                    <segment title="ノーマル"/>
+                                                    <segment title="オセロ"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="changedPointSeg:" destination="IMK-H5-JX7" eventType="valueChanged" id="DVQ-Ej-scH"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="okm-Uo-vte"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSV-OK-mIL">
+                                        <rect key="frame" x="0.0" y="80" width="394" height="20"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qeg-AE-CfF">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="20"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="X9M-k5-c0S"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1l-bl-RLP">
+                                        <rect key="frame" x="0.0" y="100" width="394" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="再生する区間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Z1-o3S">
+                                                <rect key="frame" x="0.0" y="0.0" width="104" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-1J-ude">
+                                                <rect key="frame" x="104" y="0.0" width="20" height="80"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="wRS-2D-fIS"/>
+                                                </constraints>
+                                            </view>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-fR-CHt">
+                                                <rect key="frame" x="124" y="0.0" width="270" height="81"/>
+                                                <segments>
+                                                    <segment title="イントロ"/>
+                                                    <segment title="サビ"/>
+                                                    <segment title="ランダム"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="changePlayingSeg:" destination="IMK-H5-JX7" eventType="valueChanged" id="xly-5e-Lul"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="fMf-wu-trJ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kct-YX-hcw">
+                                <rect key="frame" x="20" y="732" width="374" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="vk2-r7-rFT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="スタート">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="changePlayingSeg:" destination="IMK-H5-JX7" eventType="valueChanged" id="xly-5e-Lul"/>
+                                    <segue destination="q7q-zK-dlp" kind="push" id="AVx-0H-cmV"/>
                                 </connections>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-cK-uWk">
-                                <rect key="frame" x="37" y="554" width="341" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="ノーマル"/>
-                                    <segment title="オセロ"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changedPointSeg:" destination="IMK-H5-JX7" eventType="valueChanged" id="DVQ-Ej-scH"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="再生する区間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Z1-o3S">
-                                <rect key="frame" x="155" y="649" width="104" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="採点ルール" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1D-CY-e8r">
-                                <rect key="frame" x="164" y="495" width="87" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bt2-Jv-dNj" firstAttribute="trailing" secondItem="kct-YX-hcw" secondAttribute="trailing" constant="20" id="0MP-id-W51"/>
+                            <constraint firstItem="bt2-Jv-dNj" firstAttribute="bottom" secondItem="kct-YX-hcw" secondAttribute="bottom" constant="30" id="0Zq-jJ-Ev8"/>
+                            <constraint firstItem="kct-YX-hcw" firstAttribute="leading" secondItem="bt2-Jv-dNj" secondAttribute="leading" constant="20" id="5tb-8g-g4Y"/>
+                            <constraint firstAttribute="trailing" secondItem="jPr-fu-pbw" secondAttribute="trailing" constant="10" id="7Ri-Yt-hbH"/>
+                            <constraint firstItem="jPr-fu-pbw" firstAttribute="leading" secondItem="bt2-Jv-dNj" secondAttribute="leading" constant="10" id="BWW-hT-Ufx"/>
+                            <constraint firstItem="jPr-fu-pbw" firstAttribute="top" secondItem="bt2-Jv-dNj" secondAttribute="top" constant="20" id="OWR-cN-qka"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bt2-Jv-dNj"/>
                     </view>
                     <navigationItem key="navigationItem" title="ルールを選択" id="rRc-sJ-tvv"/>
@@ -68,6 +134,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ph2-Fl-hfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-184.05797101449278" y="46.875"/>
+        </scene>
+        <!--Play-->
+        <scene sceneID="3rM-FH-Zaa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Play" id="q7q-zK-dlp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6aw-KP-3qL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w28-Ef-bok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="47"/>
         </scene>
     </scenes>
 </document>
