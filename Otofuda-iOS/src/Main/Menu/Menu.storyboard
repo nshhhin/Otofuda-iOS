@@ -24,8 +24,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihr-ZL-7ud">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="80"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojc-hV-MxW">
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="80"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="10" id="UZW-4e-Oah"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="採点ルール" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1D-CY-e8r">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
+                                                <rect key="frame" x="10" y="0.0" width="120" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="vWh-5O-Hx1"/>
                                                 </constraints>
@@ -34,22 +41,34 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRh-rK-a4s">
-                                                <rect key="frame" x="120" y="0.0" width="20" height="80"/>
+                                                <rect key="frame" x="130" y="0.0" width="20" height="80"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="mry-O2-PAU"/>
                                                 </constraints>
                                             </view>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-cK-uWk">
-                                                <rect key="frame" x="140" y="0.0" width="254" height="81"/>
-                                                <segments>
-                                                    <segment title="ノーマル"/>
-                                                    <segment title="オセロ"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="changedPointSeg:" destination="IMK-H5-JX7" eventType="valueChanged" id="DVQ-Ej-scH"/>
-                                                </connections>
-                                            </segmentedControl>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bj-S9-tzg">
+                                                <rect key="frame" x="150" y="0.0" width="244" height="80"/>
+                                                <subviews>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-cK-uWk">
+                                                        <rect key="frame" x="5" y="5" width="234" height="71"/>
+                                                        <segments>
+                                                            <segment title="ノーマル"/>
+                                                            <segment title="オセロ"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="changedPointSeg:" destination="IMK-H5-JX7" eventType="valueChanged" id="DVQ-Ej-scH"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="bd2-cK-uWk" secondAttribute="trailing" constant="5" id="TFt-Tf-rZo"/>
+                                                    <constraint firstItem="bd2-cK-uWk" firstAttribute="top" secondItem="0bj-S9-tzg" secondAttribute="top" constant="5" id="nqn-Er-inw"/>
+                                                    <constraint firstItem="bd2-cK-uWk" firstAttribute="leading" secondItem="0bj-S9-tzg" secondAttribute="leading" constant="5" id="yLu-ih-YLD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="bd2-cK-uWk" secondAttribute="bottom" constant="5" id="z1g-cf-qew"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="okm-Uo-vte"/>
@@ -70,8 +89,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1l-bl-RLP">
                                         <rect key="frame" x="0.0" y="100" width="394" height="80"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWP-6o-FJm">
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="80"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="10" id="73a-L0-xy5"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="再生する区間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Z1-o3S">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
+                                                <rect key="frame" x="10" y="0.0" width="120" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="frB-ob-1bM"/>
                                                 </constraints>
@@ -80,23 +106,35 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-1J-ude">
-                                                <rect key="frame" x="120" y="0.0" width="20" height="80"/>
+                                                <rect key="frame" x="130" y="0.0" width="20" height="80"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="wRS-2D-fIS"/>
                                                 </constraints>
                                             </view>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-fR-CHt">
-                                                <rect key="frame" x="140" y="0.0" width="254" height="81"/>
-                                                <segments>
-                                                    <segment title="イントロ"/>
-                                                    <segment title="サビ"/>
-                                                    <segment title="ランダム"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="changePlayingSeg:" destination="IMK-H5-JX7" eventType="valueChanged" id="xly-5e-Lul"/>
-                                                </connections>
-                                            </segmentedControl>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVH-qt-T0a">
+                                                <rect key="frame" x="150" y="0.0" width="244" height="80"/>
+                                                <subviews>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-fR-CHt">
+                                                        <rect key="frame" x="5" y="5" width="234" height="71"/>
+                                                        <segments>
+                                                            <segment title="イントロ"/>
+                                                            <segment title="サビ"/>
+                                                            <segment title="ランダム"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="changePlayingSeg:" destination="IMK-H5-JX7" eventType="valueChanged" id="xly-5e-Lul"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="jCn-fR-CHt" firstAttribute="top" secondItem="lVH-qt-T0a" secondAttribute="top" constant="5" id="Heg-DZ-7pX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jCn-fR-CHt" secondAttribute="trailing" constant="5" id="avM-yX-VS7"/>
+                                                    <constraint firstItem="jCn-fR-CHt" firstAttribute="leading" secondItem="lVH-qt-T0a" secondAttribute="leading" constant="5" id="e4F-fZ-wkn"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jCn-fR-CHt" secondAttribute="bottom" constant="5" id="nOq-hM-VUh"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="fMf-wu-trJ"/>
@@ -112,8 +150,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcE-Yf-qBr">
                                         <rect key="frame" x="0.0" y="200" width="394" height="50"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEx-2x-X2s">
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="10" id="8dm-Hb-W44"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="縛り" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaS-II-Ewv">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                                <rect key="frame" x="10" y="0.0" width="150" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="aQi-82-zKL"/>
                                                 </constraints>
@@ -122,7 +167,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7I-ea-4vj">
-                                                <rect key="frame" x="150" y="0.0" width="244" height="50"/>
+                                                <rect key="frame" x="160" y="0.0" width="234" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="HFr-Jz-Wvn"/>
@@ -146,8 +191,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpL-Qf-UnM">
                                         <rect key="frame" x="0.0" y="260" width="394" height="50"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoT-Gf-YYr">
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="10" id="fGt-P8-DgV"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WC-VI-azf">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                                <rect key="frame" x="10" y="0.0" width="150" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="YOO-8e-zaB"/>
                                                 </constraints>
@@ -156,7 +208,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXe-Qm-kT0">
-                                                <rect key="frame" x="150" y="0.0" width="244" height="50"/>
+                                                <rect key="frame" x="160" y="0.0" width="234" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Wwh-Xk-1cp"/>
@@ -239,7 +291,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEa-i5-fmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="-16"/>
+            <point key="canvasLocation" x="420" y="-24"/>
         </scene>
         <!--Play-->
         <scene sceneID="3rM-FH-Zaa">
@@ -249,7 +301,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w28-Ef-bok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="396" y="47"/>
+            <point key="canvasLocation" x="435" y="60"/>
         </scene>
     </scenes>
 </document>

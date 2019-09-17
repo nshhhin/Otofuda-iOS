@@ -326,9 +326,9 @@
 				F3E25FEB2330891600134769 /* PlayVC+Ex.swift */,
 				F3E25FD1232F9F5700134769 /* PlayVC+UICollectionDelegate.swift */,
 				F3E25FD3232F9F6600134769 /* PlayVC+UICollectionDataSource.swift */,
+				F3E25FE92330874300134769 /* PlayVC+UICollectionLayout.swift */,
 				F3E25FE5233085B600134769 /* FudaCollectionCell.xib */,
 				F3E25FE7233085DF00134769 /* FudaCollectionCell.swift */,
-				F3E25FE92330874300134769 /* PlayVC+UICollectionLayout.swift */,
 			);
 			path = Play;
 			sourceTree = "<group>";

@@ -8,4 +8,8 @@ final class FudaCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    func animate(){
+        
+    }
 }
