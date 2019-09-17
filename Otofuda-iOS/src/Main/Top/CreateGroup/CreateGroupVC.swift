@@ -21,8 +21,12 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
     }
     
     func createGroup() -> String {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let me = User(name: appDelegate.uuid, musics: [])
+        
         let roomID = String.getRandomStringWithLength(length: 6)
         room = Room(name: roomID)
+        room.addMember(user: me)
         firebaseManager.post(path: room.url(), value: room.dict() )
         return roomID
     }

@@ -11,6 +11,10 @@ struct Room {
         self.member = []
     }
     
+    mutating func addMember(user: User){
+        self.member.append(user)
+    }
+    
     func dict() -> Dictionary<String, Any>{
         var dict = Dictionary<String, Any>()
         var userArray: [String] = []
