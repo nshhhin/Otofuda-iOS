@@ -39,6 +39,9 @@
 		F3E25FEA2330874300134769 /* PlayVC+UICollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FE92330874300134769 /* PlayVC+UICollectionLayout.swift */; };
 		F3E25FEC2330891600134769 /* PlayVC+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FEB2330891600134769 /* PlayVC+Ex.swift */; };
 		F3E25FEE233090EC00134769 /* MPMediaPlayer+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FED233090EC00134769 /* MPMediaPlayer+Ex.swift */; };
+		F3E25FF0233096C500134769 /* MenuVC+MPMediaPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FEF233096C500134769 /* MenuVC+MPMediaPickerDelegate.swift */; };
+		F3E25FF22330986000134769 /* MPMediaItem+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FF12330986000134769 /* MPMediaItem+Ex.swift */; };
+		F3E25FF42330997F00134769 /* MPMediaItemCollection+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FF32330997F00134769 /* MPMediaItemCollection+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,9 @@
 		F3E25FE92330874300134769 /* PlayVC+UICollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayVC+UICollectionLayout.swift"; sourceTree = "<group>"; };
 		F3E25FEB2330891600134769 /* PlayVC+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayVC+Ex.swift"; sourceTree = "<group>"; };
 		F3E25FED233090EC00134769 /* MPMediaPlayer+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MPMediaPlayer+Ex.swift"; sourceTree = "<group>"; };
+		F3E25FEF233096C500134769 /* MenuVC+MPMediaPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+MPMediaPickerDelegate.swift"; sourceTree = "<group>"; };
+		F3E25FF12330986000134769 /* MPMediaItem+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MPMediaItem+Ex.swift"; sourceTree = "<group>"; };
+		F3E25FF32330997F00134769 /* MPMediaItemCollection+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MPMediaItemCollection+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +228,8 @@
 				F3E25FE12330854D00134769 /* NSObject+Ex.swift */,
 				F3E25FE32330856300134769 /* UITable+Ex.swift */,
 				F3E25FED233090EC00134769 /* MPMediaPlayer+Ex.swift */,
+				F3E25FF12330986000134769 /* MPMediaItem+Ex.swift */,
+				F3E25FF32330997F00134769 /* MPMediaItemCollection+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 			children = (
 				F3E25FDA232F9FF800134769 /* Menu.storyboard */,
 				F3E25FDC232FA00D00134769 /* MenuVC.swift */,
+				F3E25FEF233096C500134769 /* MenuVC+MPMediaPickerDelegate.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -385,10 +394,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E25FF42330997F00134769 /* MPMediaItemCollection+Ex.swift in Sources */,
 				F3E25FD2232F9F5700134769 /* PlayVC+UICollectionDelegate.swift in Sources */,
 				589460F522855D9F00319032 /* SearchGroupVC.swift in Sources */,
 				F3C21BC4232F9C4F00546D5B /* Music.swift in Sources */,
 				F3E25FEE233090EC00134769 /* MPMediaPlayer+Ex.swift in Sources */,
+				F3E25FF22330986000134769 /* MPMediaItem+Ex.swift in Sources */,
 				589460D722852E9500319032 /* TopVC.swift in Sources */,
 				F3E25FE02330853900134769 /* UICollection+Ex.swift in Sources */,
 				F3E25FDD232FA00D00134769 /* MenuVC.swift in Sources */,
@@ -405,6 +416,7 @@
 				589460D522852E9500319032 /* AppDelegate.swift in Sources */,
 				F3E25FEA2330874300134769 /* PlayVC+UICollectionLayout.swift in Sources */,
 				589460F122855AAE00319032 /* CreateGroupVC.swift in Sources */,
+				F3E25FF0233096C500134769 /* MenuVC+MPMediaPickerDelegate.swift in Sources */,
 				F3E25FE8233085DF00134769 /* FudaCollectionCell.swift in Sources */,
 				F3E25FE42330856300134769 /* UITable+Ex.swift in Sources */,
 				F3C21BC0232F809100546D5B /* Room.swift in Sources */,

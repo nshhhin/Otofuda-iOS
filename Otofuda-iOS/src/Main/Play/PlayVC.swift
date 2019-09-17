@@ -31,7 +31,7 @@ final class PlayVC: UIViewController, PlayProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializePlayer()
-        loadMusic()
+//        loadMusic() // TODO: ✨毎回読み込むのはうざいので, Uniottoのロードアルゴリズムを仕様
         selectRandomMusics()
         arrangeMusics()
         playMusic()

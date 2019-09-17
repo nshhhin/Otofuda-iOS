@@ -2,6 +2,7 @@
 import UIKit
 
 protocol Menurotocol {
+    func tappedPickBtn(_ sender: Any)
 }
 
 enum RulePoint {
@@ -16,7 +17,6 @@ enum RulePlaying {
 }
 
 final class MenuVC: UIViewController, Menurotocol {
-    
     // ルール
     var rulePoint: RulePoint = .normal
     var rulePlaying: RulePlaying = .intro
@@ -24,6 +24,8 @@ final class MenuVC: UIViewController, Menurotocol {
     // Segument
     @IBOutlet weak var pointSegument: UISegmentedControl!
     @IBOutlet weak var playingSegument: UISegmentedControl!
+    
+    var selectedMusics: [Music] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +53,14 @@ final class MenuVC: UIViewController, Menurotocol {
         default:
             break
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      
+        let nextVC = segue.destination as! PlayVC
+        nextVC.musics = selectedMusics
+        
+        
     }
     
 }
