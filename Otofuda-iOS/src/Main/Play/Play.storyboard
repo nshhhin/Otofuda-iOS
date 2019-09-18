@@ -69,6 +69,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="fudaCollectionV" destination="jnl-b9-xB2" id="qjU-Up-aX7"/>
+                        <outlet property="startBtn" destination="CLv-Zx-blv" id="C2B-3J-6SI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCF-X2-AyL" userLabel="First Responder" sceneMemberID="firstResponder"/>

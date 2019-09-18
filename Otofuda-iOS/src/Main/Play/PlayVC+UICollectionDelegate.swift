@@ -8,12 +8,25 @@ extension PlayVC: UICollectionViewDelegate {
         let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
                                                       for: indexPath)
 
-        selectedMusics[indexPath.row].isAnimating = true
-        selectedMusics[indexPath.row].isTapped = true
+        let tappedMusic = arrangedMusics[indexPath.row]
+        let playingMusic = selectedMusics[currentIndex]
+       
+        // 正解
+        if tappedMusic == playingMusic {
+            tappedMusic.isAnimating = true
+            tappedMusic.isTapped = true
+            
+            let music = selectedMusics[indexPath.row]
+            firebaseManager.post(path: room.url(), value: ["tapped": music.dict()])
+            currentIndex += 1
+        }
+        // 不正解
+        else {
+            speech.speak(utterance)
+            currentIndex += 1
+        }
         
-        let music = selectedMusics[indexPath.row]
-        firebaseManager.post(path: room.url(), value: ["tapped": music.dict()])
-        currentIndex += 1
+        startBtn.isEnabled = true
         
         collectionView.reloadItems(at: [indexPath])
         

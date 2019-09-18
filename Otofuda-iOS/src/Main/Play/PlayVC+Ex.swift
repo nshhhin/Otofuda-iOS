@@ -4,6 +4,12 @@ import MediaPlayer
 
 extension PlayVC {
     
+    func initializeVoice(){
+        self.utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
+        self.utterance.volume = 1.0
+        self.utterance.rate = 0.55
+    }
+    
     func initializePlayer() {
         self.player = .applicationMusicPlayer
         self.player.repeatMode = .none
@@ -23,6 +29,7 @@ extension PlayVC {
     }
     
     func arrangeMusics() {
+        self.arrangedMusics = selectedMusics.shuffled()
         self.fudaCollectionV.reloadData()
     }
     
@@ -32,6 +39,5 @@ extension PlayVC {
         }
         player.setMusic(item: selectedMusics[currentIndex].item)
         player.play()
-        currentIndex += 1
     }
 }
