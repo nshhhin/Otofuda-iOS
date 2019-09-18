@@ -7,8 +7,7 @@ extension PlayVC: UICollectionViewDelegate {
         
         let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
                                                       for: indexPath)
-        cell.animate()
-        
+
         selectedMusics[indexPath.row].isAnimating = true
         selectedMusics[indexPath.row].isTapped = true
         

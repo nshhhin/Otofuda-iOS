@@ -14,18 +14,20 @@ final class FudaCollectionCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    
-    func soundTap(){
-     
         do {
-            tapSoundPlayer = try AVAudioPlayer(contentsOf: Bundle.main.url(forResource: "otofuda_get", withExtension: "wav")!)
-            tapSoundPlayer!.volume = 1.0
-            tapSoundPlayer!.prepareToPlay()
-            tapSoundPlayer!.play()
+            tapSoundPlayer = try AVAudioPlayer(
+                contentsOf: Bundle.main.url(forResource: "otofuda_get",
+                                            withExtension: "wav")!)
         } catch {
             print(error)
         }
+    }
+    
+    func soundTap(){
+        tapSoundPlayer!.volume = 1.0
+        tapSoundPlayer!.prepareToPlay()
+        tapSoundPlayer!.play()
+        
     }
     
     func animate(){
