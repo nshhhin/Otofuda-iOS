@@ -20,11 +20,9 @@ final class TopVC: UIViewController, TopProtocol {
     func requestAuth() {
         MPMediaLibrary.requestAuthorization { (status) in
             if status == .authorized {
-//                self.loadMusics()
-                self.saveMusicsUserDefaults()
+                self.loadMusics()
             } else {
-//                self.loadMusics()
-                self.saveMusicsUserDefaults()
+                self.loadMusics()
             }
         }
     }
@@ -37,14 +35,16 @@ final class TopVC: UIViewController, TopProtocol {
                 return
             }
             if songs.count == songCount {
-                haveMusics = userDefaults.array(forKey: "musics") as! [Music]
+                let musicData = userDefaults.object(forKey: "musics") as? Data
+                guard let data = musicData else { return }
+                let unArchiveData = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
+                haveMusics = unArchiveData as? [Music] ?? [Music]()
             } else {
                 saveMusicsUserDefaults()
             }
         } else {
             saveMusicsUserDefaults()
         }
-       
     }
     
     func saveMusicsUserDefaults() {
