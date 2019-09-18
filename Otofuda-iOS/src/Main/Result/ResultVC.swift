@@ -34,5 +34,8 @@ final class ResultVC: UIViewController, ResultProtocol {
         initializePlayer()
     }
     
+    @IBAction func tapRestartBtn(_ sender: Any) {
+        self.navigationController?.popToViewController(navigationController!.viewControllers[2], animated: true)
+    }
 }
 
