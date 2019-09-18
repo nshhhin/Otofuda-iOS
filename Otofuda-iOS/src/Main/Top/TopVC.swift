@@ -5,6 +5,7 @@ import MediaPlayer
 protocol TopProtocol {
     func requestAuth()
     func loadMusics()
+    func saveMusicsUserDefaults()
 }
 
 final class TopVC: UIViewController, TopProtocol {
@@ -19,9 +20,11 @@ final class TopVC: UIViewController, TopProtocol {
     func requestAuth() {
         MPMediaLibrary.requestAuthorization { (status) in
             if status == .authorized {
-                self.loadMusics()
+//                self.loadMusics()
+                self.saveMusicsUserDefaults()
             } else {
-                self.loadMusics()
+//                self.loadMusics()
+                self.saveMusicsUserDefaults()
             }
         }
     }
@@ -62,14 +65,14 @@ final class TopVC: UIViewController, TopProtocol {
         if let albums = albumsQuery.collections {
             for album in albums {
                 for song in album.items {
-                    let music = Music(name: title as! String, item: song)
+                    let music = Music(name: song.title ?? "不明なタイトル", item: song)
                     haveMusics.append(music)
                 }
             }
         }
         
-        let saveData1 = NSKeyedArchiver.archivedData(withRootObject: haveMusics)
-        userDefaults.set(saveData1, forKey: "musics")
+        let saveData = try? NSKeyedArchiver.archivedData(withRootObject: haveMusics, requiringSecureCoding: false)
+        userDefaults.set(saveData, forKey: "musics")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
