@@ -8,5 +8,6 @@ target 'Otofuda-iOS' do
   # Pods for Otofuda-iOS
   pod 'Firebase'
   pod 'Firebase/Database'
+  pod 'Mute'
   
 end
