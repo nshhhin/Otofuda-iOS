@@ -23,6 +23,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="KmE-7U-u9P"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.15686270590000001" green="0.15686273570000001" blue="0.15686270590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="T9P-MR-2J7"/>
@@ -30,7 +31,7 @@
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eBI-Rf-YBK">
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.15686270590000001" green="0.15686273570000001" blue="0.15686270590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="azv-aB-HWn">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -51,19 +52,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZE8-oD-Rcl">
                                 <rect key="frame" x="0.0" y="76" width="375" height="40"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EUq-FU-kcB">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EUq-FU-kcB" customClass="IBDesignableSegmentControl" customModule="Otofuda_iOS" customModuleProvider="target">
                                         <rect key="frame" x="50" y="6" width="275" height="29"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <segments>
                                             <segment title="アーティスト名"/>
                                             <segment title="曲名"/>
                                         </segments>
+                                        <color key="tintColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="37o-lq-8Hy"/>
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
-                                <color key="backgroundColor" red="0.78841382265090942" green="0.78796237707138062" blue="0.80784589052200317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.15686270590000001" green="0.15686273570000001" blue="0.15686270590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="EUq-FU-kcB" firstAttribute="centerY" secondItem="ZE8-oD-Rcl" secondAttribute="centerY" id="F7G-PD-BpC"/>
                                     <constraint firstAttribute="height" constant="40" id="NvC-zW-SdP"/>
@@ -73,7 +80,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.15686270590000001" green="0.15686273570000001" blue="0.15686270590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="qYg-7c-mvg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CuU-ud-Q6J"/>
                             <constraint firstItem="eBI-Rf-YBK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K8N-Ca-9Wg"/>

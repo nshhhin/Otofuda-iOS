@@ -25,7 +25,7 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     func createGroup() -> String {
