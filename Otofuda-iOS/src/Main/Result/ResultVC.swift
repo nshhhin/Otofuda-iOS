@@ -22,7 +22,7 @@ final class ResultVC: UIViewController, ResultProtocol {
         didSet {
             playedMusicTableV.delegate = self
             playedMusicTableV.dataSource = self
-            playedMusicTableV.register(cellType: SelectMusicTableCell.self)
+            playedMusicTableV.register(cellType: ResultTableCell.self)
             playedMusicTableV.backgroundColor = .lightGray
         }
     }
