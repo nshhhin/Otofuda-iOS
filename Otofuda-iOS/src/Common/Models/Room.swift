@@ -11,6 +11,10 @@ struct Room {
         self.member = []
     }
     
+    mutating func addMember(user: User){
+        self.member.append(user)
+    }
+    
     func dict() -> Dictionary<String, Any>{
         var dict = Dictionary<String, Any>()
         var userArray: [String] = []
@@ -21,5 +25,9 @@ struct Room {
         
         dict = [ "name": name, "member": userArray ]
         return dict
+    }
+    
+    func url() -> String {
+        return "rooms/" + name + "/"
     }
 }
