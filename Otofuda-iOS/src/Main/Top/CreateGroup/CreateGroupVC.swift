@@ -8,27 +8,41 @@ protocol CreateGropuProtocol {
 
 class CreateGroupVC: UIViewController, CreateGropuProtocol {
     
-    @IBOutlet weak var QRView: UIImageView!
+    
+    @IBOutlet weak var qrView: UIImageView!
     
     var firebaseManager = FirebaseManager()
-    var roomID: String = ""
-    var number: Int = 1
+    
+    var haveMusics: [Music] = []
+    
+    var room: Room!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        roomID = String.getRandomStringWithLength(length: 6)
-        let room = Room(name: roomID)
-        firebaseManager.post(path: RoomURL.base.rawValue, value: room.dict() )
-        self.generateQRCode(name: self.roomID)
+        let roomId = createGroup()
+        generateQRCode(name: roomId)
     }
     
-    func createGroup(name: String){
+    func createGroup() -> String {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let me = User(name: appDelegate.uuid, musics: [])
         
+        let roomID = String.getRandomStringWithLength(length: 6)
+        room = Room(name: roomID)
+        room.addMember(user: me)
+        firebaseManager.post(path: room.url(), value: room.dict() )
+        return roomID
     }
     
     func generateQRCode(name: String) {
         let qrImage = CIImage.generateQRImage(url: "https://uniotto.org/api/searchRoom.php?roomID=\(name)")
-        QRView.image = UIImage(ciImage: qrImage)
+        qrView.image = UIImage(ciImage: qrImage)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! MenuVC
+        nextVC.room = room
+        nextVC.haveMusics = self.haveMusics
     }
 
 }
