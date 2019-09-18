@@ -18,6 +18,8 @@ final class TopVC: UIViewController, TopProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         let isMute = Mute.shared.isMute
         
         if isMute {

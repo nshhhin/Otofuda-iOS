@@ -25,7 +25,7 @@ final class ResultVC: UIViewController, ResultProtocol {
             playedMusicTableV.delegate = self
             playedMusicTableV.dataSource = self
             playedMusicTableV.register(cellType: ResultTableCell.self)
-            playedMusicTableV.backgroundColor = .lightGray
+            playedMusicTableV.backgroundColor = .white
         }
     }
     

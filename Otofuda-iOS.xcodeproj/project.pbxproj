@@ -42,6 +42,10 @@
 		F32B91B4233235190031B062 /* ResultTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32B91B3233235190031B062 /* ResultTableCell.xib */; };
 		F32B91B6233235900031B062 /* ResultTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B91B5233235900031B062 /* ResultTableCell.swift */; };
 		F32B91BA2332434B0031B062 /* ResultVC+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B91B92332434B0031B062 /* ResultVC+Ex.swift */; };
+		F32B91BC23328B150031B062 /* IBDesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B91BB23328B150031B062 /* IBDesignableButton.swift */; };
+		F32B91F8233298FD0031B062 /* IBDesignableSegumentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B91F7233298FD0031B062 /* IBDesignableSegumentControl.swift */; };
+		F32B91FA233299CC0031B062 /* IBDesignableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B91F9233299CC0031B062 /* IBDesignableTableView.swift */; };
+		F32B91FC23329A5C0031B062 /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B91FB23329A5C0031B062 /* IBDesignableView.swift */; };
 		F3C21BB4232F6D8D00546D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */; };
 		F3C21BB7232F703C00546D5B /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB6232F703C00546D5B /* String+Ex.swift */; };
 		F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB8232F711300546D5B /* UIImage+Ex.swift */; };
@@ -123,6 +127,10 @@
 		F32B91B3233235190031B062 /* ResultTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableCell.xib; sourceTree = "<group>"; };
 		F32B91B5233235900031B062 /* ResultTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableCell.swift; sourceTree = "<group>"; };
 		F32B91B92332434B0031B062 /* ResultVC+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultVC+Ex.swift"; sourceTree = "<group>"; };
+		F32B91BB23328B150031B062 /* IBDesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableButton.swift; sourceTree = "<group>"; };
+		F32B91F7233298FD0031B062 /* IBDesignableSegumentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableSegumentControl.swift; sourceTree = "<group>"; };
+		F32B91F9233299CC0031B062 /* IBDesignableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableTableView.swift; sourceTree = "<group>"; };
+		F32B91FB23329A5C0031B062 /* IBDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableView.swift; sourceTree = "<group>"; };
 		F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F3C21BB6232F703C00546D5B /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
 		F3C21BB8232F711300546D5B /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
@@ -324,6 +332,10 @@
 			children = (
 				F3C21BB6232F703C00546D5B /* String+Ex.swift */,
 				F3C21BB8232F711300546D5B /* UIImage+Ex.swift */,
+				F32B91FB23329A5C0031B062 /* IBDesignableView.swift */,
+				F32B91BB23328B150031B062 /* IBDesignableButton.swift */,
+				F32B91F7233298FD0031B062 /* IBDesignableSegumentControl.swift */,
+				F32B91F9233299CC0031B062 /* IBDesignableTableView.swift */,
 				F3E25FDF2330853900134769 /* UICollection+Ex.swift */,
 				F3E25FE12330854D00134769 /* NSObject+Ex.swift */,
 				F3E25FE32330856300134769 /* UITable+Ex.swift */,
@@ -535,6 +547,7 @@
 				F3E25FF22330986000134769 /* MPMediaItem+Ex.swift in Sources */,
 				F3225F052330AFE300D9BD79 /* iTunesPickerVC.swift in Sources */,
 				589460D722852E9500319032 /* TopVC.swift in Sources */,
+				F32B91FC23329A5C0031B062 /* IBDesignableView.swift in Sources */,
 				F3E25FE02330853900134769 /* UICollection+Ex.swift in Sources */,
 				F3225EFA2330ACFD00D9BD79 /* SelectMusicTableCell.swift in Sources */,
 				F32B91B0233232730031B062 /* ResultVC+UICollectionDataSource.swift in Sources */,
@@ -547,8 +560,10 @@
 				F32B91AE233232660031B062 /* ResultVC+UICollectionDelegate.swift in Sources */,
 				F3E25FD0232F9E5200134769 /* PlayVC.swift in Sources */,
 				F3225F042330AFE300D9BD79 /* iTunesPickerVC+UICollectionViewDelegateFlowLayout.swift in Sources */,
+				F32B91FA233299CC0031B062 /* IBDesignableTableView.swift in Sources */,
 				F3C21BBD232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift in Sources */,
 				F3225EFE2330AFCA00D9BD79 /* iTunesRSSModel.swift in Sources */,
+				F32B91F8233298FD0031B062 /* IBDesignableSegumentControl.swift in Sources */,
 				589460F722867A4800319032 /* FirebaseManager.swift in Sources */,
 				F3225EFD2330AFCA00D9BD79 /* iTunesAPIModel.swift in Sources */,
 				F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */,
@@ -566,6 +581,7 @@
 				F3C21BC0232F809100546D5B /* Room.swift in Sources */,
 				F3E25FE22330854D00134769 /* NSObject+Ex.swift in Sources */,
 				F3225EF62330AB2800D9BD79 /* MenuVC+UITableDataSource.swift in Sources */,
+				F32B91BC23328B150031B062 /* IBDesignableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

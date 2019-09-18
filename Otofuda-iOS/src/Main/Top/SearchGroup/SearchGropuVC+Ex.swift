@@ -8,11 +8,11 @@ extension SearchGroupVC: SearchGroupProtocol {
     func readQRCode(){
         
         // QRコードをマークするビュー
-        qrView = UIView()
-        qrView.layer.borderWidth = 4
-        qrView.layer.borderColor = UIColor.red.cgColor
-        qrView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-        view.addSubview(qrView)
+        qrV = UIView()
+        qrV.layer.borderWidth = 4
+        qrV.layer.borderColor = UIColor.red.cgColor
+        qrV.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        view.addSubview(qrV)
         
         // 入力（背面カメラ）
         let videoDevice = AVCaptureDevice.default(for: AVMediaType.video)
@@ -30,10 +30,15 @@ extension SearchGroupVC: SearchGroupProtocol {
         
         // プレビュー表示
         videoLayer = AVCaptureVideoPreviewLayer.init(session: captureSession)
-        let box = CGRect(x: cameraView.bounds.minX, y: cameraView.bounds.minY , width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width)
+        let box = CGRect(
+            x: cameraV.bounds.minX,
+            y: cameraV.bounds.minY,
+            width: cameraV.bounds.width,
+            height: cameraV.bounds.height
+        )
         videoLayer?.frame = box
         videoLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill //短い方に合わせてアスペクト比を調整してくれる
-        cameraView.layer.addSublayer(videoLayer!)
+        cameraV.layer.addSublayer(videoLayer!)
         
         // セッションの開始
         DispatchQueue.global(qos: .userInitiated).async {

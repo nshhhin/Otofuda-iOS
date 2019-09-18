@@ -39,7 +39,7 @@ final class MenuVC: UIViewController, Menurotocol {
             selectMusicTableV.delegate = self
             selectMusicTableV.dataSource = self
             selectMusicTableV.register(cellType: SelectMusicTableCell.self)
-            selectMusicTableV.backgroundColor = .lightGray
+            selectMusicTableV.backgroundColor = .white
         }
     }
     

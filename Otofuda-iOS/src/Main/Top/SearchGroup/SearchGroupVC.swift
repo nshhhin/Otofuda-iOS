@@ -8,11 +8,11 @@ protocol SearchGroupProtocol {
 
 class SearchGroupVC: UIViewController {
     
-    @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var cameraV: UIView!
+    
+    var qrV: UIView!
     
     var haveMusics: [Music] = []
-    
-    var qrView: UIView!
     
     var items: [String] = []
     
@@ -22,6 +22,7 @@ class SearchGroupVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -63,6 +63,10 @@ final class PlayVC: UIViewController, PlayProtocol {
         arrangeMusics()
     }
   
+    deinit {
+        player.stop()
+        player = nil
+    }
     
     @IBAction func tapStartBtn(_ sender: Any) {
         if  currentIndex > selectedMusics.count - 1 {

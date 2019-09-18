@@ -19,6 +19,7 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: false)
         let roomId = createGroup()
         generateQRCode(name: roomId)
     }
