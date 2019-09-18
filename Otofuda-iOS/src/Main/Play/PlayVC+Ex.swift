@@ -4,6 +4,20 @@ import MediaPlayer
 
 extension PlayVC {
     
+    func setupStartBtn(isEnabled: Bool){
+        if isEnabled {
+            startBtn.isEnabled = true
+            startBtn.backgroundColor = UIColor(
+                red: 51/255,
+                green: 102/255,
+                blue: 204/255, alpha: 1
+            )
+        } else {
+            startBtn.isEnabled = false
+            startBtn.backgroundColor = .darkGray
+        }
+    }
+    
     func initializeVoice(){
         self.utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
         self.utterance.volume = 1.0
@@ -29,7 +43,10 @@ extension PlayVC {
     }
     
     func arrangeMusics() {
-        self.arrangedMusics = selectedMusics.shuffled()
+        arrangedMusics = selectedMusics.shuffled()
+        for music in selectedMusics {
+            print( music.name )
+        }
         self.fudaCollectionV.reloadData()
     }
     

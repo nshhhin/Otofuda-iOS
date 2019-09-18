@@ -110,7 +110,7 @@
 		F3225F102330B25400D9BD79 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F3225F112330B25400D9BD79 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		F3225F122330B25400D9BD79 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
-		F32B91A823320BF80031B062 /* tap_fuda.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tap_fuda.caf; path = "Otofuda-iOS/resources/tap_fuda.caf"; sourceTree = "<group>"; };
+		F32B91A823320BF80031B062 /* tap_fuda.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap_fuda.caf; sourceTree = "<group>"; };
 		F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F3C21BB6232F703C00546D5B /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
 		F3C21BB8232F711300546D5B /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
@@ -192,7 +192,6 @@
 		589460C822852E9500319032 = {
 			isa = PBXGroup;
 			children = (
-				F32B91A823320BF80031B062 /* tap_fuda.caf */,
 				589460D322852E9500319032 /* Otofuda-iOS */,
 				589460D222852E9500319032 /* Products */,
 				DF4B4C7A60863B6BDBCE3175 /* Pods */,
@@ -223,6 +222,7 @@
 				589460DB22852E9500319032 /* Assets.xcassets */,
 				F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */,
 				589460E022852E9500319032 /* Info.plist */,
+				F32B91A823320BF80031B062 /* tap_fuda.caf */,
 			);
 			path = resources;
 			sourceTree = "<group>";

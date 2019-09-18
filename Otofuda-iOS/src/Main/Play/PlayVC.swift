@@ -23,6 +23,9 @@ final class PlayVC: UIViewController, PlayProtocol {
     // 並び順
     var arrangedMusics: [Music] = []
     
+    // 再生されている曲
+    var playingMusic: Music!
+    
     var currentIndex: Int = 0
     
     let fudaMaxCount = 16
@@ -36,7 +39,7 @@ final class PlayVC: UIViewController, PlayProtocol {
     
     @IBOutlet weak var startBtn: UIButton! {
         didSet {
-            startBtn.isEnabled = true
+            setupStartBtn(isEnabled: true)
         }
     }
     
@@ -57,13 +60,13 @@ final class PlayVC: UIViewController, PlayProtocol {
             selectRandomMusics()
         }
         arrangeMusics()
-        playMusic()
     }
     
     @IBAction func tapStartBtn(_ sender: Any) {
         playMusic()
-        currentIndex += 1 // TODO: タップされた時はカウントアップしない
-        startBtn.isEnabled = false
+        setupStartBtn(isEnabled: false)
+        playingMusic = selectedMusics[currentIndex]
+        currentIndex += 1
     }
     
 }
