@@ -56,6 +56,10 @@ extension PlayVC {
     }
     
     func finishGame(){
+        
+        player.stop()
+        player = nil
+        
         let storyboard: UIStoryboard = UIStoryboard(name: "Result", bundle: nil)
         let nextVC = storyboard.instantiateInitialViewController() as! ResultVC
         nextVC.room = room
