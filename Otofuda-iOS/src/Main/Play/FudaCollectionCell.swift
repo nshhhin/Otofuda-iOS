@@ -1,5 +1,6 @@
 
 import UIKit
+import AVFoundation
 
 final class FudaCollectionCell: UICollectionViewCell {
     
@@ -9,8 +10,22 @@ final class FudaCollectionCell: UICollectionViewCell {
     
     var isAnimating = false
     
+    var tapSoundPlayer: AVAudioPlayer?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func soundTap(){
+     
+        do {
+            tapSoundPlayer = try AVAudioPlayer(contentsOf: Bundle.main.url(forResource: "otofuda_get", withExtension: "wav")!)
+            tapSoundPlayer!.volume = 1.0
+            tapSoundPlayer!.prepareToPlay()
+            tapSoundPlayer!.play()
+        } catch {
+            print(error)
+        }
     }
     
     func animate(){

@@ -35,6 +35,7 @@
 		F3225F152330B25400D9BD79 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3225F102330B25400D9BD79 /* PromiseKit.framework */; };
 		F3225F162330B25400D9BD79 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3225F112330B25400D9BD79 /* ObjectMapper.framework */; };
 		F3225F172330B25400D9BD79 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3225F122330B25400D9BD79 /* AlamofireImage.framework */; };
+		F32B91A52331C64D0031B062 /* otofuda_get.wav in Resources */ = {isa = PBXBuildFile; fileRef = F32B91A42331C64D0031B062 /* otofuda_get.wav */; };
 		F3C21BB4232F6D8D00546D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */; };
 		F3C21BB7232F703C00546D5B /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB6232F703C00546D5B /* String+Ex.swift */; };
 		F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB8232F711300546D5B /* UIImage+Ex.swift */; };
@@ -109,6 +110,7 @@
 		F3225F102330B25400D9BD79 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F3225F112330B25400D9BD79 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		F3225F122330B25400D9BD79 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		F32B91A42331C64D0031B062 /* otofuda_get.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = otofuda_get.wav; sourceTree = "<group>"; };
 		F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F3C21BB6232F703C00546D5B /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
 		F3C21BB8232F711300546D5B /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		589460C822852E9500319032 = {
 			isa = PBXGroup;
 			children = (
+				F32B91A42331C64D0031B062 /* otofuda_get.wav */,
 				589460D322852E9500319032 /* Otofuda-iOS */,
 				589460D222852E9500319032 /* Products */,
 				DF4B4C7A60863B6BDBCE3175 /* Pods */,
@@ -417,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32B91A52331C64D0031B062 /* otofuda_get.wav in Resources */,
 				F3E25FE6233085B600134769 /* FudaCollectionCell.xib in Resources */,
 				F3E25FDB232F9FF800134769 /* Menu.storyboard in Resources */,
 				F3225F092330AFF300D9BD79 /* iTunesPicker.storyboard in Resources */,

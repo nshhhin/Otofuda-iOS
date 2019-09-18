@@ -19,6 +19,7 @@ extension PlayVC: UICollectionViewDataSource {
         if arrangedMusics[indexPath.row].isTapped {
             cell.backgroundV.backgroundColor = .red
             cell.titleLabel.textColor = .white
+            cell.soundTap()
         } else {
             cell.backgroundV.backgroundColor = .white
             cell.titleLabel.textColor = .black
