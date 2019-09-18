@@ -16,8 +16,9 @@ final class FudaCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
         do {
             tapSoundPlayer = try AVAudioPlayer(
-                contentsOf: Bundle.main.url(forResource: "otofuda_get",
-                                            withExtension: "wav")!)
+                contentsOf: Bundle.main.url(forResource: "tap_fuda",
+                                            withExtension: "caf")!)
+            tapSoundPlayer!.prepareToPlay()
         } catch {
             print(error)
         }
@@ -25,7 +26,6 @@ final class FudaCollectionCell: UICollectionViewCell {
     
     func soundTap(){
         tapSoundPlayer!.volume = 1.0
-        tapSoundPlayer!.prepareToPlay()
         tapSoundPlayer!.play()
         
     }

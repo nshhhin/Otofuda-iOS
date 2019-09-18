@@ -5,7 +5,7 @@ import MediaPlayer
 extension PlayVC {
     
     func initializePlayer() {
-        self.player = .applicationMusicPlayer
+        self.player = .systemMusicPlayer
         self.player.repeatMode = .none
     }
     
