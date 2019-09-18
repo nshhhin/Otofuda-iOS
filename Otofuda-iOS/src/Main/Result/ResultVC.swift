@@ -3,6 +3,8 @@ import UIKit
 import MediaPlayer
 
 protocol ResultProtocol {
+    func playMusic(music: Music)
+    func initializePlayer()
 }
 
 final class ResultVC: UIViewController, ResultProtocol {
@@ -29,6 +31,7 @@ final class ResultVC: UIViewController, ResultProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializePlayer()
     }
     
 }
