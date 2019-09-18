@@ -49,7 +49,7 @@ final class PlayVC: UIViewController, PlayProtocol {
             fudaCollectionV.delegate = self
             fudaCollectionV.dataSource = self
             fudaCollectionV.register(cellType: FudaCollectionCell.self)
-            fudaCollectionV.backgroundColor = .clear
+            fudaCollectionV.backgroundColor = .white
         }
     }
     
