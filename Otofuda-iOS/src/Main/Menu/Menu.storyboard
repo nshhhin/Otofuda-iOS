@@ -257,6 +257,24 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OiU-Pg-Xlt">
                                 <rect key="frame" x="20" y="407.5" width="374" height="304.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="TH0-pb-Zw1">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACB-KZ-kti">
+                                            <rect key="frame" x="287" y="7" width="77" height="30"/>
+                                            <state key="normal" title="選択を解除"/>
+                                            <connections>
+                                                <action selector="tapClearSelectBtn:" destination="IMK-H5-JX7" eventType="touchUpInside" id="DM2-3n-plU"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ACB-KZ-kti" secondAttribute="trailing" constant="10" id="PkA-1y-vHp"/>
+                                        <constraint firstItem="ACB-KZ-kti" firstAttribute="centerY" secondItem="TH0-pb-Zw1" secondAttribute="centerY" id="miI-yx-eCc"/>
+                                    </constraints>
+                                </view>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

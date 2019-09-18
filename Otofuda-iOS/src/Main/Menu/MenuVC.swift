@@ -86,4 +86,8 @@ final class MenuVC: UIViewController, Menurotocol {
         }
     }
     
+    @IBAction func tapClearSelectBtn(_ sender: Any) {
+        selectedMusics = []
+        selectMusicTableV.reloadData()
+    }
 }

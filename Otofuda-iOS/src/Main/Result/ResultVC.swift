@@ -35,11 +35,9 @@ final class ResultVC: UIViewController, ResultProtocol {
     }
     
     @IBAction func tapRestartBtn(_ sender: Any) {
-        let preVC = self.navigationController?.popToViewController(
+        self.navigationController?.popToViewController(
             navigationController!.viewControllers[2], animated: true
-        ) as! MenuVC
-        preVC.selectedMusics = []
-        preVC.selectMusicTableV.reloadData()
+        )
     }
 }
 
