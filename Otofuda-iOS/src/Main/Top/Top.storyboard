@@ -105,7 +105,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="グループを作成" id="gCo-gk-Vx2"/>
                     <connections>
-                        <outlet property="QRView" destination="lBY-ag-FyV" id="OM1-dt-dRy"/>
+                        <outlet property="qrView" destination="lBY-ag-FyV" id="j8G-UG-aGa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fT9-xb-zgP" userLabel="First Responder" sceneMemberID="firstResponder"/>

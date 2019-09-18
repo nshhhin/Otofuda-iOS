@@ -27,7 +27,6 @@ final class FudaCollectionCell: UICollectionViewCell {
     func soundTap(){
         tapSoundPlayer!.volume = 1.0
         tapSoundPlayer!.play()
-        
     }
     
     func animate(){

@@ -8,12 +8,16 @@ protocol SearchGroupProtocol {
 
 class SearchGroupVC: UIViewController {
     
+    @IBOutlet weak var cameraView: UIView!
+    
     var haveMusics: [Music] = []
     
     var qrView: UIView!
-    @IBOutlet weak var cameraView: UIView!
+    
     var items: [String] = []
+    
     let captureSession = AVCaptureSession()
+    
     var videoLayer: AVCaptureVideoPreviewLayer?
 
     override func viewDidLoad() {

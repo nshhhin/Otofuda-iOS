@@ -8,13 +8,14 @@ protocol CreateGropuProtocol {
 
 class CreateGroupVC: UIViewController, CreateGropuProtocol {
     
-    var haveMusics: [Music] = []
     
-    @IBOutlet weak var QRView: UIImageView!
-    
-    var room: Room!
+    @IBOutlet weak var qrView: UIImageView!
     
     var firebaseManager = FirebaseManager()
+    
+    var haveMusics: [Music] = []
+    
+    var room: Room!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
     
     func generateQRCode(name: String) {
         let qrImage = CIImage.generateQRImage(url: "https://uniotto.org/api/searchRoom.php?roomID=\(name)")
-        QRView.image = UIImage(ciImage: qrImage)
+        qrView.image = UIImage(ciImage: qrImage)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
