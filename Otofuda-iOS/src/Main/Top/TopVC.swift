@@ -35,10 +35,11 @@ final class TopVC: UIViewController, TopProtocol {
                 return
             }
             if songs.count == songCount {
-                let musicData = userDefaults.object(forKey: "musics") as? Data
-                guard let data = musicData else { return }
-                let unArchiveData = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
-                haveMusics = unArchiveData as? [Music] ?? [Music]()
+                let loadData = userDefaults.data(forKey: "musics")
+                let songs = NSKeyedUnarchiver.unarchiveObject(with: loadData as! Data) as! [MPMediaItem]
+                for song in songs {
+                    haveMusics.append(Music(name: song.title ?? "不明", item: song))
+                }
             } else {
                 saveMusicsUserDefaults()
             }
@@ -58,21 +59,24 @@ final class TopVC: UIViewController, TopProtocol {
             return
         }
         
-        // data型に変換
         userDefaults.set( songs.count, forKey: "songCount")
         
+        var musics: [MPMediaItem] = []
         let albumsQuery = MPMediaQuery.albums()
         if let albums = albumsQuery.collections {
             for album in albums {
                 for song in album.items {
-                    let music = Music(name: song.title ?? "不明なタイトル", item: song)
-                    haveMusics.append(music)
+                    musics.append(song)
+                    haveMusics.append(Music(name: song.title ?? "不明", item: song))
                 }
             }
         }
         
-        let saveData = try? NSKeyedArchiver.archivedData(withRootObject: haveMusics, requiringSecureCoding: false)
+        let saveData = NSKeyedArchiver.archivedData(withRootObject: musics)
         userDefaults.set(saveData, forKey: "musics")
+        userDefaults.synchronize()
+
+     
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

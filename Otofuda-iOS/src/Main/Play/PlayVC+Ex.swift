@@ -11,6 +11,12 @@ extension PlayVC {
     
     func selectRandomMusics(){
         haveMusics.shuffle()
+        
+        // 曲が満たない場合は
+        if haveMusics.count < fudaMaxCount {
+            return
+        }
+        
         for i in 0..<fudaMaxCount {
             selectedMusics.append(haveMusics[i])
         }
@@ -21,6 +27,9 @@ extension PlayVC {
     }
     
     func playMusic() {
+        if selectedMusics.count <= currentIndex {
+            return
+        }
         player.setMusic(item: selectedMusics[currentIndex].item)
         player.play()
         currentIndex += 1

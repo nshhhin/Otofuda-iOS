@@ -2,7 +2,8 @@
 import Foundation
 import MediaPlayer
 
-struct Music {
+class Music: NSObject {
+    
     var name: String!
     var item: MPMediaItem!
     var isAnimating: Bool = false
@@ -19,3 +20,5 @@ struct Music {
         return dict
     }
 }
+
+
