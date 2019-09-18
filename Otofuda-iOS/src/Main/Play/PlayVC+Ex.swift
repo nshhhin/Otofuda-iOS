@@ -51,10 +51,16 @@ extension PlayVC {
     }
     
     func playMusic() {
-        if selectedMusics.count <= currentIndex {
-            return
-        }
         player.setMusic(item: selectedMusics[currentIndex].item)
         player.play()
+    }
+    
+    func finishGame(){
+        let storyboard: UIStoryboard = UIStoryboard(name: "Result", bundle: nil)
+        let nextVC = storyboard.instantiateInitialViewController() as! ResultVC
+        nextVC.room = room
+        nextVC.haveMusics = self.haveMusics
+        nextVC.selectedMusics = self.selectedMusics
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

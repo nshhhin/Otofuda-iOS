@@ -9,6 +9,7 @@ protocol PlayProtocol {
     func selectRandomMusics()
     func arrangeMusics()
     func playMusic()
+    func finishGame()
 }
 
 final class PlayVC: UIViewController, PlayProtocol {
@@ -26,7 +27,7 @@ final class PlayVC: UIViewController, PlayProtocol {
     // 再生されている曲
     var playingMusic: Music!
     
-    var currentIndex: Int = 0
+    var currentIndex: Int = 14
     
     let fudaMaxCount = 16
     
@@ -61,8 +62,12 @@ final class PlayVC: UIViewController, PlayProtocol {
         }
         arrangeMusics()
     }
+  
     
     @IBAction func tapStartBtn(_ sender: Any) {
+        if  currentIndex > selectedMusics.count - 1 {
+            return
+        }
         playMusic()
         setupStartBtn(isEnabled: false)
         playingMusic = selectedMusics[currentIndex]

@@ -32,5 +32,10 @@ extension PlayVC: UICollectionViewDelegate {
         
         collectionView.reloadItems(at: [indexPath])
         
+        // 終了判定
+        if currentIndex == fudaMaxCount - 1 {
+            finishGame()
+        }
+        
     }
 }

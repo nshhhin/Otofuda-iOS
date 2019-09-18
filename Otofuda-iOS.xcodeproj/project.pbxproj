@@ -35,6 +35,12 @@
 		F3225F162330B25400D9BD79 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3225F112330B25400D9BD79 /* ObjectMapper.framework */; };
 		F3225F172330B25400D9BD79 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3225F122330B25400D9BD79 /* AlamofireImage.framework */; };
 		F32B91A923320BF80031B062 /* tap_fuda.caf in Resources */ = {isa = PBXBuildFile; fileRef = F32B91A823320BF80031B062 /* tap_fuda.caf */; };
+		F32B91AC233231FD0031B062 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B91AB233231FD0031B062 /* ResultVC.swift */; };
+		F32B91AE233232660031B062 /* ResultVC+UICollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B91AD233232660031B062 /* ResultVC+UICollectionDelegate.swift */; };
+		F32B91B0233232730031B062 /* Result+UICollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B91AF233232730031B062 /* Result+UICollectionDataSource.swift */; };
+		F32B91B2233233C00031B062 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32B91B1233233C00031B062 /* Result.storyboard */; };
+		F32B91B4233235190031B062 /* ResultTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32B91B3233235190031B062 /* ResultTableCell.xib */; };
+		F32B91B6233235900031B062 /* ResultTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B91B5233235900031B062 /* ResultTableCell.swift */; };
 		F3C21BB4232F6D8D00546D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */; };
 		F3C21BB7232F703C00546D5B /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB6232F703C00546D5B /* String+Ex.swift */; };
 		F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C21BB8232F711300546D5B /* UIImage+Ex.swift */; };
@@ -109,6 +115,12 @@
 		F3225F112330B25400D9BD79 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		F3225F122330B25400D9BD79 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		F32B91A823320BF80031B062 /* tap_fuda.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap_fuda.caf; sourceTree = "<group>"; };
+		F32B91AB233231FD0031B062 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
+		F32B91AD233232660031B062 /* ResultVC+UICollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultVC+UICollectionDelegate.swift"; sourceTree = "<group>"; };
+		F32B91AF233232730031B062 /* Result+UICollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+UICollectionDataSource.swift"; sourceTree = "<group>"; };
+		F32B91B1233233C00031B062 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
+		F32B91B3233235190031B062 /* ResultTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableCell.xib; sourceTree = "<group>"; };
+		F32B91B5233235900031B062 /* ResultTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableCell.swift; sourceTree = "<group>"; };
 		F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F3C21BB6232F703C00546D5B /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
 		F3C21BB8232F711300546D5B /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
@@ -250,7 +262,7 @@
 				589460EC2285449100319032 /* Top */,
 				F3E25FD9232F9FED00134769 /* Menu */,
 				F3E25FCE232F9E3B00134769 /* Play */,
-				F3E25FDE233084EE00134769 /* Result */,
+				F32B91AA233231E70031B062 /* Result */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -289,6 +301,19 @@
 				F3225F0B2330B01D00D9BD79 /* SearchResultCell.xib */,
 			);
 			path = iTunesPicker;
+			sourceTree = "<group>";
+		};
+		F32B91AA233231E70031B062 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				F32B91AB233231FD0031B062 /* ResultVC.swift */,
+				F32B91AD233232660031B062 /* ResultVC+UICollectionDelegate.swift */,
+				F32B91AF233232730031B062 /* Result+UICollectionDataSource.swift */,
+				F32B91B1233233C00031B062 /* Result.storyboard */,
+				F32B91B5233235900031B062 /* ResultTableCell.swift */,
+				F32B91B3233235190031B062 /* ResultTableCell.xib */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		F3C21BB5232F702800546D5B /* Extensions */ = {
@@ -346,13 +371,6 @@
 				F3225EF92330ACFD00D9BD79 /* SelectMusicTableCell.swift */,
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		F3E25FDE233084EE00134769 /* Result */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,9 +438,11 @@
 				F32B91A923320BF80031B062 /* tap_fuda.caf in Resources */,
 				F3E25FE6233085B600134769 /* FudaCollectionCell.xib in Resources */,
 				F3E25FDB232F9FF800134769 /* Menu.storyboard in Resources */,
+				F32B91B2233233C00031B062 /* Result.storyboard in Resources */,
 				F3225F092330AFF300D9BD79 /* iTunesPicker.storyboard in Resources */,
 				F3E25FD6232F9FD400134769 /* Play.storyboard in Resources */,
 				F3225F0D2330B01D00D9BD79 /* SearchResultCell.xib in Resources */,
+				F32B91B4233235190031B062 /* ResultTableCell.xib in Resources */,
 				589460DC22852E9500319032 /* Assets.xcassets in Resources */,
 				589460EB2285367300319032 /* Top.storyboard in Resources */,
 				F3225EF82330AC4100D9BD79 /* SelectMusicTableCell.xib in Resources */,
@@ -514,12 +534,14 @@
 				589460D722852E9500319032 /* TopVC.swift in Sources */,
 				F3E25FE02330853900134769 /* UICollection+Ex.swift in Sources */,
 				F3225EFA2330ACFD00D9BD79 /* SelectMusicTableCell.swift in Sources */,
+				F32B91B0233232730031B062 /* Result+UICollectionDataSource.swift in Sources */,
 				F3E25FDD232FA00D00134769 /* MenuVC.swift in Sources */,
 				F3225F062330AFE300D9BD79 /* iTunesPickerVC+Datasource.swift in Sources */,
 				F3225EF42330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift in Sources */,
 				F3E25FEC2330891600134769 /* PlayVC+Ex.swift in Sources */,
 				F3C21BB7232F703C00546D5B /* String+Ex.swift in Sources */,
 				F3E25FD4232F9F6600134769 /* PlayVC+UICollectionDataSource.swift in Sources */,
+				F32B91AE233232660031B062 /* ResultVC+UICollectionDelegate.swift in Sources */,
 				F3E25FD0232F9E5200134769 /* PlayVC.swift in Sources */,
 				F3225F042330AFE300D9BD79 /* iTunesPickerVC+UICollectionViewDelegateFlowLayout.swift in Sources */,
 				F3C21BBD232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift in Sources */,
@@ -531,8 +553,10 @@
 				F3C21BC2232F80EF00546D5B /* User.swift in Sources */,
 				589460D522852E9500319032 /* AppDelegate.swift in Sources */,
 				F3E25FEA2330874300134769 /* PlayVC+UICollectionLayout.swift in Sources */,
+				F32B91B6233235900031B062 /* ResultTableCell.swift in Sources */,
 				589460F122855AAE00319032 /* CreateGroupVC.swift in Sources */,
 				F3E25FF0233096C500134769 /* MenuVC+MPMediaPickerDelegate.swift in Sources */,
+				F32B91AC233231FD0031B062 /* ResultVC.swift in Sources */,
 				F3E25FE8233085DF00134769 /* FudaCollectionCell.swift in Sources */,
 				F3E25FE42330856300134769 /* UITable+Ex.swift in Sources */,
 				F3C21BC0232F809100546D5B /* Room.swift in Sources */,
