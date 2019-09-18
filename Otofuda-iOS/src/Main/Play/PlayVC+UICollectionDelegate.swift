@@ -7,10 +7,16 @@ extension PlayVC: UICollectionViewDelegate {
         
         let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
                                                       for: indexPath)
-        let music = arrangedMusics[indexPath.row]
         cell.animate()
+        
+        arrangedMusics[indexPath.row].isAnimating = true
+        arrangedMusics[indexPath.row].isTapped = true
+        
+        let music = arrangedMusics[indexPath.row]
         firebaseManager.post(path: room.url(), value: ["tapped": music.dict()])
         currentIndex += 1
+        
+        collectionView.reloadItems(at: [indexPath])
         
     }
 }

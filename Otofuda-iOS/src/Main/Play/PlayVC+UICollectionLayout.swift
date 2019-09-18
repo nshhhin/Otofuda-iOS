@@ -6,8 +6,9 @@ extension PlayVC: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = collectionView.bounds.width / 5 - 1
-        let height = width
+        let margin: CGFloat  = 1.0
+        let width = collectionView.bounds.width / 4 - margin * 4.0
+        let height = width * 1.5
         let size = CGSize(width: width, height: height)
         return size
     }

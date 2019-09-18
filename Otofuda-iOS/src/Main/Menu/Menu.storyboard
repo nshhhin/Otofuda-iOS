@@ -65,6 +65,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="bd2-cK-uWk" secondAttribute="trailing" constant="5" id="TFt-Tf-rZo"/>
                                                     <constraint firstItem="bd2-cK-uWk" firstAttribute="top" secondItem="0bj-S9-tzg" secondAttribute="top" constant="5" id="nqn-Er-inw"/>
+                                                    <constraint firstAttribute="height" constant="80" id="qt7-Ka-mEG"/>
                                                     <constraint firstItem="bd2-cK-uWk" firstAttribute="leading" secondItem="0bj-S9-tzg" secondAttribute="leading" constant="5" id="yLu-ih-YLD"/>
                                                     <constraint firstAttribute="bottom" secondItem="bd2-cK-uWk" secondAttribute="bottom" constant="5" id="z1g-cf-qew"/>
                                                 </constraints>
@@ -130,6 +131,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="jCn-fR-CHt" firstAttribute="top" secondItem="lVH-qt-T0a" secondAttribute="top" constant="5" id="Heg-DZ-7pX"/>
+                                                    <constraint firstAttribute="height" constant="80" id="Yko-qb-EmZ"/>
                                                     <constraint firstAttribute="trailing" secondItem="jCn-fR-CHt" secondAttribute="trailing" constant="5" id="avM-yX-VS7"/>
                                                     <constraint firstItem="jCn-fR-CHt" firstAttribute="leading" secondItem="lVH-qt-T0a" secondAttribute="leading" constant="5" id="e4F-fZ-wkn"/>
                                                     <constraint firstAttribute="bottom" secondItem="jCn-fR-CHt" secondAttribute="bottom" constant="5" id="nOq-hM-VUh"/>

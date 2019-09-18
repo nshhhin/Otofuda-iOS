@@ -10,6 +10,20 @@ extension PlayVC: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
                                                       for: indexPath)
         cell.titleLabel.text = arrangedMusics[indexPath.row].name
+        
+        if arrangedMusics[indexPath.row].isAnimating {
+            cell.animate()
+            arrangedMusics[indexPath.row].isAnimating = false
+        }
+        
+        if arrangedMusics[indexPath.row].isTapped {
+            cell.backgroundV.backgroundColor = .red
+            cell.titleLabel.textColor = .white
+        } else {
+            cell.backgroundV.backgroundColor = .white
+            cell.titleLabel.textColor = .black
+        }
+        
         return cell
     }
 

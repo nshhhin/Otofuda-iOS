@@ -5,6 +5,8 @@ import MediaPlayer
 struct Music {
     var name: String!
     var item: MPMediaItem!
+    var isAnimating: Bool = false
+    var isTapped: Bool = false
     
     init(name: String, item: MPMediaItem){
         self.name = name
