@@ -8,6 +8,8 @@ protocol CreateGropuProtocol {
 
 class CreateGroupVC: UIViewController, CreateGropuProtocol {
     
+    var haveMusics: [Music] = []
+    
     @IBOutlet weak var QRView: UIImageView!
     
     var room: Room!
@@ -39,6 +41,7 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination as! MenuVC
         nextVC.room = room
+        nextVC.haveMusics = self.haveMusics
     }
 
 }

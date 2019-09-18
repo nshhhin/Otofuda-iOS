@@ -22,6 +22,8 @@ final class MenuVC: UIViewController, Menurotocol {
     
     var room: Room!
     
+    var haveMusics: [Music] = []
+    
     // ルール
     var rulePoint: RulePoint = .normal
     var rulePlaying: RulePlaying = .intro
@@ -78,7 +80,8 @@ final class MenuVC: UIViewController, Menurotocol {
             firebaseManager.post(path: room.url() , value: ["selected": arrayDict])
         
             let nextVC = segue.destination as! PlayVC
-            nextVC.musics = selectedMusics
+            nextVC.haveMusics = self.haveMusics
+            
             nextVC.room = room
         }
     }

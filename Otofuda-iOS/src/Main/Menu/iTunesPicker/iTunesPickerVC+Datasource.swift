@@ -35,7 +35,7 @@ extension iTunesPickerVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        var result = results.results![indexPath.row]
+        let result = results.results![indexPath.row]
         print("==================")
         print( result.previewURL )
         print("==================")

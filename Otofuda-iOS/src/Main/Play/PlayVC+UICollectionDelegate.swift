@@ -9,10 +9,10 @@ extension PlayVC: UICollectionViewDelegate {
                                                       for: indexPath)
         cell.animate()
         
-        arrangedMusics[indexPath.row].isAnimating = true
-        arrangedMusics[indexPath.row].isTapped = true
+        selectedMusics[indexPath.row].isAnimating = true
+        selectedMusics[indexPath.row].isTapped = true
         
-        let music = arrangedMusics[indexPath.row]
+        let music = selectedMusics[indexPath.row]
         firebaseManager.post(path: room.url(), value: ["tapped": music.dict()])
         currentIndex += 1
         

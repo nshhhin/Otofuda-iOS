@@ -9,14 +9,14 @@ extension PlayVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
                                                       for: indexPath)
-        cell.titleLabel.text = arrangedMusics[indexPath.row].name
+        cell.titleLabel.text = selectedMusics[indexPath.row].name
         
-        if arrangedMusics[indexPath.row].isAnimating {
+        if selectedMusics[indexPath.row].isAnimating {
             cell.animate()
-            arrangedMusics[indexPath.row].isAnimating = false
+            selectedMusics[indexPath.row].isAnimating = false
         }
         
-        if arrangedMusics[indexPath.row].isTapped {
+        if selectedMusics[indexPath.row].isTapped {
             cell.backgroundV.backgroundColor = .red
             cell.titleLabel.textColor = .white
             cell.soundTap()

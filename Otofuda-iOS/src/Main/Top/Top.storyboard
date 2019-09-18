@@ -43,7 +43,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="グループ作る"/>
                                 <connections>
-                                    <segue destination="C8y-tv-MuB" kind="push" id="ORC-jD-28X"/>
+                                    <segue destination="C8y-tv-MuB" kind="push" identifier="create" id="ORC-jD-28X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7l-zJ-h28">
@@ -52,7 +52,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="グループ参加"/>
                                 <connections>
-                                    <segue destination="vix-G8-yFh" kind="push" id="vKX-2e-raY"/>
+                                    <segue destination="vix-G8-yFh" kind="push" identifier="search" id="vKX-2e-raY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Otofuda🎴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fe-0b-KHV">
