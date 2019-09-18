@@ -1,6 +1,7 @@
 
 import UIKit
 import MediaPlayer
+import Mute
 
 protocol TopProtocol {
     func requestAuth()
@@ -12,8 +13,16 @@ final class TopVC: UIViewController, TopProtocol {
     
     var haveMusics: [Music] = []
     
+    @IBOutlet var mutePopupV: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let isMute = Mute.shared.isMute
+        
+        if isMute {
+            self.view.addSubview(mutePopupV)
+        }
         
         requestAuth()
     }

@@ -27,7 +27,7 @@ final class PlayVC: UIViewController, PlayProtocol {
     // 再生されている曲
     var playingMusic: Music!
     
-    var currentIndex: Int = 14
+    var currentIndex: Int = 0
     
     let fudaMaxCount = 16
     
