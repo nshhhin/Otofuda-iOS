@@ -317,6 +317,39 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUj-rq-ggb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="772"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azg-v5-G5t">
+                                        <rect key="frame" x="10" y="346" width="394" height="80"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bvm-rV-8sw">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="fac-vm-aGj"/>
+                                                </constraints>
+                                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホストが選択中..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wad-Rs-mlL">
+                                                <rect key="frame" x="80" y="0.0" width="314" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="VzL-Pe-Ow4"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.75337114726027399" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="azg-v5-G5t" firstAttribute="leading" secondItem="fUj-rq-ggb" secondAttribute="leading" constant="10" id="6Te-mE-Mnh"/>
+                                    <constraint firstAttribute="trailing" secondItem="azg-v5-G5t" secondAttribute="trailing" constant="10" id="Ih9-Xc-x9Y"/>
+                                    <constraint firstItem="azg-v5-G5t" firstAttribute="centerX" secondItem="fUj-rq-ggb" secondAttribute="centerX" id="KON-aq-iEW"/>
+                                    <constraint firstItem="azg-v5-G5t" firstAttribute="centerY" secondItem="fUj-rq-ggb" secondAttribute="centerY" id="tUb-jn-ehm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.15686270590000001" green="0.15686273570000001" blue="0.15686270590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -324,17 +357,22 @@
                             <constraint firstItem="bt2-Jv-dNj" firstAttribute="bottom" secondItem="kct-YX-hcw" secondAttribute="bottom" constant="10" id="0Zq-jJ-Ev8"/>
                             <constraint firstItem="kct-YX-hcw" firstAttribute="leading" secondItem="bt2-Jv-dNj" secondAttribute="leading" constant="20" id="5tb-8g-g4Y"/>
                             <constraint firstAttribute="trailing" secondItem="jPr-fu-pbw" secondAttribute="trailing" constant="10" id="7Ri-Yt-hbH"/>
+                            <constraint firstItem="fUj-rq-ggb" firstAttribute="leading" secondItem="bt2-Jv-dNj" secondAttribute="leading" id="ASf-Ec-d4E"/>
                             <constraint firstItem="jPr-fu-pbw" firstAttribute="leading" secondItem="bt2-Jv-dNj" secondAttribute="leading" constant="10" id="BWW-hT-Ufx"/>
+                            <constraint firstItem="bt2-Jv-dNj" firstAttribute="trailing" secondItem="fUj-rq-ggb" secondAttribute="trailing" id="E4j-Tf-G1O"/>
+                            <constraint firstItem="fUj-rq-ggb" firstAttribute="top" secondItem="2kV-qp-bam" secondAttribute="top" id="HKO-yr-ciM"/>
                             <constraint firstItem="jPr-fu-pbw" firstAttribute="top" secondItem="bt2-Jv-dNj" secondAttribute="top" constant="20" id="OWR-cN-qka"/>
                             <constraint firstItem="bt2-Jv-dNj" firstAttribute="trailing" secondItem="OiU-Pg-Xlt" secondAttribute="trailing" constant="20" id="RK3-pN-276"/>
                             <constraint firstItem="kct-YX-hcw" firstAttribute="top" secondItem="OiU-Pg-Xlt" secondAttribute="bottom" constant="20" id="cU5-kj-3gB"/>
                             <constraint firstItem="OiU-Pg-Xlt" firstAttribute="leading" secondItem="bt2-Jv-dNj" secondAttribute="leading" constant="20" id="kKi-Cv-9xO"/>
+                            <constraint firstItem="kct-YX-hcw" firstAttribute="top" secondItem="fUj-rq-ggb" secondAttribute="bottom" id="mJB-ak-EBA"/>
                             <constraint firstItem="OiU-Pg-Xlt" firstAttribute="top" secondItem="jPr-fu-pbw" secondAttribute="bottom" constant="10" id="pE1-2m-NvC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bt2-Jv-dNj"/>
                     </view>
                     <navigationItem key="navigationItem" title="ルールを選択" id="rRc-sJ-tvv"/>
                     <connections>
+                        <outlet property="blockV" destination="fUj-rq-ggb" id="sz6-lg-rq2"/>
                         <outlet property="playingSegument" destination="jCn-fR-CHt" id="hNZ-kW-Kd6"/>
                         <outlet property="pointSegument" destination="bd2-cK-uWk" id="KV0-N7-gsH"/>
                         <outlet property="selectMusicTableV" destination="OiU-Pg-Xlt" id="G8L-Cb-5uY"/>

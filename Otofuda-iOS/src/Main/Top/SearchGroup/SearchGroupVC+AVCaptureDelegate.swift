@@ -38,9 +38,13 @@ extension SearchGroupVC: AVCaptureMetadataOutputObjectsDelegate {
                                 self.isMatching = true
                                 
                                 let storyboard = UIStoryboard(name: "Menu", bundle: nil)
-                                let nextVC = storyboard.instantiateInitialViewController()
-                                nextVC!.modalTransitionStyle = .crossDissolve
-                                self.present(nextVC!, animated: true, completion: nil)
+                                let nextVC = storyboard.instantiateInitialViewController() as! MenuVC
+                                nextVC.modalTransitionStyle = .crossDissolve
+                                nextVC.room = room // TODO: メンバーを更新したRoomにする
+                                nextVC.haveMusics = self.haveMusics
+                                nextVC.isHost = false
+                         
+                                self.present(nextVC, animated: true, completion: nil)
                             }
                         })
                     }

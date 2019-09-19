@@ -47,6 +47,7 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination as! MenuVC
         nextVC.room = room
+        nextVC.isHost = true
         nextVC.haveMusics = self.haveMusics
     }
 

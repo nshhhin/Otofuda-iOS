@@ -3,17 +3,18 @@ import UIKit
 
 protocol Menurotocol {
     func tappedPickBtn(_ sender: Any)
+    func prepareUI()
 }
 
-enum RulePoint {
-    case normal
-    case othello
+enum RulePoint: String {
+    case normal  = "normal"
+    case othello = "othello"
 }
 
-enum RulePlaying {
-    case intro
-    case sabi
-    case random
+enum RulePlaying: String {
+    case intro = "intro"
+    case sabi  = "sabi"
+    case random = "random"
 }
 
 final class MenuVC: UIViewController, Menurotocol {
@@ -24,6 +25,9 @@ final class MenuVC: UIViewController, Menurotocol {
     
     var haveMusics: [Music] = []
     
+    var isHost: Bool = false
+    
+    @IBOutlet weak var blockV: UIView!
     // ルール
     var rulePoint: RulePoint = .normal
     var rulePlaying: RulePlaying = .intro
@@ -45,6 +49,34 @@ final class MenuVC: UIViewController, Menurotocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareUI()
+    }
+    
+    func prepareUI(){
+        if isHost {
+            blockV.isHidden = true
+        } else {
+            blockV.isHidden = false
+            observeUI()
+        }
+    }
+    
+    func observeUI(){
+        firebaseManager.observe(path: room.url(), completion: { snapshot in
+            if let roomDict = snapshot.value as? Dictionary<String, String> {
+                guard let ruleDict = roomDict["Rule"] else { return }
+                switch ruleDict  {
+                case "intro":
+                    self.playingSegument.selectedSegmentIndex = 0
+                case "sabi":
+                    self.playingSegument.selectedSegmentIndex = 1
+                case "random":
+                    self.playingSegument.selectedSegmentIndex = 2
+                default:
+                    break
+                }
+            }
+        })
     }
     
     @IBAction func changedPointSeg(_ sender: Any) {
@@ -67,7 +99,7 @@ final class MenuVC: UIViewController, Menurotocol {
         case 2:
             rulePlaying = .random
         default:
-            break
+            firebaseManager.post(path: room.url() + "rule", value: rulePlaying.rawValue)
         }
     }
     
