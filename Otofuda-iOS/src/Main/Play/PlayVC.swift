@@ -57,6 +57,7 @@ final class PlayVC: UIViewController, PlayProtocol {
         super.viewDidLoad()
         initializeVoice()
         initializePlayer()
+        navigationItem.title = "0曲目"
         if selectedMusics.count == 0 {
             selectRandomMusics()
         }
@@ -75,6 +76,7 @@ final class PlayVC: UIViewController, PlayProtocol {
         playMusic()
         setupStartBtn(isEnabled: false)
         playingMusic = selectedMusics[currentIndex]
+        navigationItem.title = String(currentIndex) + "曲目"
         currentIndex += 1
     }
     

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--PlayVC-->
+        <!--Title-->
         <scene sceneID="BgV-uI-PzX">
             <objects>
                 <viewController id="gcc-YW-FNL" customClass="PlayVC" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,6 +66,7 @@
                         <viewLayoutGuide key="safeArea" id="tzn-99-n8J"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="mb8-M3-KrY"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="fudaCollectionV" destination="jnl-b9-xB2" id="qjU-Up-aX7"/>
