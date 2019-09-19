@@ -23,6 +23,8 @@ class SearchGroupVC: UIViewController {
     var firebaseManager = FirebaseManager()
     
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    var isMatching = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
