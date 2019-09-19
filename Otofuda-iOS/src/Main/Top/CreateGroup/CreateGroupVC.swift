@@ -30,7 +30,7 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
     
     func createGroup() -> String {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        let me = User(name: appDelegate.uuid, musics: [])
+        let me = User(name: appDelegate.uuid, musics: [], color: .red)
         
         let roomID = String.getRandomStringWithLength(length: 6)
         room = Room(name: roomID)
