@@ -9,5 +9,5 @@ target 'Otofuda-iOS' do
   pod 'Firebase'
   pod 'Firebase/Database'
   pod 'Mute'
-  
+  pod 'lottie-ios'
 end

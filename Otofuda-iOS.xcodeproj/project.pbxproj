@@ -20,6 +20,7 @@
 		F308114D233325C6009E7726 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F308114C233325C6009E7726 /* Splash.storyboard */; };
 		F308114F23332CAA009E7726 /* MuteAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308114E23332CAA009E7726 /* MuteAlertVC.swift */; };
 		F308115123333017009E7726 /* mute_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F308115023333017009E7726 /* mute_animation.json */; };
+		F30811542333320B009E7726 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30811532333320B009E7726 /* MyColor.swift */; };
 		F3225EF42330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */; };
 		F3225EF62330AB2800D9BD79 /* MenuVC+UITableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */; };
 		F3225EF82330AC4100D9BD79 /* SelectMusicTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */; };
@@ -110,6 +111,7 @@
 		F308114E23332CAA009E7726 /* MuteAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteAlertVC.swift; sourceTree = "<group>"; };
 		F308115023333017009E7726 /* mute_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mute_animation.json; sourceTree = "<group>"; };
 		F308115223333081009E7726 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		F30811532333320B009E7726 /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 		F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDelegate.swift"; sourceTree = "<group>"; };
 		F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDataSource.swift"; sourceTree = "<group>"; };
 		F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMusicTableCell.xib; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 				F3C21BC3232F9C4F00546D5B /* Music.swift */,
 				F3225EFB2330AFCA00D9BD79 /* iTunesAPIModel.swift */,
 				F3225EFC2330AFCA00D9BD79 /* iTunesRSSModel.swift */,
+				F30811532333320B009E7726 /* MyColor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				F3C21BBD232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift in Sources */,
 				F3225EFE2330AFCA00D9BD79 /* iTunesRSSModel.swift in Sources */,
 				F32B91F8233298FD0031B062 /* IBDesignableSegumentControl.swift in Sources */,
+				F30811542333320B009E7726 /* MyColor.swift in Sources */,
 				589460F722867A4800319032 /* FirebaseManager.swift in Sources */,
 				F3225EFD2330AFCA00D9BD79 /* iTunesAPIModel.swift in Sources */,
 				F3C21BB9232F711300546D5B /* UIImage+Ex.swift in Sources */,
