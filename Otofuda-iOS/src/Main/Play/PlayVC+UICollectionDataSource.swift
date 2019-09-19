@@ -1,4 +1,3 @@
-
 import UIKit
 
 extension PlayVC: UICollectionViewDataSource {
@@ -11,12 +10,12 @@ extension PlayVC: UICollectionViewDataSource {
                                                       for: indexPath)
         cell.titleLabel.text = arrangedMusics[indexPath.row].name
         let tappedMusic = arrangedMusics[indexPath.row]
-        
+
         if tappedMusic.isAnimating {
             cell.animate()
             tappedMusic.isAnimating = false
         }
-        
+
         if tappedMusic.isTapped {
             cell.backgroundV.backgroundColor = .red
             cell.titleLabel.textColor = .white
@@ -25,9 +24,8 @@ extension PlayVC: UICollectionViewDataSource {
             cell.backgroundV.backgroundColor = .white
             cell.titleLabel.textColor = .black
         }
-        
+
         return cell
     }
 
-    
 }

@@ -1,4 +1,3 @@
-
 import UIKit
 import MediaPlayer
 import Mute
@@ -10,30 +9,30 @@ protocol TopProtocol {
 }
 
 final class TopVC: UIViewController, TopProtocol {
-    
+
     var haveMusics: [Music] = []
-    
+
     @IBOutlet var mutePopupV: UIView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let isMute = Mute.shared.isMute
-        
+
         if isMute {
             self.view.addSubview(mutePopupV)
         }
-        
+
         requestAuth()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
-    
+
     func requestAuth() {
-        MPMediaLibrary.requestAuthorization { (status) in
+        MPMediaLibrary.requestAuthorization { status in
             if status == .authorized {
                 self.loadMusics()
             } else {
@@ -41,7 +40,7 @@ final class TopVC: UIViewController, TopProtocol {
             }
         }
     }
-    
+
     func loadMusics() {
         let userDefaults = UserDefaults.standard
         let songsQuery = MPMediaQuery.songs()
@@ -62,20 +61,20 @@ final class TopVC: UIViewController, TopProtocol {
             saveMusicsUserDefaults()
         }
     }
-    
+
     func saveMusicsUserDefaults() {
-        
+
         // UserDefaultsの楽曲データを更新するための処理
         let userDefaults = UserDefaults.standard
         let songsQuery = MPMediaQuery.songs()
-        
+
         // 一曲もなければリターンする
         guard let songs = songsQuery.collections else {
             return
         }
-        
+
         userDefaults.set( songs.count, forKey: "songCount")
-        
+
         var musics: [MPMediaItem] = []
         let albumsQuery = MPMediaQuery.albums()
         if let albums = albumsQuery.collections {
@@ -86,14 +85,13 @@ final class TopVC: UIViewController, TopProtocol {
                 }
             }
         }
-        
+
         let saveData = NSKeyedArchiver.archivedData(withRootObject: musics)
         userDefaults.set(saveData, forKey: "musics")
         userDefaults.synchronize()
 
-     
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "create":
@@ -106,6 +104,5 @@ final class TopVC: UIViewController, TopProtocol {
             break
         }
     }
-    
-}
 
+}

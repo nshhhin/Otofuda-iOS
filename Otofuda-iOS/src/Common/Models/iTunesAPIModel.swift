@@ -1,18 +1,17 @@
-
 import Foundation
 import PromiseKit
 import Alamofire
 import ObjectMapper
 
 final class iTunesAPIModel {
-    
+
     static let shared = iTunesAPIModel()
-    
+
     func request( keyword: String, attribute: String ) -> Promise<String> {
         let encKeyword = keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        
+
         let url = "http://itunes.apple.com/search?term=\(encKeyword)&country=JP&lang=ja_jp&media=music&entity=song&attribute=\(attribute)&limit=30"
-        
+
         return Promise { seal in
             Alamofire.request(url).responseString { response in
                 switch response.result {
@@ -24,7 +23,7 @@ final class iTunesAPIModel {
             }
         }
     }
-    
+
     func mapping(jsonStr: String) -> Promise<Results> {
         return Promise { seal in
             print( jsonStr )
@@ -42,12 +41,12 @@ enum InternalError: Error {
 }
 
 struct Results: Mappable {
-    
+
     var results: [Result]?
-    
+
     init?(map: Map) {
     }
-    
+
     mutating func mapping(map: Map) {
         results <- map["results"]
     }
@@ -59,10 +58,10 @@ struct Result: Mappable {
     var artist = ""
     var thumbnail = ""
     var previewURL = ""
-    
+
     init?(map: Map) {
     }
-    
+
     mutating func mapping(map: Map) {
         album <- map["collectionName"]
         title <- map["trackName"]
@@ -70,6 +69,5 @@ struct Result: Mappable {
         thumbnail <- map["artworkUrl100"]
         previewURL <- map["previewUrl"]
     }
-    
-}
 
+}

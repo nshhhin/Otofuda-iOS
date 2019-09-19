@@ -22,6 +22,7 @@
 		F308115123333017009E7726 /* mute_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F308115023333017009E7726 /* mute_animation.json */; };
 		F30811542333320B009E7726 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30811532333320B009E7726 /* MyColor.swift */; };
 		F308115623335E48009E7726 /* MenuVC+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308115523335E48009E7726 /* MenuVC+Ex.swift */; };
+		F308115923339323009E7726 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F308115823339323009E7726 /* .swiftlint.yml */; };
 		F3225EF42330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */; };
 		F3225EF62330AB2800D9BD79 /* MenuVC+UITableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */; };
 		F3225EF82330AC4100D9BD79 /* SelectMusicTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */; };
@@ -114,6 +115,7 @@
 		F308115223333081009E7726 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F30811532333320B009E7726 /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 		F308115523335E48009E7726 /* MenuVC+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+Ex.swift"; sourceTree = "<group>"; };
+		F308115823339323009E7726 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDelegate.swift"; sourceTree = "<group>"; };
 		F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDataSource.swift"; sourceTree = "<group>"; };
 		F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMusicTableCell.xib; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		589460C822852E9500319032 = {
 			isa = PBXGroup;
 			children = (
+				F308115823339323009E7726 /* .swiftlint.yml */,
 				589460D322852E9500319032 /* Otofuda-iOS */,
 				589460D222852E9500319032 /* Products */,
 				DF4B4C7A60863B6BDBCE3175 /* Pods */,
@@ -430,6 +433,7 @@
 				787488BFDB152AFD921AF178 /* [CP] Embed Pods Frameworks */,
 				F3225F182330B26200D9BD79 /* CopyFiles */,
 				F3225F192330B26400D9BD79 /* ShellScript */,
+				F3081157233392D9009E7726 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -478,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F308115923339323009E7726 /* .swiftlint.yml in Resources */,
 				F308115123333017009E7726 /* mute_animation.json in Resources */,
 				F32B91A923320BF80031B062 /* tap_fuda.caf in Resources */,
 				F3E25FE6233085B600134769 /* FudaCollectionCell.xib in Resources */,
@@ -536,6 +541,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F3081157233392D9009E7726 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# if which swiftlint >/dev/null; then\n#swiftlint autocorrect --format\n#swiftlint\n#else\n#echo \"warning: SwiftLint not installed, download from #https://github.com/realm/SwiftLint\"\n#fi\n";
 		};
 		F3225F192330B26400D9BD79 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

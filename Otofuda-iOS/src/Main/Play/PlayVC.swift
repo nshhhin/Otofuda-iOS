@@ -1,4 +1,3 @@
-
 import UIKit
 import MediaPlayer
 
@@ -13,37 +12,37 @@ protocol PlayProtocol {
 }
 
 final class PlayVC: UIViewController, PlayProtocol {
-    
+
     var room: Room!
-    
+
     var haveMusics: [Music] = []
-    
+
     // 再生順
     var selectedMusics: [Music] = []
-    
+
     // 並び順
     var arrangedMusics: [Music] = []
-    
+
     // 再生されている曲
     var playingMusic: Music!
-    
+
     var currentIndex: Int = 0
-    
+
     let fudaMaxCount = 16
-    
+
     var player: MPMusicPlayerController!
-    
+
     var firebaseManager = FirebaseManager()
-    
+
     let speech = AVSpeechSynthesizer()
     let utterance = AVSpeechUtterance(string: "お手つき")
-    
+
     @IBOutlet weak var startBtn: UIButton! {
         didSet {
             setupStartBtn(isEnabled: true)
         }
     }
-    
+
     @IBOutlet weak var fudaCollectionV: UICollectionView! {
         didSet {
             fudaCollectionV.delegate = self
@@ -52,7 +51,7 @@ final class PlayVC: UIViewController, PlayProtocol {
             fudaCollectionV.backgroundColor = .white
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeVoice()
@@ -63,12 +62,12 @@ final class PlayVC: UIViewController, PlayProtocol {
         }
         arrangeMusics()
     }
-  
+
     deinit {
         player.stop()
         player = nil
     }
-    
+
     @IBAction func tapStartBtn(_ sender: Any) {
         if  currentIndex > selectedMusics.count - 1 {
             return
@@ -79,6 +78,5 @@ final class PlayVC: UIViewController, PlayProtocol {
         navigationItem.title = String(currentIndex) + "曲目"
         currentIndex += 1
     }
-    
-}
 
+}

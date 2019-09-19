@@ -22,7 +22,7 @@ enum ModeURL: String {
     case bingo = "bingo"
 }
 
-protocol FirebaseManagerProtocol: class {
+protocol FirebaseManagerProtocol: AnyObject {
     func post(path: String, value: Any)
     func deleteAllValue(path: String)
     func deleteObserve(path: String)
@@ -37,30 +37,30 @@ final class FirebaseManager: FirebaseManagerProtocol {
 }
 
 extension FirebaseManager {
-    
+
     func post(path: String, value: Any) {
         dbRef.child(path).setValue(value)
     }
-    
+
     func deleteAllValue(path: String) {
         dbRef.child(path).removeValue()
     }
-    
+
     func deleteObserve(path: String) {
         dbRef.child(path).removeAllObservers()
     }
-    
+
     func deleteAllValuesAndObserve(path: String) {
         deleteAllValue(path: path)
         deleteObserve(path: path)
     }
-    
+
     func observe(path: String, completion: @escaping (DataSnapshot) -> Void) {
         dbRef.child(path).observe(.value) { snapshot in
             completion(snapshot)
         }
     }
-    
+
     func observeSingle(path: String, completion: @escaping (DataSnapshot) -> Void) {
         dbRef.child(path).observeSingleEvent(of: .value) { snapshot in
             completion(snapshot)

@@ -1,4 +1,3 @@
-
 import Foundation
 
 extension String {
@@ -7,8 +6,8 @@ extension String {
         let alphabet = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         let upperBound = UInt32(alphabet.count)
         return String((0..<length).map { _ -> Character in
-            return alphabet[alphabet.index(alphabet.startIndex, offsetBy: Int(arc4random_uniform(upperBound)))]
+            alphabet[alphabet.index(alphabet.startIndex, offsetBy: Int(arc4random_uniform(upperBound)))]
         })
     }
-    
+
 }
