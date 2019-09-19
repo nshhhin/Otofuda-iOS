@@ -2,9 +2,16 @@
 import Foundation
 import UIKit
 
+enum RoomStatus: String {
+    case menu   = "menu"
+    case play   = "play"
+    case result = "result"
+}
+
 struct Room {
     var name: String!
     var member: [User] = []
+    var status: RoomStatus = .menu
     var rule: Dictionary<String, String> = [
         "playing": RulePlaying.intro.rawValue,
         "point"  : RulePoint.normal.rawValue
@@ -32,7 +39,7 @@ struct Room {
             userArray.append(user.name)
         }
         
-        dict = [ "name": name, "member": userArray, "rule": rule ]
+        dict = [ "name": name, "member": userArray, "rule": rule, "status": status.rawValue ]
         return dict
     }
     

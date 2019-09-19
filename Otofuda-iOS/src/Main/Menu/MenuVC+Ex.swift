@@ -8,6 +8,7 @@ extension MenuVC {
         } else {
             blockV.isHidden = false
             observeUI()
+            observeStart()
         }
     }
     
@@ -41,5 +42,25 @@ extension MenuVC {
                 }
             }
         })
+    }
+    
+    func observeStart(){
+        firebaseManager.observe(path: room.url() + "status", completion: { snapshot in
+            if let status = snapshot.value as? String {
+                if status == "play" {
+                    self.goNextVC()
+                }
+            }
+        })
+    }
+    
+    func goNextVC(){
+        let storyboard = UIStoryboard(name: "Play", bundle: nil)
+        let nextVC = storyboard.instantiateInitialViewController() as! PlayVC
+        nextVC.modalTransitionStyle = .crossDissolve
+        nextVC.room = room
+        nextVC.haveMusics = self.haveMusics
+//        nextVC.isHost = false
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

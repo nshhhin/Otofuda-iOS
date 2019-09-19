@@ -12,6 +12,8 @@ class SearchGroupVC: UIViewController {
     
     var qrV: UIView!
     
+    var room: Room!
+    
     var haveMusics: [Music] = []
     
     var items: [String] = []

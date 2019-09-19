@@ -29,22 +29,14 @@ extension SearchGroupVC: AVCaptureMetadataOutputObjectsDelegate {
                        
                         let roomID = cropURL(url: strMetadata)
                         
-                        var room = Room(name: roomID)
+                        room = Room(name: roomID)
                         firebaseManager.observeSingle(path: room.url(), completion: { snapshot in
                             if let roomDict = snapshot.value as? [String : Any] {
                                 var member = roomDict["member"] as? [String] ?? []
                                 member.append( self.appDelegate.uuid )
-                                self.firebaseManager.post(path: room.url() + "member", value: member)
+                                self.firebaseManager.post(path: self.room.url() + "member", value: member)
                                 self.isMatching = true
-                                
-                                let storyboard = UIStoryboard(name: "Menu", bundle: nil)
-                                let nextVC = storyboard.instantiateInitialViewController() as! MenuVC
-                                nextVC.modalTransitionStyle = .crossDissolve
-                                nextVC.room = room // TODO: メンバーを更新したRoomにする
-                                nextVC.haveMusics = self.haveMusics
-                                nextVC.isHost = false
-                         
-                                self.navigationController?.pushViewController(nextVC, animated: true)
+                                self.goNextVC()
                             }
                         })
                     }
@@ -52,6 +44,5 @@ extension SearchGroupVC: AVCaptureMetadataOutputObjectsDelegate {
             }
         }
     }
-    
     
 }

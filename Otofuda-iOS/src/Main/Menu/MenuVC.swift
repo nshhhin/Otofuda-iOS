@@ -85,11 +85,14 @@ final class MenuVC: UIViewController, Menurotocol {
 //                arrayDict.append( music.dict() )
 //            }
 //            firebaseManager.post(path: room.url() + "selected", value: arrayDict)
+            
+            room.status = .play
         
             let nextVC = segue.destination as! PlayVC
             nextVC.haveMusics = self.haveMusics
-            
             nextVC.room = room
+            
+            firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
         }
     }
     

@@ -53,4 +53,14 @@ extension SearchGroupVC: SearchGroupProtocol {
         return roomID
     }
     
+    func goNextVC(){
+        let storyboard = UIStoryboard(name: "Menu", bundle: nil)
+        let nextVC = storyboard.instantiateInitialViewController() as! MenuVC
+        nextVC.modalTransitionStyle = .crossDissolve
+        nextVC.room = room // TODO: メンバーを更新したRoomにする
+        nextVC.haveMusics = self.haveMusics
+        nextVC.isHost = false
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
 }
