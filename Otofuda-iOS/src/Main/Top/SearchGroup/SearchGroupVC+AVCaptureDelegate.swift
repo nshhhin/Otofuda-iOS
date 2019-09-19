@@ -44,7 +44,7 @@ extension SearchGroupVC: AVCaptureMetadataOutputObjectsDelegate {
                                 nextVC.haveMusics = self.haveMusics
                                 nextVC.isHost = false
                          
-                                self.present(nextVC, animated: true, completion: nil)
+                                self.navigationController?.pushViewController(nextVC, animated: true)
                             }
                         })
                     }
