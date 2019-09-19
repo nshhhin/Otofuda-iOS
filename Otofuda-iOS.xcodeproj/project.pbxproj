@@ -21,6 +21,7 @@
 		F308114F23332CAA009E7726 /* MuteAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308114E23332CAA009E7726 /* MuteAlertVC.swift */; };
 		F308115123333017009E7726 /* mute_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F308115023333017009E7726 /* mute_animation.json */; };
 		F30811542333320B009E7726 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30811532333320B009E7726 /* MyColor.swift */; };
+		F308115623335E48009E7726 /* MenuVC+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308115523335E48009E7726 /* MenuVC+Ex.swift */; };
 		F3225EF42330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */; };
 		F3225EF62330AB2800D9BD79 /* MenuVC+UITableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */; };
 		F3225EF82330AC4100D9BD79 /* SelectMusicTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */; };
@@ -112,6 +113,7 @@
 		F308115023333017009E7726 /* mute_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mute_animation.json; sourceTree = "<group>"; };
 		F308115223333081009E7726 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F30811532333320B009E7726 /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
+		F308115523335E48009E7726 /* MenuVC+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+Ex.swift"; sourceTree = "<group>"; };
 		F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDelegate.swift"; sourceTree = "<group>"; };
 		F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDataSource.swift"; sourceTree = "<group>"; };
 		F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMusicTableCell.xib; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				F3225EFF2330AFD900D9BD79 /* iTunesPicker */,
 				F3E25FDA232F9FF800134769 /* Menu.storyboard */,
 				F3E25FDC232FA00D00134769 /* MenuVC.swift */,
+				F308115523335E48009E7726 /* MenuVC+Ex.swift */,
 				F3E25FEF233096C500134769 /* MenuVC+MPMediaPickerDelegate.swift */,
 				F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */,
 				F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */,
@@ -585,6 +588,7 @@
 				F3225EF42330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift in Sources */,
 				F3E25FEC2330891600134769 /* PlayVC+Ex.swift in Sources */,
 				F3C21BB7232F703C00546D5B /* String+Ex.swift in Sources */,
+				F308115623335E48009E7726 /* MenuVC+Ex.swift in Sources */,
 				F3E25FD4232F9F6600134769 /* PlayVC+UICollectionDataSource.swift in Sources */,
 				F32B91AE233232660031B062 /* ResultVC+UICollectionDelegate.swift in Sources */,
 				F3E25FD0232F9E5200134769 /* PlayVC.swift in Sources */,

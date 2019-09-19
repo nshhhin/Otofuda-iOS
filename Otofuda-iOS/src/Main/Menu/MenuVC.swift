@@ -52,33 +52,6 @@ final class MenuVC: UIViewController, Menurotocol {
         prepareUI()
     }
     
-    func prepareUI(){
-        if isHost {
-            blockV.isHidden = true
-        } else {
-            blockV.isHidden = false
-            observeUI()
-        }
-    }
-    
-    func observeUI(){
-        firebaseManager.observe(path: room.url(), completion: { snapshot in
-            if let roomDict = snapshot.value as? Dictionary<String, String> {
-                guard let ruleDict = roomDict["Rule"] else { return }
-                switch ruleDict  {
-                case "intro":
-                    self.playingSegument.selectedSegmentIndex = 0
-                case "sabi":
-                    self.playingSegument.selectedSegmentIndex = 1
-                case "random":
-                    self.playingSegument.selectedSegmentIndex = 2
-                default:
-                    break
-                }
-            }
-        })
-    }
-    
     @IBAction func changedPointSeg(_ sender: Any) {
         switch (sender as AnyObject).selectedSegmentIndex {
         case 0:
@@ -88,6 +61,7 @@ final class MenuVC: UIViewController, Menurotocol {
         default:
             break
         }
+        firebaseManager.post(path: room.url() + "rule/point/", value: rulePoint.rawValue)
     }
     
     @IBAction func changePlayingSeg(_ sender: Any) {
@@ -99,8 +73,9 @@ final class MenuVC: UIViewController, Menurotocol {
         case 2:
             rulePlaying = .random
         default:
-            firebaseManager.post(path: room.url() + "rule", value: rulePlaying.rawValue)
+            break
         }
+        firebaseManager.post(path: room.url() + "rule/playing/", value: rulePlaying.rawValue)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

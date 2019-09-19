@@ -5,6 +5,10 @@ import UIKit
 struct Room {
     var name: String!
     var member: [User] = []
+    var rule: Dictionary<String, String> = [
+        "playing": RulePlaying.intro.rawValue,
+        "point"  : RulePoint.normal.rawValue
+    ]
     
     init(name: String){
         self.name = name
@@ -28,7 +32,7 @@ struct Room {
             userArray.append(user.name)
         }
         
-        dict = [ "name": name, "member": userArray ]
+        dict = [ "name": name, "member": userArray, "rule": rule ]
         return dict
     }
     
