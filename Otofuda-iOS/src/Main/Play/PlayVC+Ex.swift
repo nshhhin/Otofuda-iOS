@@ -40,6 +40,13 @@ extension PlayVC {
         for i in 0..<fudaMaxCount {
             selectedMusics.append(haveMusics[i])
         }
+        
+        var dictMusics: [Dictionary<String, Any>] = []
+        for music in selectedMusics {
+            dictMusics.append(music.dict())
+        }
+        
+        firebaseManager.post(path: room.url() + "selectedMusics", value: dictMusics)
     }
     
     func arrangeMusics() {

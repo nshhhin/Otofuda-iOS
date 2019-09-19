@@ -11,6 +11,11 @@ struct Room {
         self.member = []
     }
     
+    init(name: String, member: [User]) {
+        self.name = name
+        self.member = member
+    }
+    
     mutating func addMember(user: User){
         self.member.append(user)
     }

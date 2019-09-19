@@ -376,9 +376,9 @@
 				F3C21BBF232F809100546D5B /* Room.swift */,
 				F3C21BC1232F80EF00546D5B /* User.swift */,
 				F3C21BC3232F9C4F00546D5B /* Music.swift */,
+				F30811532333320B009E7726 /* MyColor.swift */,
 				F3225EFB2330AFCA00D9BD79 /* iTunesAPIModel.swift */,
 				F3225EFC2330AFCA00D9BD79 /* iTunesRSSModel.swift */,
-				F30811532333320B009E7726 /* MyColor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

@@ -46,4 +46,11 @@ extension SearchGroupVC: SearchGroupProtocol {
         }
     }
     
+    // https://uniotto.org/api/searchRoom.php?roomID=XXXXX → XXXXX にする
+    func cropURL(url: String) -> String{
+        let separatedURL: [String] = url.components(separatedBy: "=")
+        let roomID: String = separatedURL[1]
+        return roomID
+    }
+    
 }

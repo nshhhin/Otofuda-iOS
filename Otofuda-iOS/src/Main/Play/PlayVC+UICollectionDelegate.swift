@@ -14,14 +14,15 @@ extension PlayVC: UICollectionViewDelegate {
         
         let tappedMusic = arrangedMusics[indexPath.row]
 
-        print(tappedMusic.name, playingMusic.name)
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let me = User(name: appDelegate.uuid, musics: [], color: .red)
+        let music = selectedMusics[indexPath.row]
+        firebaseManager.post(path: room.url() + "tapped", value: ["user": me.dict(), "music": music.dict()])
+        
         // 正解
         if tappedMusic == playingMusic {
             tappedMusic.isAnimating = true
             tappedMusic.isTapped = true
-            
-            let music = selectedMusics[indexPath.row]
-            firebaseManager.post(path: room.url(), value: ["tapped": music.dict()])
         }
         // 不正解
         else {

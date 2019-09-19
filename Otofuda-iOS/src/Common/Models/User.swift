@@ -8,7 +8,7 @@ struct User {
     
     func dict() -> Dictionary<String, Any> {
         var dict = Dictionary<String, Any>()
-        dict = ["name": name, "musics": "musics", "color": color]
+        dict = ["name": name, "musics": "musics", "color": color.rawValue]
         return dict
     }
 }

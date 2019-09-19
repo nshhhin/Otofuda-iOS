@@ -1,5 +1,6 @@
 
 import UIKit
+import Lottie
 
 class MuteAlertVC: UIViewController {
     
@@ -22,12 +23,12 @@ class MuteAlertVC: UIViewController {
             repeats: false
         )
         
-//        let animationView = LOTAnimationView(frame: CGRect(x: 0, y: 100, width: 300, height: 300))
-//        animationView.setAnimation(named: "mute_animation")
-//        animationView.loopAnimation = true
-//        animationView.animationSpeed = 2
-//        muteAnimationV.addSubview(animationView)
-//        animationView.play()
+        // TODO: 🐛なぜか表示されない
+        let animationV = AnimationView()
+        let animation = Animation.named("mute_animation")
+        animationV.contentMode = .scaleAspectFit
+        muteAnimationV.addSubview(animationV)
+        animationV.play()
     }
     
     @objc func goNextVC() {

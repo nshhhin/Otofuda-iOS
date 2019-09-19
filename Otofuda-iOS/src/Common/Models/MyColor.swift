@@ -2,9 +2,10 @@
 import Foundation
 import UIKit
 
-enum MyColor {
-    case red
-    case blue
-    case green
-    case pink
+enum MyColor: String {
+    case red   = "red"
+    case blue  = "blue"
+    case green = "green"
+    case pink  = "pink"
+    case brown = "brown"
 }

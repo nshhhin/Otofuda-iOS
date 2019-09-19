@@ -24,9 +24,21 @@ extension SearchGroupVC: AVCaptureMetadataOutputObjectsDelegate {
                     // 検出データを取得
                     let strMetadata = metadata.stringValue!
                     print(strMetadata)
+                    let roomID = cropURL(url: strMetadata)
+                    
+                    var room = Room(name: roomID)
+                    firebaseManager.observeSingle(path: room.url(), completion: { snapshot in
+                        if let roomDict = snapshot.value as? [String : Any] {
+                            var member = roomDict["member"] as? [String] ?? []
+                            member.append( self.appDelegate.uuid )
+                            self.firebaseManager.post(path: room.url(), value: member)
+                            print( member )
+                        }
+                    })
                 }
             }
         }
     }
+    
     
 }

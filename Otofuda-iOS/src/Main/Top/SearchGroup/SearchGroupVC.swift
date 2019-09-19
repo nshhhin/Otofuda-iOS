@@ -19,6 +19,10 @@ class SearchGroupVC: UIViewController {
     let captureSession = AVCaptureSession()
     
     var videoLayer: AVCaptureVideoPreviewLayer?
+    
+    var firebaseManager = FirebaseManager()
+    
+    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
