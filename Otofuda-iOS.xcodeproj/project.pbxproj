@@ -19,10 +19,10 @@
 		F308114B233325BB009E7726 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308114A233325BB009E7726 /* SplashVC.swift */; };
 		F308114D233325C6009E7726 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F308114C233325C6009E7726 /* Splash.storyboard */; };
 		F308114F23332CAA009E7726 /* MuteAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308114E23332CAA009E7726 /* MuteAlertVC.swift */; };
-		F308115123333017009E7726 /* mute_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F308115023333017009E7726 /* mute_animation.json */; };
 		F30811542333320B009E7726 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30811532333320B009E7726 /* MyColor.swift */; };
 		F308115623335E48009E7726 /* MenuVC+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308115523335E48009E7726 /* MenuVC+Ex.swift */; };
 		F308115923339323009E7726 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F308115823339323009E7726 /* .swiftlint.yml */; };
+		F308115F233516A2009E7726 /* mute_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F308115E233516A2009E7726 /* mute_animation.json */; };
 		F3225EF42330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */; };
 		F3225EF62330AB2800D9BD79 /* MenuVC+UITableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */; };
 		F3225EF82330AC4100D9BD79 /* SelectMusicTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */; };
@@ -111,11 +111,11 @@
 		F308114A233325BB009E7726 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		F308114C233325C6009E7726 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		F308114E23332CAA009E7726 /* MuteAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteAlertVC.swift; sourceTree = "<group>"; };
-		F308115023333017009E7726 /* mute_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mute_animation.json; sourceTree = "<group>"; };
 		F308115223333081009E7726 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F30811532333320B009E7726 /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 		F308115523335E48009E7726 /* MenuVC+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+Ex.swift"; sourceTree = "<group>"; };
 		F308115823339323009E7726 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		F308115E233516A2009E7726 /* mute_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mute_animation.json; sourceTree = "<group>"; };
 		F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDelegate.swift"; sourceTree = "<group>"; };
 		F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDataSource.swift"; sourceTree = "<group>"; };
 		F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMusicTableCell.xib; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 				F3C21BB3232F6D8D00546D5B /* GoogleService-Info.plist */,
 				589460E022852E9500319032 /* Info.plist */,
 				F32B91A823320BF80031B062 /* tap_fuda.caf */,
-				F308115023333017009E7726 /* mute_animation.json */,
+				F308115E233516A2009E7726 /* mute_animation.json */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -482,8 +482,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F308115F233516A2009E7726 /* mute_animation.json in Resources */,
 				F308115923339323009E7726 /* .swiftlint.yml in Resources */,
-				F308115123333017009E7726 /* mute_animation.json in Resources */,
 				F32B91A923320BF80031B062 /* tap_fuda.caf in Resources */,
 				F3E25FE6233085B600134769 /* FudaCollectionCell.xib in Resources */,
 				F3E25FDB232F9FF800134769 /* Menu.storyboard in Resources */,

@@ -5,7 +5,7 @@ class MuteAlertVC: UIViewController {
 
     var timer: Timer!
     
-    var displayTime = 1.0 // TODO: 普段は3.0ぐらいにする
+    var displayTime = 3.0 // TODO: 普段は3.0ぐらいにする
 
     @IBOutlet weak var muteAnimationV: UIView!
 
@@ -24,11 +24,21 @@ class MuteAlertVC: UIViewController {
             repeats: false
         )
 
-        // TODO: 🐛なぜか表示されない
-        let animationV = AnimationView()
-        let animation = Animation.named("mute_animation")
-        animationV.contentMode = .scaleAspectFit
+        // FIXME: 🐛なぜか表示されない
+        let animationV = AnimationView(name: "mute_animation")
+//        animationV.contentMode = .scaleAspectFit
+        animationV.frame = CGRect(x: animationV.frame.minX, y: animationV.frame.minY, width: 200, height: 200)
+//        animationV.center = muteAnimationV.center
         muteAnimationV.addSubview(animationV)
+        
+        animationV.centerXAnchor.constraint(equalTo: muteAnimationV.centerXAnchor).isActive = true
+        animationV.centerYAnchor.constraint(equalTo: muteAnimationV.centerYAnchor).isActive = true
+        animationV.widthAnchor.constraint(equalTo: muteAnimationV.widthAnchor, multiplier: 1.0).isActive = true
+        animationV.heightAnchor.constraint(equalTo: muteAnimationV.heightAnchor, multiplier: 1.0).isActive = true
+        
+        
+        animationV.animationSpeed = 1
+        animationV.loopMode = .loop
         animationV.play()
     }
 

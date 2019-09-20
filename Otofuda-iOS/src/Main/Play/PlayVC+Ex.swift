@@ -110,6 +110,14 @@ extension PlayVC {
             countdownTimer.invalidate()
             count = 0
             
+            firebaseManager.observe(path: room.url() + "tapped", completion: { snapshot in
+                if let tapDict = snapshot.value as? Dictionary<String, Any> {
+                    self.isTapped = true
+                } else {
+                    self.isTapped = false
+                }
+            })
+            
             playMusic()
             setupStartBtn(isEnabled: false)
             playingMusic = selectedMusics[currentIndex]

@@ -3,9 +3,10 @@ import UIKit
 extension MenuVC {
     func prepareUI() {
         if isHost {
-            blockV.isHidden = true
+//            blockV.isHidden = true
         } else {
-            blockV.isHidden = false
+//            blockV.isHidden = false
+            displayBlockV()
             observeUI()
             observeStart()
         }
@@ -62,4 +63,26 @@ extension MenuVC {
         //        nextVC.isHost = false
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
+    
+    func displayBlockV(){
+        blockV.frame = self.view.frame
+        blockV.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(blockV)
+        
+        blockV.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        blockV.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        blockV.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1.0).isActive = true
+        blockV.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1.0).isActive = true
+    }
+    
+//    func displayCountdownV(){
+//        countdownLabel.text = "3"
+//        countdownV.frame = countdownV.frame
+//        countdownV.translatesAutoresizingMaskIntoConstraints = false
+//        self.view.addSubview(countdownV)
+//        countdownV.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        countdownV.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+//        countdownV.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5).isActive = true
+//        countdownV.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1).isActive = true
+//    }
 }

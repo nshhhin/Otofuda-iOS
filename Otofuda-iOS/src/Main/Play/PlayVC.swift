@@ -36,13 +36,14 @@ final class PlayVC: UIViewController, PlayProtocol {
     var player: MPMusicPlayerController!
 
     var firebaseManager = FirebaseManager()
+    
+    var isTapped = false
 
     let speech = AVSpeechSynthesizer()
     let utterance = AVSpeechUtterance(string: "お手つき")
     
     var countdownTimer: Timer!
     var count = 0
-    
     
     @IBOutlet var countdownV: UIView!
     

@@ -16,7 +16,12 @@ extension PlayVC: UICollectionViewDelegate {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let me = User(name: appDelegate.uuid, musics: [], color: .red)
         let music = selectedMusics[indexPath.row]
-        firebaseManager.post(path: room.url() + "tapped", value: ["user": me.dict(), "music": music.dict()])
+        
+        if !isTapped {
+            firebaseManager.post(path: room.url() + "tapped", value: ["user": me.dict(), "music": music.dict()])
+            firebaseManager.deleteObserve(path: room.url() + "tapped")
+            isTapped = false
+        }
 
         // 正解
         if tappedMusic == playingMusic {
