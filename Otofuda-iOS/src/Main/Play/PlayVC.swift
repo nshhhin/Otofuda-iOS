@@ -2,6 +2,9 @@ import UIKit
 import MediaPlayer
 
 protocol PlayProtocol {
+    func fireTimer()
+    func displayCountdownV()
+    func removeCountdonwV()
     func tapStartBtn(_ sender: Any)
     func initializeVoice()
     func initializePlayer()
@@ -12,7 +15,7 @@ protocol PlayProtocol {
 }
 
 final class PlayVC: UIViewController, PlayProtocol {
-
+    
     var room: Room!
 
     var haveMusics: [Music] = []
@@ -91,44 +94,4 @@ final class PlayVC: UIViewController, PlayProtocol {
 //        currentIndex += 1
     }
     
-    func fireTimer(){
-        countdownTimer = Timer.scheduledTimer(
-            timeInterval: 1,
-            target: self,
-            selector: #selector(self.countdown),
-            userInfo: nil,
-            repeats: true
-        )
-    }
-    
-    func displayCountdownV(){
-        countdownLabel.text = "3"
-        countdownV.frame = countdownV.frame
-        countdownV.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(countdownV)
-        countdownV.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        countdownV.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        countdownV.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5).isActive = true
-        countdownV.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1).isActive = true
-    }
-    
-    @objc func countdown(){
-        countdownLabel.text = String(3 - count)
-        if count == 3 {
-            self.removeCountdonwV()
-            countdownTimer.invalidate()
-            
-            playMusic()
-            setupStartBtn(isEnabled: false)
-            playingMusic = selectedMusics[currentIndex]
-            navigationItem.title = String(currentIndex) + "曲目"
-            currentIndex += 1
-        }
-        count += 1
-    }
-    
-    func removeCountdonwV(){
-        countdownV.removeFromSuperview()
-    }
-
 }
