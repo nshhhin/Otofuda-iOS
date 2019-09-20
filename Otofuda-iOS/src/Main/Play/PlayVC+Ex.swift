@@ -29,6 +29,14 @@ extension PlayVC {
     }
 
     func selectRandomMusics() {
+        
+        // 縛り曲が追加されてたら
+        // TODO: もっといい書き方あると思うので後で改修
+        if selectedMusics.count > 0 {
+            haveMusics = selectedMusics
+            selectedMusics = []
+        }
+        
         haveMusics.shuffle()
 
         // 曲が満たない場合は

@@ -90,6 +90,7 @@ final class MenuVC: UIViewController, Menurotocol {
             let nextVC = segue.destination as! PlayVC
             nextVC.haveMusics = self.haveMusics
             nextVC.room = room
+            nextVC.selectedMusics = self.selectedMusics
 
             firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
         }
