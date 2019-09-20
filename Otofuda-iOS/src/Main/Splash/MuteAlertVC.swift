@@ -4,6 +4,8 @@ import Lottie
 class MuteAlertVC: UIViewController {
 
     var timer: Timer!
+    
+    var displayTime = 1.0 // TODO: 普段は3.0ぐらいにする
 
     @IBOutlet weak var muteAnimationV: UIView!
 
@@ -15,7 +17,7 @@ class MuteAlertVC: UIViewController {
         super.viewDidAppear(animated)
 
         timer = Timer.scheduledTimer(
-            timeInterval: 3.0,
+            timeInterval: displayTime,
             target: self,
             selector: #selector(self.goNextVC),
             userInfo: nil,
