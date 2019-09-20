@@ -1,16 +1,35 @@
 import UIKit
 import Lottie
+import AVFoundation
 
 class MuteAlertVC: UIViewController {
 
     var timer: Timer!
     
-    var displayTime = 3.0 // TODO: 普段は3.0ぐらいにする
+    var displayTime = 5.0 // FIXME: 普段は3秒ぐらい    
 
     @IBOutlet weak var muteAnimationV: UIView!
+    
+    var bellPlayer: AVAudioPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayAnimation()
+        
+        do {
+            bellPlayer = try AVAudioPlayer(contentsOf: Bundle.main.url(
+                    forResource: "Bell",
+                    withExtension: "mp3"
+                    )!
+            )
+            bellPlayer!.prepareToPlay()
+            bellPlayer!.volume = 1.0
+            bellPlayer!.play()
+            bellPlayer!.numberOfLoops = 3
+        } catch {
+            print(error)
+        }
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -23,20 +42,20 @@ class MuteAlertVC: UIViewController {
             userInfo: nil,
             repeats: false
         )
-
-        // FIXME: 🐛なぜか表示されない
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        bellPlayer = nil
+    }
+    
+    
+    func displayAnimation(){
         let animationV = AnimationView(name: "mute_animation")
-//        animationV.contentMode = .scaleAspectFit
-        animationV.frame = CGRect(x: animationV.frame.minX, y: animationV.frame.minY, width: 200, height: 200)
-//        animationV.center = muteAnimationV.center
-        muteAnimationV.addSubview(animationV)
-        
-        animationV.centerXAnchor.constraint(equalTo: muteAnimationV.centerXAnchor).isActive = true
-        animationV.centerYAnchor.constraint(equalTo: muteAnimationV.centerYAnchor).isActive = true
-        animationV.widthAnchor.constraint(equalTo: muteAnimationV.widthAnchor, multiplier: 1.0).isActive = true
-        animationV.heightAnchor.constraint(equalTo: muteAnimationV.heightAnchor, multiplier: 1.0).isActive = true
-        
-        
+        animationV.contentMode = .scaleAspectFit
+        animationV.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        animationV.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 50)
+        self.view.addSubview(animationV)
         animationV.animationSpeed = 1
         animationV.loopMode = .loop
         animationV.play()
