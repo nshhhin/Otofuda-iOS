@@ -92,7 +92,7 @@ extension SearchGroupVC: AVCaptureMetadataOutputObjectsDelegate {
             formatter.dateFormat = "yyyy-M-d-H-m"
             let current_date = formatter.string(from: now as Date)
             
-//            firebaseManager.post(path: room.url() + "date", value: current_date) // Roomがまだ未定義なのでエラーになる
+            firebaseManager.post(path: room.url() + "date", value: current_date) // Roomがまだ未定義なのでエラーになる
             
             let uuid = UIDevice.current.identifierForVendor!.uuidString
             
@@ -107,13 +107,13 @@ extension SearchGroupVC: AVCaptureMetadataOutputObjectsDelegate {
                 }
                 
                 if isExist {
-                    self.goNextVC()
+                    self.goNextVC(room: room)
                     self.isMatching = true
                 } else {
                     if var member = snapshot.value as? [String] {
                         member.append( self.appDelegate.uuid )
-                        self.firebaseManager.post(path: self.room.url() + "member", value: member)
-                        self.goNextVC()
+                        self.firebaseManager.post(path: room.url() + "member", value: member)
+                        self.goNextVC(room: room)
                         self.isMatching = true
                         return
                     }

@@ -52,7 +52,7 @@ extension SearchGroupVC: SearchGroupProtocol {
         return roomID
     }
 
-    func goNextVC() {
+    func goNextVC(room: Room) {
         let storyboard = UIStoryboard(name: "Menu", bundle: nil)
         let nextVC = storyboard.instantiateInitialViewController() as! MenuVC
         nextVC.modalTransitionStyle = .crossDissolve
@@ -75,8 +75,16 @@ extension SearchGroupVC: SearchGroupProtocol {
                     guard let roomName = roomDict["name"] as? String else {
                         continue
                     }
+                    guard let member = roomDict["member"] as? [String] else {
+                        continue
+                    }
                     
-                    self.rooms.append(Room(name: roomName))
+                    var users: [User] = []
+                    for user in member {
+                        users.append( User(name: user, musics: [], color: .red))
+                    }
+                    
+                    self.rooms.append(Room(name: roomName, member: users))
                     print("はいったあああああ")
                 }
             }

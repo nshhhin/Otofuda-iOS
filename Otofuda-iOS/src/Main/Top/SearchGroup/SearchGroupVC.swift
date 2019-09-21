@@ -10,9 +10,7 @@ class SearchGroupVC: UIViewController {
     @IBOutlet weak var cameraV: UIView!
 
     var qrV: UIView!
-
-    var room: Room!
-
+    
     var haveMusics: [Music] = []
 
     var items: [String] = []
