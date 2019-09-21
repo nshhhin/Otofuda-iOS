@@ -13,14 +13,11 @@ extension MenuVC {
     }
 
     func observeUI() {
-        firebaseManager.observe(path: room.url() + "rule", completion: { snapshot in
-            print("ここまではいった")
+        firebaseManager.observe(path: room.url() + "rule", completion: { snapshot in 
             if let ruleDict = snapshot.value as? Dictionary<String, String> {
-                print("ここまではいった2")
                 guard let pointRule = ruleDict["point"] else { return }
                 guard let playingRule = ruleDict["playing"] else { return }
-                print("ここまではいった3")
-
+                
                 switch pointRule {
                 case "normal":
                     self.pointSegument.selectedSegmentIndex = 0
@@ -75,14 +72,4 @@ extension MenuVC {
         blockV.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1.0).isActive = true
     }
     
-//    func displayCountdownV(){
-//        countdownLabel.text = "3"
-//        countdownV.frame = countdownV.frame
-//        countdownV.translatesAutoresizingMaskIntoConstraints = false
-//        self.view.addSubview(countdownV)
-//        countdownV.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        countdownV.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-//        countdownV.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5).isActive = true
-//        countdownV.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1).isActive = true
-//    }
 }

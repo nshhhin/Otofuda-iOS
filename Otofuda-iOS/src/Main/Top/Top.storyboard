@@ -225,7 +225,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" restorationIdentifier="cameraID" translatesAutoresizingMaskIntoConstraints="NO" id="qNs-xX-Xpd">
-                                <rect key="frame" x="46" y="287" width="322" height="322"/>
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qNs-xX-Xpd" secondAttribute="height" multiplier="1:1" id="nMX-DL-PzN"/>
@@ -234,10 +234,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.15686270590000001" green="0.15686273570000001" blue="0.15686270590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="qNs-xX-Xpd" firstAttribute="leading" secondItem="6H1-SW-fmF" secondAttribute="leading" constant="46" id="0az-wn-LbG"/>
-                            <constraint firstItem="6H1-SW-fmF" firstAttribute="trailing" secondItem="qNs-xX-Xpd" secondAttribute="trailing" constant="46" id="5La-nE-kwL"/>
+                            <constraint firstItem="qNs-xX-Xpd" firstAttribute="leading" secondItem="6H1-SW-fmF" secondAttribute="leading" id="GUD-jI-s6Y"/>
                             <constraint firstItem="qNs-xX-Xpd" firstAttribute="centerY" secondItem="7R9-ol-kwd" secondAttribute="centerY" id="KVR-Nk-dBp"/>
                             <constraint firstItem="qNs-xX-Xpd" firstAttribute="centerX" secondItem="7R9-ol-kwd" secondAttribute="centerX" id="tUC-9I-mAC"/>
+                            <constraint firstItem="6H1-SW-fmF" firstAttribute="trailing" secondItem="qNs-xX-Xpd" secondAttribute="trailing" id="toG-v4-Ht2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6H1-SW-fmF"/>
                     </view>

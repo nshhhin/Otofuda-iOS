@@ -16,7 +16,7 @@ extension SearchGroupVC: AVCaptureMetadataOutputObjectsDelegate {
                     let barCode = videoLayer?.transformedMetadataObject(for: metadata) as! AVMetadataMachineReadableCodeObject
                     let box = CGRect(
                         x: barCode.bounds.minX,
-                        y: barCode.bounds.minY,
+                        y: barCode.bounds.minY + 250, // FIXME: 🐛このずれのせいでとりあえず250に設定している
                         width: barCode.bounds.width,
                         height: barCode.bounds.height
                     )

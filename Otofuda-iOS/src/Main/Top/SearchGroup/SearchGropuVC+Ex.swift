@@ -32,11 +32,11 @@ extension SearchGroupVC: SearchGroupProtocol {
         let box = CGRect(
             x: cameraV.bounds.minX,
             y: cameraV.bounds.minY,
-            width: cameraV.bounds.width,
-            height: cameraV.bounds.height
+            width:  UIScreen.main.bounds.size.width,
+            height:  UIScreen.main.bounds.size.width
         )
         videoLayer?.frame = box
-        videoLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill //短い方に合わせてアスペクト比を調整してくれる
+        videoLayer?.videoGravity = .resizeAspectFill //短い方に合わせてアスペクト比を調整してくれる
         cameraV.layer.addSublayer(videoLayer!)
 
         // セッションの開始
