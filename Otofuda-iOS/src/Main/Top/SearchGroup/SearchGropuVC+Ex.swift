@@ -61,5 +61,26 @@ extension SearchGroupVC: SearchGroupProtocol {
         nextVC.isHost = false
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
+    
+    func observeRooms(){
+        firebaseManager.observe(path: RoomURL.base.rawValue, completion: { snapshot in
+            if let dbRooms = snapshot.value as? Dictionary<String, Any> {
+                self.rooms = []
+                
+                for dbRoom in dbRooms.keys {
+                    
+                    guard let roomDict = dbRooms[dbRoom] as? Dictionary<String, Any> else {
+                        continue
+                    }
+                    guard let roomName = roomDict["name"] as? String else {
+                        continue
+                    }
+                    
+                    self.rooms.append(Room(name: roomName))
+                    print("はいったあああああ")
+                }
+            }
+        })
+    }
 
 }

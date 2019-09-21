@@ -26,9 +26,12 @@ class SearchGroupVC: UIViewController {
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
     var isMatching = false
+    
+    var rooms: [Room] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        observeRooms()
     }
 
     override func viewWillAppear(_ animated: Bool) {

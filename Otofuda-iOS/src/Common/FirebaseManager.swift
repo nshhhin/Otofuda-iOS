@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 enum RoomURL: String {
-    case base = "room/"
+    case base = "rooms/"
     case playMode = "/Otofuda/PlayMode"
     case mode = "/Otofuda/Mode"
 }
