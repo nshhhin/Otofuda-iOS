@@ -26,6 +26,8 @@
 		F308116723351DBC009E7726 /* Bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F308116623351DBC009E7726 /* Bell.mp3 */; };
 		F30811692335C937009E7726 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30811682335C937009E7726 /* Date+Ex.swift */; };
 		F308116B2335C9F6009E7726 /* CreateGroupVC+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308116A2335C9F6009E7726 /* CreateGroupVC+Ex.swift */; };
+		F30811732336535D009E7726 /* Otofuda_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30811722336535D009E7726 /* Otofuda_iOSTests.swift */; };
+		F30811812336536F009E7726 /* Otofuda_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30811802336536F009E7726 /* Otofuda_iOSUITests.swift */; };
 		F3225EF42330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */; };
 		F3225EF62330AB2800D9BD79 /* MenuVC+UITableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */; };
 		F3225EF82330AC4100D9BD79 /* SelectMusicTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */; };
@@ -83,6 +85,23 @@
 		F3E25FF42330997F00134769 /* MPMediaItemCollection+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E25FF32330997F00134769 /* MPMediaItemCollection+Ex.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F30811752336535D009E7726 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 589460C922852E9500319032 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 589460D022852E9500319032;
+			remoteInfo = "Otofuda-iOS";
+		};
+		F30811832336536F009E7726 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 589460C922852E9500319032 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 589460D022852E9500319032;
+			remoteInfo = "Otofuda-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		F3225F182330B26200D9BD79 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -122,6 +141,12 @@
 		F308116623351DBC009E7726 /* Bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bell.mp3; sourceTree = "<group>"; };
 		F30811682335C937009E7726 /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
 		F308116A2335C9F6009E7726 /* CreateGroupVC+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateGroupVC+Ex.swift"; sourceTree = "<group>"; };
+		F30811702336535C009E7726 /* Otofuda-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Otofuda-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30811722336535D009E7726 /* Otofuda_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Otofuda_iOSTests.swift; sourceTree = "<group>"; };
+		F30811742336535D009E7726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F308117E2336536F009E7726 /* Otofuda-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Otofuda-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30811802336536F009E7726 /* Otofuda_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Otofuda_iOSUITests.swift; sourceTree = "<group>"; };
+		F30811822336536F009E7726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDelegate.swift"; sourceTree = "<group>"; };
 		F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDataSource.swift"; sourceTree = "<group>"; };
 		F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMusicTableCell.xib; sourceTree = "<group>"; };
@@ -194,6 +219,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F308116D2336535C009E7726 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F308117B2336536F009E7726 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -235,6 +274,8 @@
 			children = (
 				F308115823339323009E7726 /* .swiftlint.yml */,
 				589460D322852E9500319032 /* Otofuda-iOS */,
+				F30811712336535D009E7726 /* Otofuda-iOSTests */,
+				F308117F2336536F009E7726 /* Otofuda-iOSUITests */,
 				589460D222852E9500319032 /* Products */,
 				DF4B4C7A60863B6BDBCE3175 /* Pods */,
 				54E6151815F6B8962458DCA0 /* Frameworks */,
@@ -245,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				589460D122852E9500319032 /* Otofuda-iOS.app */,
+				F30811702336535C009E7726 /* Otofuda-iOSTests.xctest */,
+				F308117E2336536F009E7726 /* Otofuda-iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,6 +377,24 @@
 				F308114E23332CAA009E7726 /* MuteAlertVC.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		F30811712336535D009E7726 /* Otofuda-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				F30811722336535D009E7726 /* Otofuda_iOSTests.swift */,
+				F30811742336535D009E7726 /* Info.plist */,
+			);
+			path = "Otofuda-iOSTests";
+			sourceTree = "<group>";
+		};
+		F308117F2336536F009E7726 /* Otofuda-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F30811802336536F009E7726 /* Otofuda_iOSUITests.swift */,
+				F30811822336536F009E7726 /* Info.plist */,
+			);
+			path = "Otofuda-iOSUITests";
 			sourceTree = "<group>";
 		};
 		F3225EFF2330AFD900D9BD79 /* iTunesPicker */ = {
@@ -453,6 +514,42 @@
 			productReference = 589460D122852E9500319032 /* Otofuda-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F308116F2336535C009E7726 /* Otofuda-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F30811772336535D009E7726 /* Build configuration list for PBXNativeTarget "Otofuda-iOSTests" */;
+			buildPhases = (
+				F308116C2336535C009E7726 /* Sources */,
+				F308116D2336535C009E7726 /* Frameworks */,
+				F308116E2336535C009E7726 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F30811762336535D009E7726 /* PBXTargetDependency */,
+			);
+			name = "Otofuda-iOSTests";
+			productName = "Otofuda-iOSTests";
+			productReference = F30811702336535C009E7726 /* Otofuda-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F308117D2336536F009E7726 /* Otofuda-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F30811852336536F009E7726 /* Build configuration list for PBXNativeTarget "Otofuda-iOSUITests" */;
+			buildPhases = (
+				F308117A2336536F009E7726 /* Sources */,
+				F308117B2336536F009E7726 /* Frameworks */,
+				F308117C2336536F009E7726 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F30811842336536F009E7726 /* PBXTargetDependency */,
+			);
+			name = "Otofuda-iOSUITests";
+			productName = "Otofuda-iOSUITests";
+			productReference = F308117E2336536F009E7726 /* Otofuda-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -465,6 +562,14 @@
 				TargetAttributes = {
 					589460D022852E9500319032 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					F308116F2336535C009E7726 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 589460D022852E9500319032;
+					};
+					F308117D2336536F009E7726 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 589460D022852E9500319032;
 					};
 				};
 			};
@@ -482,6 +587,8 @@
 			projectRoot = "";
 			targets = (
 				589460D022852E9500319032 /* Otofuda-iOS */,
+				F308116F2336535C009E7726 /* Otofuda-iOSTests */,
+				F308117D2336536F009E7726 /* Otofuda-iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -507,6 +614,20 @@
 				F3225EF82330AC4100D9BD79 /* SelectMusicTableCell.xib in Resources */,
 				F3C21BB4232F6D8D00546D5B /* GoogleService-Info.plist in Resources */,
 				F308114D233325C6009E7726 /* Splash.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F308116E2336535C009E7726 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F308117C2336536F009E7726 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,7 +774,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F308116C2336535C009E7726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30811732336535D009E7726 /* Otofuda_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F308117A2336536F009E7726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30811812336536F009E7726 /* Otofuda_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F30811762336535D009E7726 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 589460D022852E9500319032 /* Otofuda-iOS */;
+			targetProxy = F30811752336535D009E7726 /* PBXContainerItemProxy */;
+		};
+		F30811842336536F009E7726 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 589460D022852E9500319032 /* Otofuda-iOS */;
+			targetProxy = F30811832336536F009E7726 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		589460E122852E9500319032 /* Debug */ = {
@@ -829,6 +979,86 @@
 			};
 			name = Release;
 		};
+		F30811782336535D009E7726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8YPT438X6;
+				INFOPLIST_FILE = "Otofuda-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nakamura-labProject.Otofuda-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otofuda-iOS.app/Otofuda-iOS";
+			};
+			name = Debug;
+		};
+		F30811792336535D009E7726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8YPT438X6;
+				INFOPLIST_FILE = "Otofuda-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Nakamura-labProject.Otofuda-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otofuda-iOS.app/Otofuda-iOS";
+			};
+			name = Release;
+		};
+		F30811862336536F009E7726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8YPT438X6;
+				INFOPLIST_FILE = "Otofuda-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nakamura-labProject.Otofuda-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Otofuda-iOS";
+			};
+			name = Debug;
+		};
+		F30811872336536F009E7726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8YPT438X6;
+				INFOPLIST_FILE = "Otofuda-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Nakamura-labProject.Otofuda-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Otofuda-iOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -846,6 +1076,24 @@
 			buildConfigurations = (
 				589460E422852E9500319032 /* Debug */,
 				589460E522852E9500319032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F30811772336535D009E7726 /* Build configuration list for PBXNativeTarget "Otofuda-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F30811782336535D009E7726 /* Debug */,
+				F30811792336535D009E7726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F30811852336536F009E7726 /* Build configuration list for PBXNativeTarget "Otofuda-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F30811862336536F009E7726 /* Debug */,
+				F30811872336536F009E7726 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
