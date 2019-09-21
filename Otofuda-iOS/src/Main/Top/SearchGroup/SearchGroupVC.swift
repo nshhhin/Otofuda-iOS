@@ -3,6 +3,8 @@ import AVFoundation
 
 protocol SearchGroupProtocol {
     func readQRCode()
+    func enterRoom(room: Room)
+    func observeRooms()
 }
 
 class SearchGroupVC: UIViewController {
@@ -37,5 +39,9 @@ class SearchGroupVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
         print("サーチビューが起動されました")
         readQRCode()
+    }
+    
+    deinit {
+        firebaseManager.deleteAllValue(path: RoomURL.base.rawValue)
     }
 }

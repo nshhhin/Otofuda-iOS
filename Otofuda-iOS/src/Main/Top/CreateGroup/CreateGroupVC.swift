@@ -2,6 +2,7 @@ import UIKit
 import FirebaseDatabase
 
 protocol CreateGropuProtocol {
+    func createGroup() -> String
     func generateQRCode(name: String)
 }
 
@@ -26,27 +27,12 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
-    func createGroup() -> String {
-        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        let me = User(name: appDelegate.uuid, musics: [], color: .red)
-
-        let roomID = String.getRandomStringWithLength(length: 6)
-        room = Room(name: roomID)
-        room.addMember(user: me)
-        firebaseManager.post(path: room.url(), value: room.dict() )
-        return roomID
-    }
-
-    func generateQRCode(name: String) {
-        let qrImage = CIImage.generateQRImage(url: "https://uniotto.org/api/searchRoom.php?roomID=\(name)")
-        qrView.image = UIImage(ciImage: qrImage)
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination as! MenuVC
         nextVC.room = room
         nextVC.isHost = true
         nextVC.haveMusics = self.haveMusics
     }
+    
 
 }

@@ -44,6 +44,41 @@ extension SearchGroupVC: SearchGroupProtocol {
             self.captureSession.startRunning()
         }
     }
+    
+    func enterRoom(room: Room) {
+        if !isMatching {
+            let current_date = Date.getCurrentDate()
+            
+            firebaseManager.post(path: room.url() + "date", value: current_date)
+            
+            let uuid = UIDevice.current.identifierForVendor!.uuidString
+            
+            firebaseManager.observeSingle(path: room.url() + "member", completion: {(snapshot) in
+                var isExist: Bool = false
+                if let member = snapshot.value as? [String] {
+                    for user in member {
+                        if user == uuid {
+                            isExist = isExist || true
+                        }
+                    }
+                }
+                
+                if isExist {
+                    self.goNextVC(room: room)
+                    self.isMatching = true
+                } else {
+                    if var member = snapshot.value as? [String] {
+                        member.append( self.appDelegate.uuid )
+                        self.firebaseManager.post(path: room.url() + "member", value: member)
+                        self.goNextVC(room: room)
+                        self.isMatching = true
+                        return
+                    }
+                }
+            })
+            
+        }
+    }
 
     // https://uniotto.org/api/searchRoom.php?roomID=XXXXX → XXXXX にする
     func cropURL(url: String) -> String {

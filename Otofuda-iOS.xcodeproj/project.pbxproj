@@ -24,6 +24,8 @@
 		F308115923339323009E7726 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F308115823339323009E7726 /* .swiftlint.yml */; };
 		F308115F233516A2009E7726 /* mute_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F308115E233516A2009E7726 /* mute_animation.json */; };
 		F308116723351DBC009E7726 /* Bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F308116623351DBC009E7726 /* Bell.mp3 */; };
+		F30811692335C937009E7726 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30811682335C937009E7726 /* Date+Ex.swift */; };
+		F308116B2335C9F6009E7726 /* CreateGroupVC+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308116A2335C9F6009E7726 /* CreateGroupVC+Ex.swift */; };
 		F3225EF42330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */; };
 		F3225EF62330AB2800D9BD79 /* MenuVC+UITableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */; };
 		F3225EF82330AC4100D9BD79 /* SelectMusicTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */; };
@@ -118,6 +120,8 @@
 		F308115823339323009E7726 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F308115E233516A2009E7726 /* mute_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mute_animation.json; sourceTree = "<group>"; };
 		F308116623351DBC009E7726 /* Bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bell.mp3; sourceTree = "<group>"; };
+		F30811682335C937009E7726 /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
+		F308116A2335C9F6009E7726 /* CreateGroupVC+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateGroupVC+Ex.swift"; sourceTree = "<group>"; };
 		F3225EF32330AAFF00D9BD79 /* MenuVC+UITableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDelegate.swift"; sourceTree = "<group>"; };
 		F3225EF52330AB2800D9BD79 /* MenuVC+UITableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuVC+UITableDataSource.swift"; sourceTree = "<group>"; };
 		F3225EF72330AC4100D9BD79 /* SelectMusicTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMusicTableCell.xib; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				589460F022855AAE00319032 /* CreateGroupVC.swift */,
+				F308116A2335C9F6009E7726 /* CreateGroupVC+Ex.swift */,
 			);
 			path = CreateGroup;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				F3E25FED233090EC00134769 /* MPMediaPlayer+Ex.swift */,
 				F3E25FF12330986000134769 /* MPMediaItem+Ex.swift */,
 				F3E25FF32330997F00134769 /* MPMediaItemCollection+Ex.swift */,
+				F30811682335C937009E7726 /* Date+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -607,6 +613,7 @@
 				589460D722852E9500319032 /* TopVC.swift in Sources */,
 				F32B91FC23329A5C0031B062 /* IBDesignableView.swift in Sources */,
 				F3E25FE02330853900134769 /* UICollection+Ex.swift in Sources */,
+				F30811692335C937009E7726 /* Date+Ex.swift in Sources */,
 				F3225EFA2330ACFD00D9BD79 /* SelectMusicTableCell.swift in Sources */,
 				F32B91B0233232730031B062 /* ResultVC+UICollectionDataSource.swift in Sources */,
 				F3E25FDD232FA00D00134769 /* MenuVC.swift in Sources */,
@@ -622,6 +629,7 @@
 				F32B91FA233299CC0031B062 /* IBDesignableTableView.swift in Sources */,
 				F3C21BBD232F73E400546D5B /* SearchGroupVC+AVCaptureDelegate.swift in Sources */,
 				F3225EFE2330AFCA00D9BD79 /* iTunesRSSModel.swift in Sources */,
+				F308116B2335C9F6009E7726 /* CreateGroupVC+Ex.swift in Sources */,
 				F32B91F8233298FD0031B062 /* IBDesignableSegumentControl.swift in Sources */,
 				F30811542333320B009E7726 /* MyColor.swift in Sources */,
 				589460F722867A4800319032 /* FirebaseManager.swift in Sources */,
