@@ -121,7 +121,7 @@ final class MenuVC: UIViewController, Menurotocol {
             nextVC.arrangeMusics = arrangeMusics
             nextVC.isHost = self.isHost
             
-            room.status = .play
+            room.status = .start
 
             firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
         }

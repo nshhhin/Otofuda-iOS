@@ -4,9 +4,8 @@ import MediaPlayer
 extension MenuVC {
     func prepareUI() {
         if isHost {
-//            blockV.isHidden = true
-        } else {
-//            blockV.isHidden = false
+        }
+        else {
             displayBlockV()
             observeUI()
             observeStart()
@@ -45,7 +44,7 @@ extension MenuVC {
     func observeStart() {
         firebaseManager.observe(path: room.url() + "status", completion: { snapshot in
             if let status = snapshot.value as? String {
-                if status == "play" {
+                if status == RoomStatus.start.rawValue {
                     self.firebaseManager.observeSingle(path: self.room.url(), completion: { snapshot in
                         guard let fbRoom = snapshot.value as? Dictionary<String,Any> else {
                             print("fbRoomがありません")

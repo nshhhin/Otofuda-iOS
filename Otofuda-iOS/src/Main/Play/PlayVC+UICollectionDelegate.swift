@@ -6,6 +6,8 @@ extension PlayVC: UICollectionViewDelegate {
 
         let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
                                                       for: indexPath)
+        
+        cell.soundTap()
 
         guard let playingMusic = playingMusic else {
             return

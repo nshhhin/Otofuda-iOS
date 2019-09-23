@@ -80,6 +80,8 @@ extension PlayVC {
             self.removeCountdonwV()
             countdownTimer.invalidate()
             count = 0
+            room.status = .play
+            self.firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
             
             firebaseManager.observe(path: room.url() + "tapped", completion: { snapshot in
                 if let tapDict = snapshot.value as? Dictionary<String, Any> {
@@ -94,6 +96,7 @@ extension PlayVC {
             playingMusic = playingMusics[currentIndex]
             navigationItem.title = String(currentIndex) + "曲目"
             currentIndex += 1
+            firebaseManager.post(path: room.url() + "currentIndex", value: currentIndex)
         }
         count += 1
     }

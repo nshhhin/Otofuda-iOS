@@ -3,7 +3,9 @@ import UIKit
 
 enum RoomStatus: String {
     case menu   = "menu"
+    case start  = "start"
     case play   = "play"
+    case get    = "get"
     case result = "result"
 }
 

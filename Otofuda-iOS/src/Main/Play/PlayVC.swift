@@ -77,6 +77,10 @@ final class PlayVC: UIViewController, PlayProtocol {
     }
 
     @IBAction func tapStartBtn(_ sender: Any) {
+        if player.playbackState == .playing {
+            player.stop()
+        }
+        
         if  currentIndex > playingMusics.count - 1 {
             return
         }
