@@ -8,8 +8,8 @@ protocol PlayProtocol {
     func tapStartBtn(_ sender: Any)
     func initializeVoice()
     func initializePlayer()
-    func selectRandomMusics()
-    func arrangeMusics()
+//    func selectRandomMusics()
+//    func arrangeMusics()
     func playMusic()
     func finishGame()
 }
@@ -17,14 +17,13 @@ protocol PlayProtocol {
 final class PlayVC: UIViewController, PlayProtocol {
     
     var room: Room!
-
-    var haveMusics: [Music] = []
+    
+    var isHost: Bool = false
 
     // 再生順
-    var selectedMusics: [Music] = []
-
+    var playingMusics: [Music] = []
     // 並び順
-    var arrangedMusics: [Music] = []
+    var arrangeMusics: [Music] = []
 
     // 再生されている曲
     var playingMusic: Music!
@@ -69,10 +68,26 @@ final class PlayVC: UIViewController, PlayProtocol {
         initializeVoice()
         initializePlayer()
         navigationItem.title = "0曲目"
-        if selectedMusics.count == 0 {
-            selectRandomMusics()
-        }
-        arrangeMusics()
+        self.fudaCollectionV.reloadData()
+        
+//        if isHost {
+//            if selectedMusics.count == 0 {
+//                selectRandomMusics()
+//                arrangedMusics = selectedMusics.shuffled()
+//                 self.fudaCollectionV.reloadData()
+//
+//                var dictMusics: [Dictionary<String, Any>] = []
+//                        for music in arrangedMusics {
+//                            dictMusics.append(music.dict())
+//                        }
+//                firebaseManager.post(path: room.url() + "selectedMusics", value: dictMusics)
+//            }
+//        } else {
+//            getSelectedMusics()
+//            self.fudaCollectionV.reloadData()
+//        }
+        
+//        arrangeMusics()
     }
 
     deinit {
@@ -81,7 +96,7 @@ final class PlayVC: UIViewController, PlayProtocol {
     }
 
     @IBAction func tapStartBtn(_ sender: Any) {
-        if  currentIndex > selectedMusics.count - 1 {
+        if  currentIndex > playingMusics.count - 1 {
             return
         }
         displayCountdownV()

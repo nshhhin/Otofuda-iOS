@@ -1,4 +1,5 @@
 import UIKit
+import MediaPlayer
 
 extension MenuVC {
     func prepareUI() {
@@ -56,7 +57,7 @@ extension MenuVC {
         let nextVC = storyboard.instantiateInitialViewController() as! PlayVC
         nextVC.modalTransitionStyle = .crossDissolve
         nextVC.room = room
-        nextVC.haveMusics = self.haveMusics
+        nextVC.isHost = self.isHost
         //        nextVC.isHost = false
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
@@ -70,6 +71,22 @@ extension MenuVC {
         blockV.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         blockV.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1.0).isActive = true
         blockV.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1.0).isActive = true
+    }
+    
+    func getShuffledMusic(selectedMusics: [Music]) -> (
+        playingMusics: [Music], arrangeMusics:[Music]) {
+            
+            let shuffledMusics = selectedMusics.shuffled()
+            var rangeMusics: [Music] = []
+            
+            for i in 0..<16 {
+                rangeMusics.append(shuffledMusics[i])
+            }
+            
+            let playingMusics: [Music] = rangeMusics.shuffled()
+            let arrangeMusics: [Music] = rangeMusics.shuffled()
+        
+            return (playingMusics, arrangeMusics)
     }
     
 }

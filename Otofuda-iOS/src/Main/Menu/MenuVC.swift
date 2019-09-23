@@ -80,12 +80,32 @@ final class MenuVC: UIViewController, Menurotocol {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "next" {
 
-            room.status = .play
-
+            // そもそも持ち曲が16曲以上なければ何もしない
+            // TODO: セグエなのでリターンしただけでは強制的に遷移してしまうので今後改善
+            if haveMusics.count < 16 {
+               return
+            }
+            
+            // 選択曲が16曲以下だったら水増しする
+            if selectedMusics.count < 16 {
+                let shuffledMusics = haveMusics.shuffled()
+                let diffCount = 16 - selectedMusics.count
+                for i in 0..<diffCount {
+                    selectedMusics.append( shuffledMusics[i] )
+                }
+            }
+            
+            let shuffledTapleMusics = getShuffledMusic(selectedMusics: selectedMusics)
+            let playingMusics = shuffledTapleMusics.playingMusics
+            let arrangeMusics = shuffledTapleMusics.arrangeMusics
+            
             let nextVC = segue.destination as! PlayVC
-            nextVC.haveMusics = self.haveMusics
             nextVC.room = room
-            nextVC.selectedMusics = self.selectedMusics
+            nextVC.playingMusics = playingMusics
+            nextVC.arrangeMusics = arrangeMusics
+            nextVC.isHost = self.isHost
+            
+            room.status = .play
 
             firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
         }
