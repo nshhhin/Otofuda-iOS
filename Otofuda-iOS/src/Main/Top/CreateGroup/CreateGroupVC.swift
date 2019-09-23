@@ -21,6 +21,10 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
         let roomId = createGroup()
         generateQRCode(name: roomId)
     }
+    
+    deinit {
+        firebaseManager.deleteAllValue(path: room.url())
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

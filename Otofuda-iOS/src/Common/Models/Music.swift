@@ -15,9 +15,8 @@ class Music: NSObject {
 
     func dict() -> Dictionary<String, Any> {
         var dict = Dictionary<String, Any>()
-        dict = ["name": name, "artist": item.artist!, "genere": item.genre ?? "なし"]
+        dict = ["name": name ?? "なし", "artist": item.artist ?? "なし", "genere": item.genre ?? "なし"]
         return dict
     }
-    
     
 }

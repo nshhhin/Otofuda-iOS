@@ -36,6 +36,9 @@ final class MenuVC: UIViewController, Menurotocol {
     @IBOutlet weak var playingSegument: UISegmentedControl!
 
     var selectedMusics: [Music] = []
+    
+    var playingMusics: [Music] = []
+    var arrangeMusics: [Music] = []
 
     @IBOutlet weak var selectMusicTableV: UITableView! {
         didSet {
@@ -94,10 +97,22 @@ final class MenuVC: UIViewController, Menurotocol {
                     selectedMusics.append( shuffledMusics[i] )
                 }
             }
-            
+                        
             let shuffledTapleMusics = getShuffledMusic(selectedMusics: selectedMusics)
             let playingMusics = shuffledTapleMusics.playingMusics
             let arrangeMusics = shuffledTapleMusics.arrangeMusics
+            
+            // FirebaseにPOST処理
+            var dictPlayingMusics: [Dictionary<String, Any>] = []
+            for music in playingMusics {
+                dictPlayingMusics.append(music.dict())
+            }
+            var dictArrangeMusics: [Dictionary<String, Any>] = []
+            for music in arrangeMusics {
+                dictArrangeMusics.append(music.dict())
+            }
+            firebaseManager.post(path: room.url() + "playingMusics", value: dictPlayingMusics)
+            firebaseManager.post(path: room.url() + "arrangeMusics", value: dictArrangeMusics)
             
             let nextVC = segue.destination as! PlayVC
             nextVC.room = room

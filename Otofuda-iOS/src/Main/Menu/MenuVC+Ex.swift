@@ -46,9 +46,47 @@ extension MenuVC {
         firebaseManager.observe(path: room.url() + "status", completion: { snapshot in
             if let status = snapshot.value as? String {
                 if status == "play" {
-                    self.goNextVC()
+                    self.firebaseManager.observeSingle(path: self.room.url(), completion: { snapshot in
+                        guard let fbRoom = snapshot.value as? Dictionary<String,Any> else {
+                            return
+                        }
+                        guard let fbPlayingMusics = snapshot.value as? [Dictionary<String, Any>] else {
+                            return
+                        }
+                        guard let fbArrangeMusics = snapshot.value as? [Dictionary<String, Any>] else {
+                            return
+                        }
+                        
+                        for fbPlayingMusic in fbPlayingMusics {
+                            let name = fbPlayingMusic["name"] as! String // TODO: タイトル
+                            let music = Music(name: name, item: nil)
+                            self.playingMusics.append(music)
+                        }
+                        
+                        for fbArrangeMusic in fbArrangeMusics {
+                            let name = fbArrangeMusic["name"] as! String
+                            let music = Music(name: name, item: nil)
+                            self.arrangeMusics.append(music)
+                        }
+                        
+                        
+                    })
                 }
             }
+        })
+        
+        firebaseManager.observe(path: room.url() + "playingMusics", completion: { snapshot in
+            if let selectedMusics = snapshot.value as? [Dictionary<String, Any>] {
+                self.selectedMusics = []
+                for selectedMusic in selectedMusics {
+                    let name = selectedMusic["name"] as! String
+                    let music = Music(name: name, item: nil)
+                    self.playingMusics.append(music)
+                }
+                
+                self.goNextVC()
+            }
+           
         })
     }
 
