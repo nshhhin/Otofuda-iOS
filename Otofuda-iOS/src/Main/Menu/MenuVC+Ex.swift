@@ -48,46 +48,48 @@ extension MenuVC {
                 if status == "play" {
                     self.firebaseManager.observeSingle(path: self.room.url(), completion: { snapshot in
                         guard let fbRoom = snapshot.value as? Dictionary<String,Any> else {
+                            print("fbRoomがみつかりませえええええん")
                             return
                         }
-                        guard let fbPlayingMusics = snapshot.value as? [Dictionary<String, Any>] else {
+                        guard let fbPlayingMusics = fbRoom["playingMusics"] as? [Dictionary<String, Any>] else {
+                             print("playingMusicがみつかりませえええええん")
                             return
                         }
-                        guard let fbArrangeMusics = snapshot.value as? [Dictionary<String, Any>] else {
+                        guard let fbArrangeMusics = fbRoom["arrangeMusics"] as? [Dictionary<String, Any>] else {
                             return
                         }
                         
                         for fbPlayingMusic in fbPlayingMusics {
-                            let name = fbPlayingMusic["name"] as! String // TODO: タイトル
+                            let name = fbPlayingMusic["name"] as! String // TODO: タイトルがないときに落ちる
                             let music = Music(name: name, item: nil)
                             self.playingMusics.append(music)
                         }
                         
                         for fbArrangeMusic in fbArrangeMusics {
-                            let name = fbArrangeMusic["name"] as! String
+                            let name = fbArrangeMusic["name"] as! String // TODO: タイトルがないときに落ちる
                             let music = Music(name: name, item: nil)
                             self.arrangeMusics.append(music)
                         }
                         
-                        
+                        self.goNextVC()
                     })
                 }
             }
         })
         
-        firebaseManager.observe(path: room.url() + "playingMusics", completion: { snapshot in
-            if let selectedMusics = snapshot.value as? [Dictionary<String, Any>] {
-                self.selectedMusics = []
-                for selectedMusic in selectedMusics {
-                    let name = selectedMusic["name"] as! String
-                    let music = Music(name: name, item: nil)
-                    self.playingMusics.append(music)
-                }
-                
-                self.goNextVC()
-            }
-           
-        })
+//        firebaseManager.observe(path: room.url() + "playingMusics", completion: { snapshot in
+//            if let selectedMusics = snapshot.value as? [Dictionary<String, Any>] {
+//                self.selectedMusics = []
+//                for selectedMusic in selectedMusics {
+//                    let name = selectedMusic["name"] as! String
+//                    let music = Music(name: name, item: nil)
+//                    self.playingMusics.append(music)
+//                }
+//
+//                self.goNextVC()
+//            }
+//
+//        })
     }
 
     func goNextVC() {
@@ -96,7 +98,8 @@ extension MenuVC {
         nextVC.modalTransitionStyle = .crossDissolve
         nextVC.room = room
         nextVC.isHost = self.isHost
-        //        nextVC.isHost = false
+        nextVC.playingMusics = self.playingMusics
+        nextVC.arrangeMusics = self.arrangeMusics
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
