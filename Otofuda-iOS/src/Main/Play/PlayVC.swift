@@ -69,25 +69,7 @@ final class PlayVC: UIViewController, PlayProtocol {
         initializePlayer()
         navigationItem.title = "0曲目"
         self.fudaCollectionV.reloadData()
-        
-//        if isHost {
-//            if selectedMusics.count == 0 {
-//                selectRandomMusics()
-//                arrangedMusics = selectedMusics.shuffled()
-//                 self.fudaCollectionV.reloadData()
-//
-//                var dictMusics: [Dictionary<String, Any>] = []
-//                        for music in arrangedMusics {
-//                            dictMusics.append(music.dict())
-//                        }
-//                firebaseManager.post(path: room.url() + "selectedMusics", value: dictMusics)
-//            }
-//        } else {
-//            getSelectedMusics()
-//            self.fudaCollectionV.reloadData()
-//        }
-        
-//        arrangeMusics()
+
     }
 
     deinit {

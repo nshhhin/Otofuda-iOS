@@ -28,38 +28,6 @@ extension PlayVC {
         self.player.repeatMode = .none
     }
 
-//    func selectRandomMusics() {
-//        
-//        // 縛り曲が追加されてたら
-//        // TODO: もっといい書き方あると思うので後で改修
-//        if selectedMusics.count > 0 {
-//            haveMusics = selectedMusics
-//            selectedMusics = []
-//        }
-//        
-//        haveMusics.shuffle()
-//
-//        // 曲が満たない場合は
-//        if haveMusics.count < fudaMaxCount {
-//            return
-//        }
-//
-//        for i in 0..<fudaMaxCount {
-//            selectedMusics.append(haveMusics[i])
-//        }
-
-//        var dictMusics: [Dictionary<String, Any>] = []
-//        for music in selectedMusics {
-//            dictMusics.append(music.dict())
-//        }
-//
-////        firebaseManager.post(path: room.url() + "selectedMusics", value: dictMusics)
-//    }
-
-//    func arrangeMusics() {
-//        self.fudaCollectionV.reloadData()
-//    }
-
     func playMusic() {
         player.setMusic(item: playingMusics[currentIndex].item)
         player.play()
@@ -73,7 +41,6 @@ extension PlayVC {
         let storyboard = UIStoryboard(name: "Result", bundle: nil)
         let nextVC = storyboard.instantiateInitialViewController() as! ResultVC
         nextVC.room = room
-//        nextVC.haveMusics = self.haveMusics
         nextVC.playingMusics = self.playingMusics
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
@@ -127,22 +94,5 @@ extension PlayVC {
         countdownV.removeFromSuperview()
     }
     
-    func getSelectedMusics(){
-        firebaseManager.observeSingle(path: room.url() + "selectedMusics", completion: { snapshot in
-            guard let selectedMusics = snapshot.value as? [Dictionary<String, Any>] else {
-                return
-            }
-            for musicDict in selectedMusics {
-                guard let name = musicDict["name"] as? String else {
-                    continue
-                }
-                guard let artist = musicDict["artist"] as? String else {
-                    continue
-                }
-                let music = Music(name: name, item: nil)
-                self.playingMusics.append( music )
-            }
-        })
-    }
 
 }

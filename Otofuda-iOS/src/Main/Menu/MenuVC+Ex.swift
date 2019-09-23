@@ -48,14 +48,15 @@ extension MenuVC {
                 if status == "play" {
                     self.firebaseManager.observeSingle(path: self.room.url(), completion: { snapshot in
                         guard let fbRoom = snapshot.value as? Dictionary<String,Any> else {
-                            print("fbRoomがみつかりませえええええん")
+                            print("fbRoomがありません")
                             return
                         }
                         guard let fbPlayingMusics = fbRoom["playingMusics"] as? [Dictionary<String, Any>] else {
-                             print("playingMusicがみつかりませえええええん")
+                            print("fbPlayingMusicsがありません")
                             return
                         }
                         guard let fbArrangeMusics = fbRoom["arrangeMusics"] as? [Dictionary<String, Any>] else {
+                            print("fbArrangeMusicsがありません")
                             return
                         }
                         
@@ -77,19 +78,6 @@ extension MenuVC {
             }
         })
         
-//        firebaseManager.observe(path: room.url() + "playingMusics", completion: { snapshot in
-//            if let selectedMusics = snapshot.value as? [Dictionary<String, Any>] {
-//                self.selectedMusics = []
-//                for selectedMusic in selectedMusics {
-//                    let name = selectedMusic["name"] as! String
-//                    let music = Music(name: name, item: nil)
-//                    self.playingMusics.append(music)
-//                }
-//
-//                self.goNextVC()
-//            }
-//
-//        })
     }
 
     func goNextVC() {
