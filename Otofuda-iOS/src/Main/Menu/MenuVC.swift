@@ -86,6 +86,7 @@ final class MenuVC: UIViewController, Menurotocol {
             // そもそも持ち曲が16曲以上なければ何もしない
             // TODO: セグエなのでリターンしただけでは強制的に遷移してしまうので今後改善
             if haveMusics.count < 16 {
+                print("16曲以下しかありません")
                return
             }
             
