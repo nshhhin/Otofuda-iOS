@@ -16,6 +16,14 @@ extension PlayVC {
             startBtn.backgroundColor = .darkGray
         }
     }
+    
+    func initializeUI(){
+        if isHost {
+            startBtn.isHidden = false
+        } else {
+            startBtn.isHidden = true
+        }
+    }
 
     func initializeVoice() {
         self.utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")

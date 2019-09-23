@@ -6,10 +6,9 @@ protocol PlayProtocol {
     func displayCountdownV()
     func removeCountdonwV()
     func tapStartBtn(_ sender: Any)
+    func initializeUI()
     func initializeVoice()
     func initializePlayer()
-//    func selectRandomMusics()
-//    func arrangeMusics()
     func playMusic()
     func finishGame()
 }
@@ -65,11 +64,11 @@ final class PlayVC: UIViewController, PlayProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializeUI()
         initializeVoice()
         initializePlayer()
         navigationItem.title = "0曲目"
         self.fudaCollectionV.reloadData()
-
     }
 
     deinit {
