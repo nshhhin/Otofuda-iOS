@@ -65,6 +65,7 @@ class MuteAlertVC: UIViewController {
         let storyboard = UIStoryboard(name: "Top", bundle: nil)
         let nextVC = storyboard.instantiateInitialViewController()
         nextVC!.modalTransitionStyle = .crossDissolve
+        nextVC!.modalPresentationStyle = .fullScreen
         present(nextVC!, animated: true, completion: nil)
     }
 

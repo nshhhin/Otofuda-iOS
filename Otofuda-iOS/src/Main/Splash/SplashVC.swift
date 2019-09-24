@@ -23,6 +23,7 @@ class SplashVC: UIViewController {
     @objc func goNextVC() {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "MuteAlertVC")
         nextVC?.modalTransitionStyle = .crossDissolve
+        nextVC?.modalPresentationStyle = .fullScreen
         present(nextVC!, animated: true, completion: nil)
     }
 
