@@ -41,6 +41,7 @@ final class TopVC: UIViewController, TopProtocol {
         }
     }
 
+    // FIXME: 🐛たぶん曲0の時とかバグる
     func loadMusics() {
         let userDefaults = UserDefaults.standard
         let songsQuery = MPMediaQuery.songs()

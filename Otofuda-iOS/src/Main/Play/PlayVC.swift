@@ -69,6 +69,10 @@ final class PlayVC: UIViewController, PlayProtocol {
         initializePlayer()
         navigationItem.title = "0曲目"
         self.fudaCollectionV.reloadData()
+        
+        if !isHost {
+            observeRoomStatus()
+        }
     }
 
     deinit {
@@ -84,8 +88,14 @@ final class PlayVC: UIViewController, PlayProtocol {
         if  currentIndex > playingMusics.count - 1 {
             return
         }
+        
+        room.status = .play
+        firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
+        
+        
         displayCountdownV()
         fireTimer()
+        
 
         // TODO: できればく非同期で3秒たったら〜ってやりたいので保留
 //        playMusic()

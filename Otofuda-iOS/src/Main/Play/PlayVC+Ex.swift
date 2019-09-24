@@ -80,8 +80,8 @@ extension PlayVC {
             self.removeCountdonwV()
             countdownTimer.invalidate()
             count = 0
-            room.status = .play
-            self.firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
+//            room.status = .play
+//            self.firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
             
             firebaseManager.observe(path: room.url() + "tapped", completion: { snapshot in
                 if let tapDict = snapshot.value as? Dictionary<String, Any> {
@@ -91,9 +91,12 @@ extension PlayVC {
                 }
             })
             
-            playMusic()
-            setupStartBtn(isEnabled: false)
+            if isHost {
+                playMusic()
+                setupStartBtn(isEnabled: false)
+            }
             playingMusic = playingMusics[currentIndex]
+            
             navigationItem.title = String(currentIndex) + "曲目"
             currentIndex += 1
             firebaseManager.post(path: room.url() + "currentIndex", value: currentIndex)
@@ -103,6 +106,20 @@ extension PlayVC {
     
     func removeCountdonwV(){
         countdownV.removeFromSuperview()
+    }
+    
+    func observeRoomStatus(){
+        firebaseManager.observe(path: room.url() + "status", completion: { snapshot in
+            guard let status = snapshot.value as? String else {
+                return
+            }
+            
+            if status == RoomStatus.play.rawValue {
+                print("============ああああああああああ========")
+                self.displayCountdownV()
+                self.fireTimer()
+            }
+        })
     }
     
 
