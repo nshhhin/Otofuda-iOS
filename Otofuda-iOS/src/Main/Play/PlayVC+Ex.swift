@@ -82,15 +82,15 @@ extension PlayVC {
             count = 0
 //            room.status = .play
 //            self.firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
-            
-            firebaseManager.observe(path: room.url() + "tapped", completion: { snapshot in
-                if let tapDict = snapshot.value as? Dictionary<String, Any> {
-                    self.isTapped = true
-                } else {
-                    self.isTapped = false
-                }
-            })
-            
+//
+//            firebaseManager.observe(path: room.url() + "tapped", completion: { snapshot in
+//                if let tapDict = snapshot.value as? Dictionary<String, Any> {
+//                    self.isTapped = true
+//                } else {
+//                    self.isTapped = false
+//                }
+//            })
+//
             if isHost {
                 playMusic()
                 setupStartBtn(isEnabled: false)
