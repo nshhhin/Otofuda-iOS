@@ -119,10 +119,18 @@ extension PlayVC {
             if tappedDict.count == self.room.member.count {
                 self.room.status = .next
             }
-
-            
         })
         
+    }
+    
+    func observeAnswearUser(){
+        firebaseManager.observe(path: room.url() + "answearUser", completion: { snapshot in
+            guard let answearUser = snapshot.value as? Dictionary<String, Any> else {
+                return
+            }
+            self.room.status = .next
+            self.firebaseManager.deleteObserve(path: self.room.url() + "answearUser")
+        })
     }
     
 

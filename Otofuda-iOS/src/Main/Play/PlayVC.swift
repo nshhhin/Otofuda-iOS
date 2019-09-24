@@ -15,6 +15,8 @@ protocol PlayProtocol {
 
 final class PlayVC: UIViewController, PlayProtocol {
     
+    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     var room: Room!
     
     var isHost: Bool = false
@@ -95,10 +97,8 @@ final class PlayVC: UIViewController, PlayProtocol {
         firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
         firebaseManager.deleteAllValue(path: room.url() + "tapped")
         
-        
         displayCountdownV()
         fireTimer()
-        
 
         // TODO: できればく非同期で3秒たったら〜ってやりたいので保留
 //        playMusic()

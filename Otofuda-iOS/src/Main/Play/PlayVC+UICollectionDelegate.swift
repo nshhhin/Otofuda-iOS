@@ -14,18 +14,16 @@ extension PlayVC: UICollectionViewDelegate {
             return
         }
         
-        let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
-                                                      for: indexPath)
-        
-        cell.soundTap()
-
         guard let playingMusic = playingMusic else {
             return
         }
+        
+        let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
+                                                      for: indexPath)
+        cell.soundTap()
 
         let tappedMusic = arrangeMusics[indexPath.row]
 
-        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let me = User(name: appDelegate.uuid, musics: [], color: .red)
         
         firebaseManager.observeSingle(path: room.url() + "tapped", completion: { snapshot in
@@ -40,27 +38,28 @@ extension PlayVC: UICollectionViewDelegate {
                 self.firebaseManager.post(path: self.room.url() + "tapped", value: tappedDict)
             }
             
+            // 正解
+            if tappedMusic.name == playingMusic.name {
+                tappedMusic.isAnimating = true
+                tappedMusic.isTapped = true
+                self.firebaseManager.observeSingle(path: self.room.url() + "answearUser", completion: { snapshot2 in
+                    if let answearUser = snapshot2.value as? Dictionary<String, Any> {
+                        // なにもしない
+                        return
+                    }
+                    else {
+                        self.firebaseManager.post(path: self.room.url() + "answearUser", value: me)
+                    }
+                })
+            }
+            // 不正解
+            else {
+                self.speech.speak(self.utterance)
+            }
+            
             self.isTapped = true
             self.isPlaying = false
         })
-        
-//
-//        if !isTapped {
-//            firebaseManager.post(path: room.url() + "tapped", value: ["user": me.dict(), "music": playingMusic.dict()])
-//            firebaseManager.deleteObserve(path: room.url() + "tapped")
-//            isTapped = false
-//        }
-
-        // 正解
-        if tappedMusic.name == playingMusic.name {
-            tappedMusic.isAnimating = true
-            tappedMusic.isTapped = true
-            
-        }
-            // 不正解
-        else {
-            speech.speak(utterance)
-        }
 
         setupStartBtn(isEnabled: true)
 
