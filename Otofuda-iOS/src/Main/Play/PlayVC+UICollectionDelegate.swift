@@ -4,6 +4,11 @@ extension PlayVC: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+        // もうタップしてたら何もしない
+        if isTapped {
+            return
+        }
+        
         let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
                                                       for: indexPath)
         
@@ -19,7 +24,6 @@ extension PlayVC: UICollectionViewDelegate {
         let me = User(name: appDelegate.uuid, musics: [], color: .red)
         
         firebaseManager.observeSingle(path: room.url() + "tapped", completion: { snapshot in
-            
             if var tappedDict = snapshot.value as? [Dictionary<String, Any>] {
                 let dict: Dictionary<String, Any> = ["user": me.dict(), "music": tappedMusic.name]
                 tappedDict.append(dict)
@@ -30,14 +34,16 @@ extension PlayVC: UICollectionViewDelegate {
                 tappedDict.append(dict)
                 self.firebaseManager.post(path: self.room.url() + "tapped", value: tappedDict)
             }
+            
+            self.isTapped = true
         })
         
-        
-        if !isTapped {
-            firebaseManager.post(path: room.url() + "tapped", value: ["user": me.dict(), "music": playingMusic.dict()])
-            firebaseManager.deleteObserve(path: room.url() + "tapped")
-            isTapped = false
-        }
+//
+//        if !isTapped {
+//            firebaseManager.post(path: room.url() + "tapped", value: ["user": me.dict(), "music": playingMusic.dict()])
+//            firebaseManager.deleteObserve(path: room.url() + "tapped")
+//            isTapped = false
+//        }
 
         // 正解
         if tappedMusic == playingMusic {
