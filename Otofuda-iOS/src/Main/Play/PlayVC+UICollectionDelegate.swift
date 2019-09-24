@@ -18,6 +18,21 @@ extension PlayVC: UICollectionViewDelegate {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let me = User(name: appDelegate.uuid, musics: [], color: .red)
         
+        firebaseManager.observeSingle(path: room.url() + "tapped", completion: { snapshot in
+            
+            if var tappedDict = snapshot.value as? [Dictionary<String, Any>] {
+                let dict: Dictionary<String, Any> = ["user": me.dict(), "music": tappedMusic.name]
+                tappedDict.append(dict)
+                self.firebaseManager.post(path: self.room.url() + "tapped", value: tappedDict)
+            } else {
+                var tappedDict: [Dictionary<String, Any>] = []
+                let dict: Dictionary<String, Any> = ["user": me.dict(), "music": tappedMusic.name]
+                tappedDict.append(dict)
+                self.firebaseManager.post(path: self.room.url() + "tapped", value: tappedDict)
+            }
+        })
+        
+        
         if !isTapped {
             firebaseManager.post(path: room.url() + "tapped", value: ["user": me.dict(), "music": playingMusic.dict()])
             firebaseManager.deleteObserve(path: room.url() + "tapped")

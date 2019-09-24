@@ -115,7 +115,6 @@ extension PlayVC {
             }
             
             if status == RoomStatus.play.rawValue {
-                print("============ああああああああああ========")
                 self.displayCountdownV()
                 self.fireTimer()
             }
