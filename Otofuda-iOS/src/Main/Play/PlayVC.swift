@@ -69,7 +69,7 @@ final class PlayVC: UIViewController, PlayProtocol {
         initializeUI()
         initializeVoice()
         initializePlayer()
-        navigationItem.title = "0曲目"
+        navigationItem.title = "1曲目"
         self.fudaCollectionV.reloadData()
         
         if !isHost {
@@ -93,6 +93,7 @@ final class PlayVC: UIViewController, PlayProtocol {
         
         room.status = .play
         firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
+        firebaseManager.deleteAllValue(path: room.url() + "tapped")
         
         
         displayCountdownV()

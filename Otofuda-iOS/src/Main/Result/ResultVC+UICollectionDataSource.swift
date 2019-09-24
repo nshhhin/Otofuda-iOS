@@ -12,7 +12,7 @@ extension ResultVC: UITableViewDataSource {
             with: ResultTableCell.self,
             for: indexPath
         )
-        cell.prepareLabel(index: indexPath.row, music: music)
+        cell.prepareLabel(index: indexPath.row + 1, music: music)
 
         return cell
     }
