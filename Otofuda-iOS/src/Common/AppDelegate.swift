@@ -9,6 +9,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let uuid: String = UIDevice.current.identifierForVendor!.uuidString
 
+    let colors: [MyColor] = [.red, .blue, .green, .pink, .brown]
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         let audioSession = AVAudioSession.sharedInstance()

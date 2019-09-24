@@ -21,4 +21,24 @@ extension CreateGroupVC {
         qrView.image = UIImage(ciImage: qrImage)
     }
     
+    func observeMember(){
+        firebaseManager.observe(path: room.url() + "member", completion: { snapshot in
+            guard let member = snapshot.value as? [String] else {
+                return
+            }
+            
+            self.member = []
+            for i in 0..<member.count {
+                let user = member[i]
+                let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                let myColor = appDelegate.colors[i]
+                self.member.append(User(name: user, musics: [], color: myColor))
+            }
+        })
+    }
+    
+    func removeObserveMember(){
+        firebaseManager.deleteObserve(path: room.url() + "member")
+    }
+    
 }

@@ -109,6 +109,22 @@ extension PlayVC {
                 self.fireTimer()
             }
         })
+        
+        
+        // ここにタップがメンバー数に到達したら，ステータスにtappedにする処理を書く
+        firebaseManager.observe(path: room.url() + "tapped", completion: { snapshot in
+            guard let tappedDict = snapshot.value as? [Dictionary<String, Any>] else {
+                return
+            }
+//            
+//            if tappedDict.count == room.member.count {
+//                status = .finish
+//            }
+//            
+            
+            
+        })
+        
     }
     
 

@@ -27,6 +27,10 @@ struct Room {
         self.name = name
         self.member = member
     }
+    
+    mutating func setMember(member: [User]) {
+        self.member = member
+    }
 
     mutating func addMember(user: User) {
         self.member.append(user)

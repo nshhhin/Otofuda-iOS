@@ -15,6 +15,8 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
     var haveMusics: [Music] = []
 
     var room: Room!
+    
+    var member: [User] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +35,11 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination as! MenuVC
+        room.setMember(member: member)
         nextVC.room = room
         nextVC.isHost = true
         nextVC.haveMusics = self.haveMusics
+        removeObserveMember()
     }
     
 
