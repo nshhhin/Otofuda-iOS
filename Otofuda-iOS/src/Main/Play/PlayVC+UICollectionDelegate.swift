@@ -9,6 +9,11 @@ extension PlayVC: UICollectionViewDelegate {
             return
         }
         
+        // まだ再生中じゃなければ何もしない
+        if !isPlaying {
+            return
+        }
+        
         let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
                                                       for: indexPath)
         
@@ -36,6 +41,7 @@ extension PlayVC: UICollectionViewDelegate {
             }
             
             self.isTapped = true
+            self.isPlaying = false
         })
         
 //

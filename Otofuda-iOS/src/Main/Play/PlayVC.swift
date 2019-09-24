@@ -36,6 +36,8 @@ final class PlayVC: UIViewController, PlayProtocol {
     var firebaseManager = FirebaseManager()
     
     var isTapped = false
+    
+    var isPlaying = false
 
     let speech = AVSpeechSynthesizer()
     let utterance = AVSpeechUtterance(string: "お手つき")

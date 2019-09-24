@@ -77,6 +77,7 @@ extension PlayVC {
     @objc func countdown(){
         countdownLabel.text = String(3 - count)
         if count == 3 {
+            self.isPlaying = true
             self.removeCountdonwV()
             countdownTimer.invalidate()
             count = 0
