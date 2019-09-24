@@ -84,7 +84,6 @@ extension PlayVC {
             if isHost {
                 playMusic()
                 setupStartBtn(isEnabled: false)
-                // FIXME: 🐛ここがなんども呼ばれるバグ
                 firebaseManager.post(path: room.url() + "currentIndex", value: currentIndex)
             }
             playingMusic = playingMusics[currentIndex]
