@@ -52,9 +52,10 @@ extension PlayVC: UICollectionViewDelegate {
 //        }
 
         // 正解
-        if tappedMusic == playingMusic {
+        if tappedMusic.name == playingMusic.name {
             tappedMusic.isAnimating = true
             tappedMusic.isTapped = true
+            
         }
             // 不正解
         else {

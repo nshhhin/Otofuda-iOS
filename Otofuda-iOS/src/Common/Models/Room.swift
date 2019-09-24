@@ -5,7 +5,7 @@ enum RoomStatus: String {
     case menu   = "menu"
     case start  = "start"
     case play   = "play"
-    case get    = "get"
+    case next   = "next"
     case result = "result"
 }
 
