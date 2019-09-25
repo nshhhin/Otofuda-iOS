@@ -6,15 +6,18 @@ extension PlayVC: UICollectionViewDelegate {
 
         // もうタップしてたら何もしない
         if isTapped {
+            print("isTappped!!!!!!!")
             return
         }
         
         // まだ再生中じゃなければ何もしない
         if !isPlaying {
+            print("isPlaying!!!!!!")
             return
         }
         
         guard let playingMusic = playingMusic else {
+            print("isNotPlayingMusic!!!!!")
             return
         }
         
@@ -61,7 +64,6 @@ extension PlayVC: UICollectionViewDelegate {
             self.isPlaying = false
         })
 
-        setupStartBtn(isEnabled: true)
 
         collectionView.reloadItems(at: [indexPath])
 

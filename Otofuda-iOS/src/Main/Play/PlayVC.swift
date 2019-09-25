@@ -95,7 +95,8 @@ final class PlayVC: UIViewController, PlayProtocol {
         
         room.status = .play
         firebaseManager.post(path: room.url() + "status", value: room.status.rawValue)
-        firebaseManager.deleteAllValue(path: room.url() + "tapped")
+        firebaseManager.deleteAllValuesAndObserve(path: room.url() + "tapped")
+        firebaseManager.deleteAllValuesAndObserve(path: room.url() + "answearUser")
         
         displayCountdownV()
         fireTimer()

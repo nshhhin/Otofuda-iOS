@@ -22,6 +22,7 @@ class CreateGroupVC: UIViewController, CreateGropuProtocol {
         super.viewDidLoad()
         let roomId = createGroup()
         generateQRCode(name: roomId)
+        observeMember()
     }
     
     deinit {

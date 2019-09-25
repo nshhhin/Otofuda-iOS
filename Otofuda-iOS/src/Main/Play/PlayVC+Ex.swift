@@ -85,6 +85,8 @@ extension PlayVC {
                 playMusic()
                 setupStartBtn(isEnabled: false)
                 firebaseManager.post(path: room.url() + "currentIndex", value: currentIndex)
+                observeTapped()
+                observeAnswearUser()
             }
             playingMusic = playingMusics[currentIndex]
             
@@ -109,7 +111,9 @@ extension PlayVC {
                 self.fireTimer()
             }
         })
-        
+    }
+    
+    func observeTapped(){
         // ここにタップがメンバー数に到達したら，ステータスにtappedにする処理を書く
         firebaseManager.observe(path: room.url() + "tapped", completion: { snapshot in
             guard let tappedDict = snapshot.value as? [Dictionary<String, Any>] else {
@@ -118,9 +122,11 @@ extension PlayVC {
             
             if tappedDict.count == self.room.member.count {
                 self.room.status = .next
+                self.setupStartBtn(isEnabled: true)
+                self.isPlaying = false
+                self.isTapped = false
             }
         })
-        
     }
     
     func observeAnswearUser(){
@@ -130,6 +136,10 @@ extension PlayVC {
             }
             self.room.status = .next
             self.firebaseManager.deleteObserve(path: self.room.url() + "answearUser")
+            self.setupStartBtn(isEnabled: true)
+            self.isPlaying = false
+            self.isTapped = false
+
         })
     }
     
