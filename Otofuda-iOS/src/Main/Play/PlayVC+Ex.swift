@@ -44,6 +44,9 @@ extension PlayVC {
     func finishGame() {
         player.stop()
         player = nil
+        
+        firebaseManager.deleteAllValuesAndObserve(path: room.url() + "tapped")
+        firebaseManager.deleteAllValuesAndObserve(path: room.url() + "answearUser")
 
         let storyboard = UIStoryboard(name: "Result", bundle: nil)
         let nextVC = storyboard.instantiateInitialViewController() as! ResultVC

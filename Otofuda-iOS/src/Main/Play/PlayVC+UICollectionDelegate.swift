@@ -23,8 +23,7 @@ extension PlayVC: UICollectionViewDelegate {
         
         let cell = collectionView.dequeueReusableCell(with: FudaCollectionCell.self,
                                                       for: indexPath)
-        cell.soundTap()
-
+        
         let tappedMusic = arrangeMusics[indexPath.row]
 
         let me = User(name: appDelegate.uuid, musics: [], color: .red)
@@ -43,14 +42,17 @@ extension PlayVC: UICollectionViewDelegate {
             
             // 正解
             if tappedMusic.name == playingMusic.name {
-                tappedMusic.isAnimating = true
-                tappedMusic.isTapped = true
                 self.firebaseManager.observeSingle(path: self.room.url() + "answearUser", completion: { snapshot2 in
                     if let answearUser = snapshot2.value as? Dictionary<String, Any> {
                         // なにもしない
                         return
                     }
                     else {
+                        tappedMusic.isAnimating = true
+                        tappedMusic.isTapped = true
+                        cell.soundTap()
+                        cell.animate()
+                        collectionView.reloadItems(at: [indexPath])
                         self.firebaseManager.post(path: self.room.url() + "answearUser", value: me.dict())
                     }
                 })
@@ -63,9 +65,6 @@ extension PlayVC: UICollectionViewDelegate {
             self.isTapped = true
             self.isPlaying = false
         })
-
-
-        collectionView.reloadItems(at: [indexPath])
 
         // 終了判定
         if currentIndex == fudaMaxCount - 1 {
