@@ -80,7 +80,7 @@ final class PlayVC: UIViewController, PlayProtocol {
     }
 
     deinit {
-        player.stop()
+        player.stop() // FIXME: 🐛プレイヤー止まってない？
         player = nil
     }
 

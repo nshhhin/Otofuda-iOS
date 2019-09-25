@@ -51,7 +51,7 @@ extension PlayVC: UICollectionViewDelegate {
                         return
                     }
                     else {
-                        self.firebaseManager.post(path: self.room.url() + "answearUser", value: me)
+                        self.firebaseManager.post(path: self.room.url() + "answearUser", value: me.dict())
                     }
                 })
             }
