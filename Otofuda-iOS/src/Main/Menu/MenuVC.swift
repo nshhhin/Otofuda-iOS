@@ -34,12 +34,12 @@ final class MenuVC: UIViewController, Menurotocol {
     // Segument
     @IBOutlet weak var pointSegument: UISegmentedControl! {
         didSet {
-            pointSegument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .selected)
+            pointSegument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.darkGray], for: .selected)
         }
     }
     @IBOutlet weak var playingSegument: UISegmentedControl! {
         didSet {
-            playingSegument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .selected)
+            playingSegument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.darkGray], for: .selected)
         }
     }
 
