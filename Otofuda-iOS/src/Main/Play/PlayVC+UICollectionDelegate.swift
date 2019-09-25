@@ -48,6 +48,8 @@ extension PlayVC: UICollectionViewDelegate {
                         return
                     }
                     else {
+                        self.room.status = .next
+                        self.firebaseManager.post(path: self.room.url() + "status", value: self.room.status.rawValue)
                         tappedMusic.isAnimating = true
                         tappedMusic.isTapped = true
                         cell.soundTap()

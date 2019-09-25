@@ -125,6 +125,8 @@ extension PlayVC {
             
             if tappedDict.count == self.room.member.count {
                 self.room.status = .next
+                self.firebaseManager.post(path: self.room.url() + "status", value: self.room.status.rawValue)
+                self.room.status = .next
                 self.setupStartBtn(isEnabled: true)
                 self.isPlaying = false
                 self.isTapped = false
