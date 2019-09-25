@@ -110,6 +110,7 @@ extension PlayVC {
             }
             
             if status == RoomStatus.play.rawValue {
+                self.isTapped = false
                 self.displayCountdownV()
                 self.fireTimer()
             }
