@@ -32,8 +32,16 @@ final class MenuVC: UIViewController, Menurotocol {
     var rulePlaying: RulePlaying = .intro
 
     // Segument
-    @IBOutlet weak var pointSegument: UISegmentedControl!
-    @IBOutlet weak var playingSegument: UISegmentedControl!
+    @IBOutlet weak var pointSegument: UISegmentedControl! {
+        didSet {
+            pointSegument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .selected)
+        }
+    }
+    @IBOutlet weak var playingSegument: UISegmentedControl! {
+        didSet {
+            playingSegument.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .selected)
+        }
+    }
 
     var selectedMusics: [Music] = []
     
