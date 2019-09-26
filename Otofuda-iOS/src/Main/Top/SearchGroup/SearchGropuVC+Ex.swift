@@ -70,7 +70,7 @@ extension SearchGroupVC: SearchGroupProtocol {
                     if var member = snapshot.value as? [String] {
                         member.append( self.appDelegate.uuid )
                         self.firebaseManager.post(path: room.url() + "member", value: member)
-                        self.goNextVC(room: room)
+                        self.goNextVC(room: room) // FIXME: 🐛たまに重複してnavigationに追加されることがある(9/26時点）
                         self.isMatching = true
                         return
                     }
@@ -115,8 +115,10 @@ extension SearchGroupVC: SearchGroupProtocol {
                     }
                     
                     var users: [User] = []
+                    var index = 0
                     for user in member {
-                        users.append( User(name: user, musics: [], color: .red))
+                        users.append( User(name: user, musics: [], color: self.appDelegate.colors[index]) )
+                        index += 1
                     }
                     
                     self.rooms.append(Room(name: roomName, member: users))
