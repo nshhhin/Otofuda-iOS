@@ -122,17 +122,8 @@
                         <viewLayoutGuide key="safeArea" id="0d6-49-v7h"/>
                     </view>
                     <navigationItem key="navigationItem" id="pf4-T6-xqm"/>
-                    <connections>
-                        <outlet property="mutePopupV" destination="QvS-gg-Wda" id="cDx-cU-Ax1"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4NL-SW-c24" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="QvS-gg-Wda">
-                    <rect key="frame" x="0.0" y="0.0" width="309" height="189"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <viewLayoutGuide key="safeArea" id="vjN-T7-Jtk"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="-175.36231884057972" y="585.9375"/>
         </scene>

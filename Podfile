@@ -10,4 +10,23 @@ target 'Otofuda-iOS' do
   pod 'Firebase/Database'
   pod 'Mute'
   pod 'lottie-ios'
+
+  target 'Otofuda-iOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+    # pod 'Firebase'
+    # pod 'Firebase/Database'
+    # pod 'Mute'
+    # pod 'lottie-ios'
+  end
+
+  target 'Otofuda-iOSUITests' do
+    inherit! :search_paths
+    # Pods for testing
+    # pod 'Firebase'
+    # pod 'Firebase/Database'
+    # pod 'Mute'
+    # pod 'lottie-ios'
+  end
+
 end

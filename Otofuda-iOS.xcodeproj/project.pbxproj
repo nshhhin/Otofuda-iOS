@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B1B9FF299F1F7AFCE10DB1 /* Pods_Otofuda_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CDC4134202E14425297323 /* Pods_Otofuda_iOSUITests.framework */; };
 		5880D37C22B4928700F40959 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5880D37B22B4928700F40959 /* FirebaseCore.framework */; };
 		589460D522852E9500319032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460D422852E9500319032 /* AppDelegate.swift */; };
 		589460D722852E9500319032 /* TopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460D622852E9500319032 /* TopVC.swift */; };
@@ -15,6 +16,7 @@
 		589460F122855AAE00319032 /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F022855AAE00319032 /* CreateGroupVC.swift */; };
 		589460F522855D9F00319032 /* SearchGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F422855D9F00319032 /* SearchGroupVC.swift */; };
 		589460F722867A4800319032 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589460F622867A4800319032 /* FirebaseManager.swift */; };
+		87B6FE4F76959AE731B4A6B8 /* Pods_Otofuda_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA582A8B6C1AC60CA05C8891 /* Pods_Otofuda_iOSTests.framework */; };
 		ABB34FFD4B8DD80A5EAA9C01 /* Pods_Otofuda_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F973746A2B06067E4EA3ABB /* Pods_Otofuda_iOS.framework */; };
 		F308114B233325BB009E7726 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308114A233325BB009E7726 /* SplashVC.swift */; };
 		F308114D233325C6009E7726 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F308114C233325C6009E7726 /* Splash.storyboard */; };
@@ -117,8 +119,10 @@
 /* Begin PBXFileReference section */
 		03555C36D7B3F6240EE0182C /* Pods-Otofuda-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOS.release.xcconfig"; path = "Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		1950F3B136AEAAC0B3CE5024 /* Pods-Otofuda-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1B7465F4A0D598A5FEFCDE39 /* Pods-Otofuda-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-Otofuda-iOSTests/Pods-Otofuda-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		39D95D0D2EA417A05FCACEDE /* Pods-Otofuda-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		404A2813DE2749B4D0EED308 /* Pods-Otofuda-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		4F4DB329C6599576A6CF9A87 /* Pods-Otofuda-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Otofuda-iOSUITests/Pods-Otofuda-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4F973746A2B06067E4EA3ABB /* Pods_Otofuda_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Otofuda_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5880D37B22B4928700F40959 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		589460D122852E9500319032 /* Otofuda-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Otofuda-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,10 @@
 		589460F022855AAE00319032 /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
 		589460F422855D9F00319032 /* SearchGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroupVC.swift; sourceTree = "<group>"; };
 		589460F622867A4800319032 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		8FA81005ED0399BA25805BAD /* Pods-Otofuda-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-Otofuda-iOSUITests/Pods-Otofuda-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A8CDC4134202E14425297323 /* Pods_Otofuda_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Otofuda_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7EFAE83DD86409EF8712C2C /* Pods-Otofuda-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Otofuda-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Otofuda-iOSTests/Pods-Otofuda-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA582A8B6C1AC60CA05C8891 /* Pods_Otofuda_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Otofuda_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F308114A233325BB009E7726 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		F308114C233325C6009E7726 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		F308114E23332CAA009E7726 /* MuteAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteAlertVC.swift; sourceTree = "<group>"; };
@@ -223,6 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B6FE4F76959AE731B4A6B8 /* Pods_Otofuda_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B1B9FF299F1F7AFCE10DB1 /* Pods_Otofuda_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +256,8 @@
 				F3225F0F2330B25400D9BD79 /* SwiftyJSON.framework */,
 				5880D37B22B4928700F40959 /* FirebaseCore.framework */,
 				4F973746A2B06067E4EA3ABB /* Pods_Otofuda_iOS.framework */,
+				DA582A8B6C1AC60CA05C8891 /* Pods_Otofuda_iOSTests.framework */,
+				A8CDC4134202E14425297323 /* Pods_Otofuda_iOSUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -365,6 +377,10 @@
 				03555C36D7B3F6240EE0182C /* Pods-Otofuda-iOS.release.xcconfig */,
 				39D95D0D2EA417A05FCACEDE /* Pods-Otofuda-iOS.debug.xcconfig */,
 				404A2813DE2749B4D0EED308 /* Pods-Otofuda-iOS.release.xcconfig */,
+				D7EFAE83DD86409EF8712C2C /* Pods-Otofuda-iOSTests.debug.xcconfig */,
+				1B7465F4A0D598A5FEFCDE39 /* Pods-Otofuda-iOSTests.release.xcconfig */,
+				8FA81005ED0399BA25805BAD /* Pods-Otofuda-iOSUITests.debug.xcconfig */,
+				4F4DB329C6599576A6CF9A87 /* Pods-Otofuda-iOSUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -518,6 +534,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F30811772336535D009E7726 /* Build configuration list for PBXNativeTarget "Otofuda-iOSTests" */;
 			buildPhases = (
+				2B6766A51D96AA3CB5FECEFA /* [CP] Check Pods Manifest.lock */,
 				F308116C2336535C009E7726 /* Sources */,
 				F308116D2336535C009E7726 /* Frameworks */,
 				F308116E2336535C009E7726 /* Resources */,
@@ -536,6 +553,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F30811852336536F009E7726 /* Build configuration list for PBXNativeTarget "Otofuda-iOSUITests" */;
 			buildPhases = (
+				CA4278867C022823BB07E8D3 /* [CP] Check Pods Manifest.lock */,
 				F308117A2336536F009E7726 /* Sources */,
 				F308117B2336536F009E7726 /* Frameworks */,
 				F308117C2336536F009E7726 /* Resources */,
@@ -634,6 +652,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2B6766A51D96AA3CB5FECEFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Otofuda-iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		72E1837E0B9A4EA64C3F807C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -671,6 +711,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Otofuda-iOS/Pods-Otofuda-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA4278867C022823BB07E8D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Otofuda-iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F3081157233392D9009E7726 /* ShellScript */ = {
@@ -841,6 +903,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -902,6 +965,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -981,6 +1045,7 @@
 		};
 		F30811782336535D009E7726 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7EFAE83DD86409EF8712C2C /* Pods-Otofuda-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1002,6 +1067,7 @@
 		};
 		F30811792336535D009E7726 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B7465F4A0D598A5FEFCDE39 /* Pods-Otofuda-iOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1022,6 +1088,7 @@
 		};
 		F30811862336536F009E7726 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FA81005ED0399BA25805BAD /* Pods-Otofuda-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8YPT438X6;
@@ -1042,6 +1109,7 @@
 		};
 		F30811872336536F009E7726 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4DB329C6599576A6CF9A87 /* Pods-Otofuda-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8YPT438X6;

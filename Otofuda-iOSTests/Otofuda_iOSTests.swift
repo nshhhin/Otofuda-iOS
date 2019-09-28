@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import Otofuda_iOS
 
 class Otofuda_iOSTests: XCTestCase {
 
