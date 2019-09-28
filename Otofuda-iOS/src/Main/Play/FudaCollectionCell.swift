@@ -1,17 +1,16 @@
-
 import UIKit
 import AVFoundation
 
 final class FudaCollectionCell: UICollectionViewCell {
-    
+
     @IBOutlet weak var titleLabel: UILabel!
-    
+
     @IBOutlet weak var backgroundV: UIView!
-    
+
     var isAnimating = false
-    
+
     var tapSoundPlayer: AVAudioPlayer?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         do {
@@ -23,13 +22,13 @@ final class FudaCollectionCell: UICollectionViewCell {
             print(error)
         }
     }
-    
-    func soundTap(){
+
+    func soundTap() {
         tapSoundPlayer!.volume = 1.0
         tapSoundPlayer!.play()
     }
-    
-    func animate(){
+
+    func animate() {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.toValue = CGFloat(Double.pi / 180) * 360
         rotationAnimation.duration = 0.3

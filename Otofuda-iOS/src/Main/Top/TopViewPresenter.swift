@@ -9,11 +9,10 @@
 import Foundation
 import Firebase
 
-protocol topPresenter: class {
-    
+protocol topPresenter: AnyObject {
+
 }
 
-
 final class topViewPresenter: topPresenter {
-    
+
 }

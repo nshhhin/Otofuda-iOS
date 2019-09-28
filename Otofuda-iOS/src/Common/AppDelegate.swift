@@ -1,4 +1,3 @@
-
 import UIKit
 import Firebase
 import AVFoundation
@@ -7,12 +6,14 @@ import AVFoundation
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+
     let uuid: String = UIDevice.current.identifierForVendor!.uuidString
+
+    let colors: [MyColor] = [.red, .blue, .green, .pink, .brown, .yellow, .orange]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        let audioSession : AVAudioSession = AVAudioSession.sharedInstance()
+        let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(.ambient)
         } catch {
@@ -35,6 +36,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
     }
-
 
 }

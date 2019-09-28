@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--PlayVC-->
+        <!--Title-->
         <scene sceneID="BgV-uI-PzX">
             <objects>
                 <viewController id="gcc-YW-FNL" customClass="PlayVC" customModule="Otofuda_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLv-Zx-blv">
                                 <rect key="frame" x="0.0" y="713" width="414" height="100"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="3t2-l6-Pak"/>
                                 </constraints>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.15686270590000001" green="0.15686273570000001" blue="0.15686270590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="tzn-99-n8J" firstAttribute="bottom" secondItem="CLv-Zx-blv" secondAttribute="bottom" id="3Ak-Ad-cTV"/>
                             <constraint firstItem="jnl-b9-xB2" firstAttribute="top" secondItem="tzn-99-n8J" secondAttribute="top" id="E7E-RJ-z23"/>
@@ -66,13 +66,43 @@
                         <viewLayoutGuide key="safeArea" id="tzn-99-n8J"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="mb8-M3-KrY"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="countdownLabel" destination="bTd-Et-S9W" id="z5a-DO-1aj"/>
+                        <outlet property="countdownV" destination="nNV-6x-Iip" id="Eey-Ns-qAz"/>
                         <outlet property="fudaCollectionV" destination="jnl-b9-xB2" id="qjU-Up-aX7"/>
                         <outlet property="startBtn" destination="CLv-Zx-blv" id="C2B-3J-6SI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCF-X2-AyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="nNV-6x-Iip" customClass="IBDesignableView" customModule="Otofuda_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTd-Et-S9W">
+                            <rect key="frame" x="80" y="43.5" width="80.5" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="bTd-Et-S9W" firstAttribute="centerY" secondItem="nNV-6x-Iip" secondAttribute="centerY" id="AjF-tO-FC4"/>
+                        <constraint firstItem="bTd-Et-S9W" firstAttribute="centerX" secondItem="nNV-6x-Iip" secondAttribute="centerX" id="sBC-Yc-6L1"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Fhi-Lf-kzw"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </objects>
             <point key="canvasLocation" x="-394.20289855072468" y="-403.125"/>
         </scene>
